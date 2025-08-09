@@ -1,0 +1,45 @@
+@model comara.Models.Cobro
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Eliminar</h1>
+
+<h3>¿Está seguro de que desea eliminar esta cobranza?</h3>
+<div>
+    <h4>Cobranza</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cobFech)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cobFech)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.cliNombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.cliNombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cobMonto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cobMonto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cobMetodo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cobMetodo)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="cobCod" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver a la lista</a>
+    </form>
+</div>

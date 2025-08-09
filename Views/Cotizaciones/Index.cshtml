@@ -1,0 +1,61 @@
+@model IEnumerable<comara.Models.Cotizacion>
+
+@{
+    ViewData["Title"] = "Cotizaciones";
+}
+
+<h1>Cotizaciones</h1>
+
+<p>
+    <a asp-action="Create">Crear Nueva</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.cotCod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cotFech)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente.cliNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cotTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cotEstado)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cotCod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cotFech)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.cliNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cotTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cotEstado)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.cotCod">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.cotCod">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.cotCod">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

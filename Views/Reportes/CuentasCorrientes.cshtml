@@ -1,0 +1,57 @@
+@model IEnumerable<comara.Models.CuentaCorriente>
+
+@{
+    ViewData["Title"] = "Reporte de Cuentas Corrientes";
+}
+
+<h1>Reporte de Cuentas Corrientes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.cctaFech)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente.cliNombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cctaMovimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cctaMonto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cctaSaldo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cctaDesc)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cctaFech)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente.cliNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cctaMovimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cctaMonto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cctaSaldo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cctaDesc)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

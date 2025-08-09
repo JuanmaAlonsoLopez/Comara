@@ -107,4 +107,14 @@ public class Articulo
 
     [Column("conjunto")]
     public string? Conjunto { get; set; }
+
+    [ForeignKey("MarCod")]
+    public Marca? Marca { get; set; }
+
+    // Assuming a foreign key to Proveedores table
+    [Column("proCod")] // Add this column to your database if it doesn't exist
+    public int? ProCod { get; set; }
+
+    [ForeignKey("ProCod")]
+    public Proveedor? Proveedor { get; set; }
 }

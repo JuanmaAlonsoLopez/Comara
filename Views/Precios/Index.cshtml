@@ -1,0 +1,55 @@
+@model IEnumerable<comara.Models.Articulo>
+
+@{
+    ViewData["Title"] = "Listas de Precios";
+}
+
+<h1>Listas de Precios</h1>
+
+<p>
+    <a asp-action="AumentarPrecios">Aumentar Precios</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ArtCod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArtDesc)
+            </th>
+            <th>
+                Precio Lista 1
+            </th>
+            <th>
+                Precio Lista 2
+            </th>
+            <th>
+                Precio Lista 3
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArtCod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArtDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArtL1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArtL2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArtL3)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

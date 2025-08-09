@@ -1,0 +1,39 @@
+@model comara.Models.Articulo
+
+@{
+    ViewData["Title"] = "Edit Stock";
+}
+
+<h1>Editar Stock</h1>
+
+<h4>Artículo: @Model.ArtDesc</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ArtCod" />
+            <div class="form-group">
+                <label asp-for="ArtStock" class="control-label"></label>
+                <input asp-for="ArtStock" class="form-control" />
+                <span asp-validation-for="ArtStock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArtStockMin" class="control-label"></label>
+                <input asp-for="ArtStockMin" class="form-control" />
+                <span asp-validation-for="ArtStockMin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
