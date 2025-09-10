@@ -12,26 +12,26 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="venCod" />
+            <input type="hidden" asp-for="VenCod" />
             <div class="form-group">
-                <label asp-for="venFech" class="control-label"></label>
-                <input asp-for="venFech" class="form-control" />
-                <span asp-validation-for="venFech" class="text-danger"></span>
+                <label asp-for="VenFech" class="control-label"></label>
+                <input asp-for="VenFech" class="form-control" />
+                <span asp-validation-for="VenFech" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="cliCod" class="control-label"></label>
-                <select asp-for="cliCod" class="form-control" asp-items="ViewBag.cliCod"></select>
-                <span asp-validation-for="cliCod" class="text-danger"></span>
+                <label asp-for="CliCod" class="control-label"></label>
+                <select asp-for="CliCod" class="form-control" asp-items="ViewBag.cliCod"></select>
+                <span asp-validation-for="CliCod" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="venTotal" class="control-label"></label>
-                <input asp-for="venTotal" class="form-control" />
-                <span asp-validation-for="venTotal" class="text-danger"></span>
+                <label asp-for="VenTotal" class="control-label"></label>
+                <input asp-for="VenTotal" class="form-control" />
+                <span asp-validation-for="VenTotal" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="venEstado" class="control-label"></label>
-                <input asp-for="venEstado" class="form-control" />
-                <span asp-validation-for="venEstado" class="text-danger"></span>
+                <label asp-for="VenEstado" class="control-label"></label>
+                <input asp-for="VenEstado" class="form-control" />
+                <span asp-validation-for="VenEstado" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Guardar" class="btn btn-primary" />

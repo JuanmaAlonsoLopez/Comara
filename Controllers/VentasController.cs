@@ -31,7 +31,7 @@ namespace comara.Controllers
 
             var venta = await _context.Ventas
                 .Include(v => v.Cliente)
-                .FirstOrDefaultAsync(m => m.venCod == id);
+                .FirstOrDefaultAsync(m => m.VenCod == id);
             if (venta == null)
             {
                 return NotFound();
@@ -43,14 +43,14 @@ namespace comara.Controllers
         // GET: Ventas/Create
         public IActionResult Create()
         {
-            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre");
+            ViewData["CliCod"] = new SelectList(_context.Clientes, "CliCod", "CliNombre");
             return View();
         }
 
         // POST: Ventas/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("venCod,venFech,cliCod,venTotal,venEstado,venTipoCbte")] Venta venta)
+        public async Task<IActionResult> Create([Bind("VenCod,VenFech,CliCod,VenTotal,VenEstado,VenTipoCbte")] Venta venta)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +58,7 @@ namespace comara.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", venta.cliCod);
+            ViewData["CliCod"] = new SelectList(_context.Clientes, "CliCod", "CliNombre", venta.CliCod);
             return View(venta);
         }
 
@@ -75,16 +75,16 @@ namespace comara.Controllers
             {
                 return NotFound();
             }
-            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", venta.cliCod);
+            ViewData["CliCod"] = new SelectList(_context.Clientes, "CliCod", "CliNombre", venta.CliCod);
             return View(venta);
         }
 
         // POST: Ventas/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("venCod,venFech,cliCod,venTotal,venEstado,venTipoCbte")] Venta venta)
+        public async Task<IActionResult> Edit(int id, [Bind("VenCod,VenFech,CliCod,VenTotal,VenEstado,VenTipoCbte")] Venta venta)
         {
-            if (id != venta.venCod)
+            if (id != venta.VenCod)
             {
                 return NotFound();
             }
@@ -98,7 +98,7 @@ namespace comara.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!VentaExists(venta.venCod))
+                    if (!VentaExists(venta.VenCod))
                     {
                         return NotFound();
                     }
@@ -109,13 +109,13 @@ namespace comara.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", venta.cliCod);
+            ViewData["CliCod"] = new SelectList(_context.Clientes, "CliCod", "CliNombre", venta.CliCod);
             return View(venta);
         }
 
         private bool VentaExists(int id)
         {
-            return _context.Ventas.Any(e => e.venCod == id);
+            return _context.Ventas.Any(e => e.VenCod == id);
         }
 
         // GET: Ventas/Delete/5
@@ -128,7 +128,7 @@ namespace comara.Controllers
 
             var venta = await _context.Ventas
                 .Include(v => v.Cliente)
-                .FirstOrDefaultAsync(m => m.venCod == id);
+                .FirstOrDefaultAsync(m => m.VenCod == id);
             if (venta == null)
             {
                 return NotFound();

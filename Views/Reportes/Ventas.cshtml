@@ -10,16 +10,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.venFech)
+                @Html.DisplayNameFor(model => model.VenFech)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cliente.cliNombre)
+                @Html.DisplayNameFor(model => model.Cliente != null ? model.Cliente.CliNombre : null)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.venTotal)
+                @Html.DisplayNameFor(model => model.VenTotal)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.venEstado)
+                @Html.DisplayNameFor(model => model.VenEstado)
             </th>
         </tr>
     </thead>
@@ -28,16 +28,16 @@
 {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.venFech)
+                @Html.DisplayFor(modelItem => item.VenFech)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cliente.cliNombre)
+                @(item.Cliente != null ? Html.DisplayFor(modelItem => item.Cliente.CliNombre) : "")
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.venTotal)
+                @Html.DisplayFor(modelItem => item.VenTotal)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.venEstado)
+                @Html.DisplayFor(modelItem => item.VenEstado)
             </td>
         </tr>
 }

@@ -31,7 +31,7 @@ namespace comara.Controllers
 
             var cotizacion = await _context.Cotizaciones
                 .Include(c => c.Cliente)
-                .FirstOrDefaultAsync(m => m.cotCod == id);
+                .FirstOrDefaultAsync(m => m.CotCod == id);
             if (cotizacion == null)
             {
                 return NotFound();
@@ -43,14 +43,14 @@ namespace comara.Controllers
         // GET: Cotizaciones/Create
         public IActionResult Create()
         {
-            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre");
+            ViewData["CliCod"] = new SelectList(_context.Clientes, "CliCod", "CliNombre");
             return View();
         }
 
         // POST: Cotizaciones/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("cotCod,cotFech,cliCod,cotTotal,cotEstado")] Cotizacion cotizacion)
+        public async Task<IActionResult> Create([Bind("CotCod,CotFech,CliCod,CotTotal,CotEstado")] Cotizacion cotizacion)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +58,7 @@ namespace comara.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", cotizacion.cliCod);
+            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", cotizacion.CliCod);
             return View(cotizacion);
         }
 
@@ -75,7 +75,7 @@ namespace comara.Controllers
             {
                 return NotFound();
             }
-            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", cotizacion.cliCod);
+            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", cotizacion.CliCod);
             return View(cotizacion);
         }
 
@@ -84,7 +84,7 @@ namespace comara.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("cotCod,cotFech,cliCod,cotTotal,cotEstado")] Cotizacion cotizacion)
         {
-            if (id != cotizacion.cotCod)
+            if (id != cotizacion.CotCod)
             {
                 return NotFound();
             }
@@ -98,7 +98,7 @@ namespace comara.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CotizacionExists(cotizacion.cotCod))
+                    if (!CotizacionExists(cotizacion.CotCod))
                     {
                         return NotFound();
                     }
@@ -109,13 +109,13 @@ namespace comara.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", cotizacion.cliCod);
+            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", cotizacion.CliCod);
             return View(cotizacion);
         }
 
         private bool CotizacionExists(int id)
         {
-            return _context.Cotizaciones.Any(e => e.cotCod == id);
+            return _context.Cotizaciones.Any(e => e.CotCod == id);
         }
 
         // GET: Cotizaciones/Delete/5
@@ -128,7 +128,7 @@ namespace comara.Controllers
 
             var cotizacion = await _context.Cotizaciones
                 .Include(c => c.Cliente)
-                .FirstOrDefaultAsync(m => m.cotCod == id);
+                .FirstOrDefaultAsync(m => m.CotCod == id);
             if (cotizacion == null)
             {
                 return NotFound();
@@ -143,7 +143,10 @@ namespace comara.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var cotizacion = await _context.Cotizaciones.FindAsync(id);
-            _context.Cotizaciones.Remove(cotizacion);
+            if (cotizacion != null)
+            {
+                _context.Cotizaciones.Remove(cotizacion);
+            }
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

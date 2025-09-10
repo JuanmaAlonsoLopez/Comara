@@ -1,15 +1,40 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace comara.Models
 {
+    [Table("DETALLE_COTIZACIONES")]
     public class DetalleCotizacion
     {
         [Key]
-        public int detCotCod { get; set; }
-        public int cotCod { get; set; }
-        public int artCod { get; set; }
-        public float detCant { get; set; }
-        public float detPrecio { get; set; }
-        public float detSubtotal { get; set; }
+        [Column("detCotCod")]
+        public int DetCotCod { get; set; }
+
+        [Required]
+        [Column("cotCod")]
+        public int CotCod { get; set; }
+
+        [Required]
+        [Column("artCod")]
+        public int ArtCod { get; set; }
+
+        [Required]
+        [Column("detCant")]
+        public float DetCant { get; set; }
+
+        [Required]
+        [Column("detPrecio")]
+        public float DetPrecio { get; set; }
+
+        [Required]
+        [Column("detSubtotal")]
+        public float DetSubtotal { get; set; }
+
+        // Propiedades de Navegación
+        [ForeignKey("CotCod")]
+        public virtual Cotizacion? Cotizacion { get; set; }
+
+        [ForeignKey("ArtCod")]
+        public virtual Articulo? Articulo { get; set; }
     }
 }

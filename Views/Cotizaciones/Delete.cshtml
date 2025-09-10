@@ -12,33 +12,33 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.cotFech)
+            @Html.DisplayNameFor(model => model.CotFech)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.cotFech)
+            @Html.DisplayFor(model => model.CotFech)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cliente.cliNombre)
+            @Html.DisplayNameFor(model => model.Cliente.CliNombre)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cliente.cliNombre)
+            @Html.DisplayFor(model => model.Cliente.CliNombre)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.cotTotal)
+            @Html.DisplayNameFor(model => model.CotTotal)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.cotTotal)
+            @Html.DisplayFor(model => model.CotTotal)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.cotEstado)
+            @Html.DisplayNameFor(model => model.CotEstado)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.cotEstado)
+            @Html.DisplayFor(model => model.CotEstado)
         </dd>
     </dl>
     
     <form asp-action="Delete">
-        <input type="hidden" asp-for="cotCod" />
+        <input type="hidden" asp-for="CotCod" />
         <input type="submit" value="Eliminar" class="btn btn-danger" /> |
         <a asp-action="Index">Volver a la lista</a>
     </form>

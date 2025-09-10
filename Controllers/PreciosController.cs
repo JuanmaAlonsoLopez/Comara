@@ -54,7 +54,7 @@ namespace comara.Controllers
                 articulo.ArtL2 *= (1 + porcentaje / 100);
                 articulo.ArtL3 *= (1 + porcentaje / 100);
                 articulo.ArtL4 *= (1 + porcentaje / 100);
-                articulo.ArtL5 = (int?)(articulo.ArtL5 * (1 + porcentaje / 100));
+                articulo.ArtL5 *= (1 + porcentaje / 100);
             }
 
             await _context.SaveChangesAsync();

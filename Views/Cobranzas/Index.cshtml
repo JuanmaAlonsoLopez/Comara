@@ -14,19 +14,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.cobCod)
+                @Html.DisplayNameFor(model => model.CobCod)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.cobFech)
+                @Html.DisplayNameFor(model => model.CobFech)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cliente.cliNombre)
+                @Html.DisplayNameFor(model => model.Cliente.CliNombre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.cobMonto)
+                @Html.DisplayNameFor(model => model.CobMonto)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.cobMetodo)
+                @Html.DisplayNameFor(model => model.CobMetodo)
             </th>
             <th></th>
         </tr>
@@ -36,24 +36,24 @@
 {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.cobCod)
+                @Html.DisplayFor(modelItem => item.CobCod)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.cobFech)
+                @Html.DisplayFor(modelItem => item.CobFech)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cliente.cliNombre)
+                @Html.DisplayFor(modelItem => item.Cliente.CliNombre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.cobMonto)
+                @Html.DisplayFor(modelItem => item.CobMonto)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.cobMetodo)
+                @Html.DisplayFor(modelItem => item.CobMetodo)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.cobCod">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.cobCod">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.cobCod">Eliminar</a>
+                <a asp-action="Edit" asp-route-id="@item.CobCod">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.CobCod">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.CobCod">Eliminar</a>
             </td>
         </tr>
 }

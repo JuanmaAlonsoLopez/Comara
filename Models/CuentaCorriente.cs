@@ -1,18 +1,42 @@
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace comara.Models
 {
+    [Table("CUENTAS_CORRIENTES")]
     public class CuentaCorriente
     {
         [Key]
-        public int cctaCod { get; set; }
-        public int cliCod { get; set; }
-        public DateTime cctaFech { get; set; }
-        public string? cctaMovimiento { get; set; }
-        public float cctaMonto { get; set; }
-        public float cctaSaldo { get; set; }
-        public string? cctaDesc { get; set; }
+        [Column("cctaCod")]
+        public int CctaCod { get; set; }
 
-        public Cliente Cliente { get; set; }
+        [Required]
+        [Column("cliCod")]
+        public int CliCod { get; set; }
+
+        [Required]
+        [Column("cctaFech")]
+        public DateTime CctaFech { get; set; }
+
+        [StringLength(10)]
+        [Column("cctaMovimiento")]
+        public string? CctaMovimiento { get; set; }
+
+        [Required]
+        [Column("cctaMonto")]
+        public float CctaMonto { get; set; }
+
+        [Required]
+        [Column("cctaSaldo")]
+        public float CctaSaldo { get; set; }
+
+        [StringLength(255)]
+        [Column("cctaDesc")]
+        public string? CctaDesc { get; set; }
+
+        // Propiedad de Navegación
+        [ForeignKey("CliCod")]
+        public virtual Cliente? Cliente { get; set; }
     }
 }

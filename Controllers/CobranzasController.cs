@@ -31,7 +31,7 @@ namespace comara.Controllers
 
             var cobro = await _context.Cobros
                 .Include(c => c.Cliente)
-                .FirstOrDefaultAsync(m => m.cobCod == id);
+                .FirstOrDefaultAsync(m => m.CobCod == id);
             if (cobro == null)
             {
                 return NotFound();
@@ -50,7 +50,7 @@ namespace comara.Controllers
         // POST: Cobranzas/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("cobCod,cliCod,cobFech,cobMonto,cobMetodo")] Cobro cobro)
+        public async Task<IActionResult> Create([Bind("CobCod,CliCod,CobFech,CobMonto,CobMetodo")] Cobro cobro)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +58,7 @@ namespace comara.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", cobro.cliCod);
+            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", cobro.CliCod);
             return View(cobro);
         }
 
@@ -75,16 +75,16 @@ namespace comara.Controllers
             {
                 return NotFound();
             }
-            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", cobro.cliCod);
+            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", cobro.CliCod);
             return View(cobro);
         }
 
         // POST: Cobranzas/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("cobCod,cliCod,cobFech,cobMonto,cobMetodo")] Cobro cobro)
+        public async Task<IActionResult> Edit(int id, [Bind("CobCod,CliCod,CobFech,CobMonto,CobMetodo")] Cobro cobro)
         {
-            if (id != cobro.cobCod)
+            if (id != cobro.CobCod)
             {
                 return NotFound();
             }
@@ -98,7 +98,7 @@ namespace comara.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CobroExists(cobro.cobCod))
+                    if (!CobroExists(cobro.CobCod))
                     {
                         return NotFound();
                     }
@@ -109,13 +109,13 @@ namespace comara.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", cobro.cliCod);
+            ViewData["cliCod"] = new SelectList(_context.Clientes, "cliCod", "cliNombre", cobro.CliCod);
             return View(cobro);
         }
 
         private bool CobroExists(int id)
         {
-            return _context.Cobros.Any(e => e.cobCod == id);
+            return _context.Cobros.Any(e => e.CobCod == id);
         }
 
         // GET: Cobranzas/Delete/5
@@ -128,7 +128,7 @@ namespace comara.Controllers
 
             var cobro = await _context.Cobros
                 .Include(c => c.Cliente)
-                .FirstOrDefaultAsync(m => m.cobCod == id);
+                .FirstOrDefaultAsync(m => m.CobCod == id);
             if (cobro == null)
             {
                 return NotFound();

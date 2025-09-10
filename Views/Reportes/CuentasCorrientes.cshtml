@@ -10,22 +10,22 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.cctaFech)
+                @Html.DisplayNameFor(model => model.CctaFech)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cliente.cliNombre)
+                @Html.DisplayNameFor(model => model.Cliente != null ? model.Cliente.CliNombre : null)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.cctaMovimiento)
+                @Html.DisplayNameFor(model => model.CctaMovimiento)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.cctaMonto)
+                @Html.DisplayNameFor(model => model.CctaMonto)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.cctaSaldo)
+                @Html.DisplayNameFor(model => model.CctaSaldo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.cctaDesc)
+                @Html.DisplayNameFor(model => model.CctaDesc)
             </th>
         </tr>
     </thead>
@@ -34,22 +34,29 @@
 {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.cctaFech)
+                @Html.DisplayFor(modelItem => item.CctaFech)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cliente.cliNombre)
+                @if (item.Cliente != null)
+                {
+                    @Html.DisplayFor(modelItem => item.Cliente.CliNombre)
+                }
+                else
+                {
+                    <span class="text-muted">Sin cliente</span>
+                }
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.cctaMovimiento)
+                @Html.DisplayFor(modelItem => item.CctaMovimiento)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.cctaMonto)
+                @Html.DisplayFor(modelItem => item.CctaMonto)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.cctaSaldo)
+                @Html.DisplayFor(modelItem => item.CctaSaldo)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.cctaDesc)
+                @Html.DisplayFor(modelItem => item.CctaDesc)
             </td>
         </tr>
 }

@@ -1,16 +1,34 @@
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace comara.Models
 {
+    [Table("COBROS")]
     public class Cobro
     {
         [Key]
-        public int cobCod { get; set; }
-        public int cliCod { get; set; }
-        public DateTime cobFech { get; set; }
-        public float cobMonto { get; set; }
-        public string? cobMetodo { get; set; }
+        [Column("cobCod")]
+        public int CobCod { get; set; }
 
-        public Cliente Cliente { get; set; }
+        [Required]
+        [Column("cliCod")]
+        public int CliCod { get; set; }
+
+        [Required]
+        [Column("cobFech")]
+        public DateTime CobFech { get; set; }
+
+        [Required]
+        [Column("cobMonto")]
+        public float CobMonto { get; set; }
+
+        [StringLength(50)]
+        [Column("cobMetodo")]
+        public string? CobMetodo { get; set; }
+
+        // Propiedad de Navegación
+        [ForeignKey("CliCod")]
+        public virtual Cliente? Cliente { get; set; }
     }
 }
