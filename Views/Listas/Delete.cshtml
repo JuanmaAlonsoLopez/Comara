@@ -1,0 +1,45 @@
+﻿@model comara.Models.Lista
+
+@{
+    ViewData["Title"] = "Eliminar Lista";
+}
+
+<h1>Eliminar</h1>
+<h3>¿Estás seguro de que quieres eliminar esta lista?</h3>
+<div>
+    <h4>Lista</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4">
+            Código
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.ListCode)
+        </dd>
+        <dt class="col-sm-4">
+            Descripción
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.ListDesc)
+        </dd>
+        <dt class="col-sm-4">
+            Porcentaje
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.ListPercent)
+        </dd>
+        <dt class="col-sm-4">
+            Activa
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.ListStatus)
+        </dd>
+    </dl>
+    <hr />
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ListCode" />
+        <input type="submit" value="Eliminar" class="btn btn-sm btn-danger" /> |
+        <a asp-action="Index" class="btn btn-sm btn-secondary">Cancelar</a>
+    </form>
+</div>

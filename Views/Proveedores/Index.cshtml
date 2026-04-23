@@ -1,0 +1,236 @@
+@model IEnumerable<comara.Models.Proveedor>
+
+@{
+    ViewData["Title"] = "Proveedores";
+}
+
+<h1>Proveedores</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-sm btn-primary">Crear Nuevo</a>
+    <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#importModal">
+        Importar desde Excel
+    </button>
+    <a asp-action="DownloadTemplate" class="btn btn-sm btn-info">
+        <i class="bi bi-download"></i> Descargar Plantilla Excel
+    </a>
+</p>
+
+<!-- Buscador -->
+<form method="get" asp-action="Index" class="mb-3">
+    <div class="input-group">
+        <input type="text" name="searchTerm" class="form-control"
+               value="@ViewBag.SearchTerm"
+               placeholder="Buscar por nombre, CUIT, contacto o email..." />
+        <button type="submit" class="btn btn-outline-primary">Buscar</button>
+        @if (!string.IsNullOrEmpty(ViewBag.SearchTerm))
+        {
+            <a asp-action="Index" class="btn btn-outline-secondary">Limpiar</a>
+        }
+    </div>
+    <input type="hidden" name="pageSize" value="@ViewBag.PageSize" />
+</form>
+
+<!-- Info de resultados -->
+<div class="d-flex justify-content-between align-items-center mb-2">
+    <small class="text-muted">
+        @if (ViewBag.TotalItems > 0)
+        {
+            <span>Mostrando @((ViewBag.CurrentPage - 1) * ViewBag.PageSize + 1)-@Math.Min(ViewBag.CurrentPage * ViewBag.PageSize, ViewBag.TotalItems) de @ViewBag.TotalItems proveedores</span>
+        }
+        else
+        {
+            <span>No se encontraron proveedores</span>
+        }
+        @if (!string.IsNullOrEmpty(ViewBag.SearchTerm))
+        {
+            <span> (filtrado por: "@ViewBag.SearchTerm")</span>
+        }
+    </small>
+    <div>
+        <label class="me-2">Por pagina:</label>
+        <select id="pageSizeSelect" class="form-select form-select-sm d-inline-block" style="width: auto;">
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+    </div>
+</div>
+
+@if (TempData["ImportMessage"] != null)
+{
+    <div class="alert alert-@(TempData["ImportSuccess"] != null && (bool)TempData["ImportSuccess"] ? "success" : "danger") alert-dismissible fade show" role="alert">
+        @TempData["ImportMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (TempData["ImportErrors"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Errores encontrados:</strong>
+        <a class="ms-2" data-bs-toggle="collapse" href="#errorDetails" role="button" aria-expanded="false" aria-controls="errorDetails">
+            Ver detalles
+        </a>
+        <div class="collapse mt-2" id="errorDetails">
+            <div class="card card-body bg-light">
+                @Html.Raw(TempData["ImportErrors"])
+            </div>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<!-- Modal para importar Excel -->
+<div class="modal fade" id="importModal" tabindex="-1" aria-labelledby="importModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="importModalLabel">Importar Proveedores desde Excel</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="ImportExcel" method="post" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="excelFile" class="form-label">Seleccionar archivo Excel (.xlsx)</label>
+                        <input type="file" class="form-control" id="excelFile" name="excelFile" accept=".xlsx" required>
+                    </div>
+                    <div class="alert alert-info">
+                        <strong>Formato del archivo:</strong>
+                        <ul class="mb-0">
+                            <li>El archivo debe ser .xlsx (Excel)</li>
+                            <li>La primera fila debe contener los encabezados</li>
+                            <li>Columnas: Nombre, CUIT, Contacto, Descuento (%), Email, Celular</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Importar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>CUIT</th>
+                <th>Contacto</th>
+                <th>Celular</th>
+                <th>Descuento</th>
+                <th style="width: 220px;">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.proCod</td>
+                    <td>@item.proNombre</td>
+                    <td>@(item.proCUIT ?? "-")</td>
+                    <td>@(item.proContacto ?? "-")</td>
+                    <td>@(item.proCelular ?? "-")</td>
+                    <td>
+                        @if (item.proDescuento.HasValue && item.proDescuento > 0)
+                        {
+                            <span class="text-success">@string.Format("{0:N2}%", item.proDescuento)</span>
+                        }
+                        else
+                        {
+                            <span>-</span>
+                        }
+                    </td>
+                    <td class="text-nowrap">
+                        <a asp-action="Edit" asp-route-id="@item.proCod" class="btn btn-sm btn-warning">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.proCod" class="btn btn-sm btn-info">Detalles</a> |
+                        <a asp-action="Delete" asp-route-id="@item.proCod" class="btn btn-sm btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Paginacion -->
+@if (ViewBag.TotalPages > 1)
+{
+    <nav aria-label="Paginacion de proveedores" class="mt-3">
+        <ul class="pagination justify-content-center">
+            @{
+                int currentPage = ViewBag.CurrentPage;
+                int totalPages = ViewBag.TotalPages;
+                string searchTerm = ViewBag.SearchTerm ?? "";
+                int pageSize = ViewBag.PageSize;
+
+                int startPage = Math.Max(1, currentPage - 2);
+                int endPage = Math.Min(totalPages, currentPage + 2);
+
+                if (endPage - startPage < 4)
+                {
+                    if (startPage == 1)
+                        endPage = Math.Min(totalPages, startPage + 4);
+                    else if (endPage == totalPages)
+                        startPage = Math.Max(1, endPage - 4);
+                }
+            }
+
+            <!-- Primera pagina y anterior -->
+            <li class="page-item @(currentPage == 1 ? "disabled" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="1" asp-route-searchTerm="@searchTerm" asp-route-pageSize="@pageSize">
+                    &laquo;
+                </a>
+            </li>
+            <li class="page-item @(currentPage == 1 ? "disabled" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="@(currentPage - 1)" asp-route-searchTerm="@searchTerm" asp-route-pageSize="@pageSize">
+                    &lsaquo;
+                </a>
+            </li>
+
+            <!-- Paginas -->
+            @for (int i = startPage; i <= endPage; i++)
+            {
+                <li class="page-item @(i == currentPage ? "active" : "")">
+                    <a class="page-link" asp-action="Index" asp-route-page="@i" asp-route-searchTerm="@searchTerm" asp-route-pageSize="@pageSize">@i</a>
+                </li>
+            }
+
+            <!-- Siguiente y ultima pagina -->
+            <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="@(currentPage + 1)" asp-route-searchTerm="@searchTerm" asp-route-pageSize="@pageSize">
+                    &rsaquo;
+                </a>
+            </li>
+            <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="@totalPages" asp-route-searchTerm="@searchTerm" asp-route-pageSize="@pageSize">
+                    &raquo;
+                </a>
+            </li>
+        </ul>
+    </nav>
+}
+
+@section Scripts {
+    <script>
+        // Cambiar cantidad de items por pagina
+        document.getElementById('pageSizeSelect').addEventListener('change', function() {
+            const pageSize = this.value;
+            const searchTerm = '@ViewBag.SearchTerm' || '';
+            let url = '@Url.Action("Index")?pageSize=' + pageSize;
+            if (searchTerm) {
+                url += '&searchTerm=' + encodeURIComponent(searchTerm);
+            }
+            window.location.href = url;
+        });
+
+        // Establecer el valor correcto del select al cargar
+        document.addEventListener('DOMContentLoaded', function() {
+            const pageSizeSelect = document.getElementById('pageSizeSelect');
+            pageSizeSelect.value = '@ViewBag.PageSize';
+        });
+    </script>
+}

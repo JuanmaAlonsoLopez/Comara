@@ -1,42 +1,97 @@
 @model comara.Models.Articulo
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles";
 }
 
-<h1>Detalles</h1>
+<h1>Detalles del Artículo</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <dl class="row">
+            <dt class="col-sm-5">Código:</dt>
+            <dd class="col-sm-7">@Model.ArtCod</dd>
+
+            <dt class="col-sm-5">Descripción:</dt>
+            <dd class="col-sm-7">@Model.ArtDesc</dd>
+
+            <dt class="col-sm-5">Marca:</dt>
+            <dd class="col-sm-7">@Model.Marca?.marNombre</dd>
+
+            <dt class="col-sm-5">Proveedor:</dt>
+            <dd class="col-sm-7">@Model.Proveedor?.proNombre</dd>
+
+            <dt class="col-sm-5">Stock Actual:</dt>
+            <dd class="col-sm-7">
+                @if (Model.ArtStock.HasValue)
+                {
+                    @(Model.ArtStock == Math.Truncate(Model.ArtStock.Value) ? Model.ArtStock.Value.ToString("N0") : Model.ArtStock.Value.ToString("N2"))
+                }
+            </dd>
+
+            <dt class="col-sm-5">Stock Mínimo:</dt>
+            <dd class="col-sm-7">
+                @if (Model.ArtStockMin.HasValue)
+                {
+                    @(Model.ArtStockMin == Math.Truncate(Model.ArtStockMin.Value) ? Model.ArtStockMin.Value.ToString("N0") : Model.ArtStockMin.Value.ToString("N2"))
+                }
+            </dd>
+        </dl>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Información de Costos</h5>
+            </div>
+            <div class="card-body">
+                <dl class="row mb-0">
+                    <dt class="col-sm-6">Costo Neto:</dt>
+                    <dd class="col-sm-6">@string.Format("${0:N2}", Model.ArtCost ?? 0)</dd>
+
+                    <dt class="col-sm-6">Descuento Proveedor:</dt>
+                    <dd class="col-sm-6">
+                        @string.Format("{0:N2}%", Model.Proveedor?.proDescuento ?? 0)
+                    </dd>
+
+                    <dt class="col-sm-6"><strong>Costo con Descuento:</strong></dt>
+                    <dd class="col-sm-6"><strong>@string.Format("${0:N2}", Model.CostoConDescuento)</strong></dd>
+
+                    <dt class="col-sm-6">IVA:</dt>
+                    <dd class="col-sm-6">@string.Format("{0:N2}%", Model.Iva?.Porcentaje ?? 0)</dd>
+
+                    <dt class="col-sm-6"><strong class="text-success">Costo Final:</strong></dt>
+                    <dd class="col-sm-6"><strong class="text-success">@string.Format("${0:N2}", Model.CostoFinal)</strong></dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">Precios de Lista</h5>
+            </div>
+            <div class="card-body">
+                <dl class="row mb-0">
+                    @if (ViewBag.Listas != null)
+                    {
+                        @foreach (var lista in (List<comara.Models.Lista>)ViewBag.Listas)
+                        {
+                            <dt class="col-sm-4">@lista.ListDesc:</dt>
+                            <dd class="col-sm-8">
+                                @string.Format("${0:N2}", Model.CalcularPrecioVenta(lista.ListPercent))
+                                <small class="text-muted">(@string.Format("{0:N2}%", lista.ListPercent))</small>
+                            </dd>
+                        }
+                    }
+                    else
+                    {
+                        <dt class="col-sm-12 text-muted">No hay listas de precios activas</dt>
+                    }
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div>
-    <h4>Artículo</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ArtDesc)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ArtDesc)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ArtStock)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ArtStock)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Marca.marNombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Marca.marNombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Proveedor.proNombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Proveedor.proNombre)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.ArtCod">Editar</a> |
-    <a asp-action="Index">Volver a la lista</a>
+    <a asp-action="Index" class="btn btn-sm btn-secondary">Volver a la lista</a>
 </div>

@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(dotnet build)",
+      "Bash(dotnet ef migrations add:*)",
+      "Bash(findstr:*)",
+      "Bash(dotnet ef database:*)",
+      "Bash(dotnet add package:*)",
+      "Bash(mkdir:*)",
+      "Bash(dotnet ef migrations:*)",
+      "Bash(psql:*)",
+      "Bash(Remove-Item GenerateHash.cs -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Juanma\\\\OneDrive - alumnos.frm.utn.edu.ar\\\\Trabajo\\\\SISTEMA COMARA\\\\comara\\\\RESUMEN_CAMBIOS_AFIP.md\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Juanma\\\\OneDrive - alumnos.frm.utn.edu.ar\\\\Trabajo\\\\SISTEMA COMARA\\\\comara\\\\SOLUCION_FACTURACION_AFIP.md\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Juanma\\\\OneDrive - alumnos.frm.utn.edu.ar\\\\Trabajo\\\\SISTEMA COMARA\\\\comara\\\\SOLUCION_AFIP_COMPLETADA.md\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Juanma\\\\OneDrive - alumnos.frm.utn.edu.ar\\\\Trabajo\\\\SISTEMA COMARA\\\\comara\\\\IMPLEMENTACION_COMPLETA_AFIP.md\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Juanma\\\\OneDrive - alumnos.frm.utn.edu.ar\\\\Trabajo\\\\SISTEMA COMARA\\\\comara\\\\INSTRUCCIONES_AFIP.md\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Juanma\\\\OneDrive - alumnos.frm.utn.edu.ar\\\\Trabajo\\\\SISTEMA COMARA\\\\comara\\\\ERROR_GENERATION_TIME_SOLUCION.md\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\Juanma\\\\OneDrive - alumnos.frm.utn.edu.ar\\\\Trabajo\\\\SISTEMA COMARA\\\\comara\\\\FIX_DATABASE_AFIP.md\" -Force)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(cd:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

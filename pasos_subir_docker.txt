@@ -1,0 +1,3 @@
+docker build -t southamerica-west1-docker.pkg.dev/comara/comara/comara:v2.9.0 .
+
+docker push southamerica-west1-docker.pkg.dev/comara/comara/comara:v2.9.0

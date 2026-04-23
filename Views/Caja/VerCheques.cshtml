@@ -1,0 +1,119 @@
+@model IEnumerable<comara.Models.Cheque>
+
+@{
+    ViewData["Title"] = "Cheques";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2>Cheques</h2>
+            <p class="text-muted">Gestión y seguimiento de cheques</p>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <a asp-action="Index" class="btn btn-secondary">Volver a Caja</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Todos los Cheques</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Número</th>
+                                    <th>Banco</th>
+                                    <th>Librador</th>
+                                    <th>CUIT</th>
+                                    <th>Fecha Emisión</th>
+                                    <th>Fecha Cobro</th>
+                                    <th class="text-end">Monto</th>
+                                    <th>Cliente</th>
+                                    <th>Estado</th>
+                                    <th>Fecha Salida</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null && Model.Any())
+                                {
+                                    @foreach (var cheque in Model)
+                                    {
+                                        var rowClass = "";
+                                        if (cheque.ChqEnCaja && cheque.ChqFechaCobro < DateTime.Now)
+                                        {
+                                            rowClass = "table-warning";
+                                        }
+                                        else if (cheque.ChqEnCaja)
+                                        {
+                                            rowClass = "table-success";
+                                        }
+                                        else
+                                        {
+                                            rowClass = "table-light";
+                                        }
+
+                                        <tr class="@rowClass">
+                                            <td>@cheque.ChqNumero</td>
+                                            <td>@cheque.ChqBanco</td>
+                                            <td>@cheque.ChqLibrador</td>
+                                            <td>@(cheque.ChqCUIT ?? "-")</td>
+                                            <td>@cheque.ChqFechaEmision.ToString("dd/MM/yyyy")</td>
+                                            <td>@cheque.ChqFechaCobro.ToString("dd/MM/yyyy")</td>
+                                            <td class="text-end"><strong>@cheque.ChqMonto.ToString("C")</strong></td>
+                                            <td>@(cheque.Pago?.Cliente?.CliNombre ?? "-")</td>
+                                            <td>
+                                                @if (cheque.ChqEnCaja)
+                                                {
+                                                    if (cheque.ChqFechaCobro < DateTime.Now)
+                                                    {
+                                                        <span class="badge bg-warning text-dark">En Caja (Vencido)</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="badge bg-success">En Caja</span>
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-secondary">Fuera de Caja</span>
+                                                }
+                                            </td>
+                                            <td>@(cheque.ChqFechaSalida?.ToString("dd/MM/yyyy") ?? "-")</td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="10" class="text-center">No hay cheques registrados</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <div class="alert alert-info">
+                <h6>Leyenda:</h6>
+                <ul>
+                    <li><span class="badge bg-success">En Caja</span> - Cheque físicamente en caja, fecha de cobro vigente</li>
+                    <li><span class="badge bg-warning text-dark">En Caja (Vencido)</span> - Cheque en caja con fecha de cobro pasada</li>
+                    <li><span class="badge bg-secondary">Fuera de Caja</span> - Cheque depositado, entregado o cobrado</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

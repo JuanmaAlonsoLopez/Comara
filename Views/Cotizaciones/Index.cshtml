@@ -4,58 +4,239 @@
     ViewData["Title"] = "Cotizaciones";
 }
 
-<h1>Cotizaciones</h1>
+<h1><i class="bi bi-file-text"></i> Cotizaciones</h1>
 
 <p>
-    <a asp-action="Create">Crear Nueva</a>
+    <a asp-action="Create" class="btn btn-sm btn-primary">
+        <i class="bi bi-plus-circle"></i> Crear Nueva Cotizacion
+    </a>
 </p>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CotCod)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CotFech)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cliente.CliNombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CotTotal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CotEstado)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model)
+<!-- Buscador -->
+<form method="get" asp-action="Index" class="mb-3">
+    <div class="row g-2">
+        <div class="col-md-4">
+            <div class="input-group">
+                <input type="text" name="searchTerm" class="form-control"
+                       value="@ViewBag.SearchTerm"
+                       placeholder="Buscar por cliente..." />
+                <button type="submit" class="btn btn-outline-primary">
+                    <i class="bi bi-search"></i> Buscar
+                </button>
+                @if (!string.IsNullOrEmpty(ViewBag.SearchTerm))
+                {
+                    <a asp-action="Index" class="btn btn-outline-secondary">Limpiar</a>
+                }
+            </div>
+        </div>
+        <div class="col-md-3">
+            @{
+                var estados = ViewBag.Estados as List<comara.Models.CotizacionEstado> ?? new List<comara.Models.CotizacionEstado>();
+            }
+            <select name="estadoFilter" class="form-select" onchange="this.form.submit()">
+                <option value="">Todos los estados</option>
+                @foreach (var estado in estados)
+                {
+                    <option value="@estado.Id" selected="@(ViewBag.EstadoFilter != null && (int?)ViewBag.EstadoFilter == estado.Id)">@estado.Descripcion</option>
+                }
+            </select>
+        </div>
+    </div>
+    <input type="hidden" name="pageSize" value="@ViewBag.PageSize" />
+</form>
+
+<!-- Info de resultados -->
+<div class="d-flex justify-content-between align-items-center mb-2">
+    <small class="text-muted">
+        @if (ViewBag.TotalItems > 0)
+        {
+            <span>Mostrando @((ViewBag.CurrentPage - 1) * ViewBag.PageSize + 1)-@Math.Min(ViewBag.CurrentPage * ViewBag.PageSize, ViewBag.TotalItems) de @ViewBag.TotalItems cotizaciones</span>
+        }
+        else
+        {
+            <span>No se encontraron cotizaciones</span>
+        }
+        @if (!string.IsNullOrEmpty(ViewBag.SearchTerm))
+        {
+            <span> (filtrado por: "@ViewBag.SearchTerm")</span>
+        }
+        @if (ViewBag.EstadoFilter != null)
+        {
+            var estadosLocal = ViewBag.Estados as List<comara.Models.CotizacionEstado> ?? new List<comara.Models.CotizacionEstado>();
+            var estadoSeleccionado = estadosLocal.FirstOrDefault(e => e.Id == (int)ViewBag.EstadoFilter);
+            if (estadoSeleccionado != null)
+            {
+                <span> - Estado: @estadoSeleccionado.Descripcion</span>
+            }
+        }
+    </small>
+    <div>
+        <label class="me-2">Por pagina:</label>
+        <select id="pageSizeSelect" class="form-select form-select-sm d-inline-block" style="width: auto;">
+            <option value="20" selected="@(ViewBag.PageSize == 20)">20</option>
+            <option value="50" selected="@(ViewBag.PageSize == 50)">50</option>
+            <option value="100" selected="@(ViewBag.PageSize == 100)">100</option>
+        </select>
+    </div>
+</div>
+
+@if (TempData["Success"] != null)
 {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CotCod)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CotFech)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cliente.CliNombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CotTotal)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CotEstado)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.CotCod">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.CotCod">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.CotCod">Eliminar</a>
-            </td>
-        </tr>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="bi bi-check-circle"></i> @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 }
-    </tbody>
-</table>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <i class="bi bi-exclamation-triangle"></i> @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th style="width: 80px;">Codigo</th>
+                <th>Fecha</th>
+                <th>Cliente</th>
+                <th class="text-end">Total</th>
+                <th>Estado</th>
+                <th style="width: 350px;">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                var estadoDescripcion = item.Estado?.Descripcion ?? "Pendiente";
+                var estadoColor = item.Estado?.Color ?? "info";
+                var badgeClass = estadoColor == "warning" ? $"bg-{estadoColor} text-dark" : $"bg-{estadoColor}";
+                var esEditable = item.CotEstadoId != CotizacionEstadoConstantes.Convertida;
+
+                <tr>
+                    <td><strong>#@item.CotCod</strong></td>
+                    <td>@item.CotFech.ToString("dd/MM/yyyy")</td>
+                    <td>@(item.Cliente?.CliNombre ?? "Sin cliente")</td>
+                    <td class="text-end"><strong class="text-success">$@string.Format("{0:N2}", item.CotTotal)</strong></td>
+                    <td><span class="badge @badgeClass">@estadoDescripcion</span></td>
+                    <td class="text-nowrap">
+                        <div class="btn-group btn-group-sm" role="group">
+                            <a asp-action="Details" asp-route-id="@item.CotCod" class="btn btn-info" title="Ver Detalles">
+                                <i class="bi bi-eye"></i>
+                            </a>
+                            <a asp-action="DescargarPresupuestoPDF" asp-route-id="@item.CotCod" class="btn btn-danger" title="Descargar PDF">
+                                <i class="bi bi-file-earmark-pdf"></i>
+                            </a>
+                            @if (esEditable)
+                            {
+                                <a asp-action="Edit" asp-route-id="@item.CotCod" class="btn btn-warning" title="Editar">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <a asp-action="ConvertToSale" asp-route-id="@item.CotCod" class="btn btn-success" title="Convertir a Venta">
+                                    <i class="bi bi-cart-check"></i>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.CotCod" class="btn btn-outline-danger" title="Eliminar">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            }
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Paginacion -->
+@if (ViewBag.TotalPages > 1)
+{
+    <nav aria-label="Paginacion de cotizaciones" class="mt-3">
+        <ul class="pagination justify-content-center">
+            @{
+                int currentPage = ViewBag.CurrentPage;
+                int totalPages = ViewBag.TotalPages;
+                string searchTerm = ViewBag.SearchTerm ?? "";
+                int? estadoFilterValue = ViewBag.EstadoFilter;
+                string estadoFilter = estadoFilterValue?.ToString() ?? "";
+                int pageSize = ViewBag.PageSize;
+
+                int startPage = Math.Max(1, currentPage - 2);
+                int endPage = Math.Min(totalPages, currentPage + 2);
+
+                if (endPage - startPage < 4)
+                {
+                    if (startPage == 1)
+                        endPage = Math.Min(totalPages, startPage + 4);
+                    else if (endPage == totalPages)
+                        startPage = Math.Max(1, endPage - 4);
+                }
+            }
+
+            <!-- Primera pagina y anterior -->
+            <li class="page-item @(currentPage == 1 ? "disabled" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="1" asp-route-searchTerm="@searchTerm" asp-route-estadoFilter="@estadoFilter" asp-route-pageSize="@pageSize">
+                    &laquo;
+                </a>
+            </li>
+            <li class="page-item @(currentPage == 1 ? "disabled" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="@(currentPage - 1)" asp-route-searchTerm="@searchTerm" asp-route-estadoFilter="@estadoFilter" asp-route-pageSize="@pageSize">
+                    &lsaquo;
+                </a>
+            </li>
+
+            <!-- Paginas -->
+            @for (int i = startPage; i <= endPage; i++)
+            {
+                <li class="page-item @(i == currentPage ? "active" : "")">
+                    <a class="page-link" asp-action="Index" asp-route-page="@i" asp-route-searchTerm="@searchTerm" asp-route-estadoFilter="@estadoFilter" asp-route-pageSize="@pageSize">@i</a>
+                </li>
+            }
+
+            <!-- Siguiente y ultima pagina -->
+            <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="@(currentPage + 1)" asp-route-searchTerm="@searchTerm" asp-route-estadoFilter="@estadoFilter" asp-route-pageSize="@pageSize">
+                    &rsaquo;
+                </a>
+            </li>
+            <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="@totalPages" asp-route-searchTerm="@searchTerm" asp-route-estadoFilter="@estadoFilter" asp-route-pageSize="@pageSize">
+                    &raquo;
+                </a>
+            </li>
+        </ul>
+    </nav>
+}
+
+@section Scripts {
+    <script>
+        // Cambiar cantidad de items por pagina
+        document.getElementById('pageSizeSelect').addEventListener('change', function () {
+            const pageSize = this.value;
+            const searchTerm = '@(ViewBag.SearchTerm ?? "")';
+            const estadoFilter = '@(ViewBag.EstadoFilter?.ToString() ?? "")';
+            let url = '@Url.Action("Index")?pageSize=' + pageSize;
+            if (searchTerm) {
+                url += '&searchTerm=' + encodeURIComponent(searchTerm);
+            }
+            if (estadoFilter) {
+                url += '&estadoFilter=' + encodeURIComponent(estadoFilter);
+            }
+            window.location.href = url;
+        });
+
+        // Establecer el valor correcto del select al cargar
+        document.addEventListener('DOMContentLoaded', function () {
+            const pageSizeSelect = document.getElementById('pageSizeSelect');
+            pageSizeSelect.value = '@ViewBag.PageSize';
+
+            // Fix para el select de estado
+            const estadoSelect = document.querySelector('select[name="estadoFilter"]');
+            if (estadoSelect) {
+                estadoSelect.value = '@(ViewBag.EstadoFilter?.ToString() ?? "")';
+            }
+        });
+    </script>
+}

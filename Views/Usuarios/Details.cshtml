@@ -1,0 +1,104 @@
+@model comara.Models.Usuario
+
+@{
+    ViewData["Title"] = "Detalles del Usuario";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h4><i class="bi bi-person-badge"></i> Detalles del Usuario</h4>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4">Nombre de Usuario</dt>
+                        <dd class="col-sm-8">
+                            <strong>@Model.UsuUsername</strong>
+                        </dd>
+
+                        <dt class="col-sm-4">Nombre Completo</dt>
+                        <dd class="col-sm-8">@Model.UsuNombreCompleto</dd>
+
+                        <dt class="col-sm-4">Email</dt>
+                        <dd class="col-sm-8">
+                            @if (!string.IsNullOrEmpty(Model.UsuEmail))
+                            {
+                                <a href="mailto:@Model.UsuEmail">@Model.UsuEmail</a>
+                            }
+                            else
+                            {
+                                <span class="text-muted">No especificado</span>
+                            }
+                        </dd>
+
+                        <dt class="col-sm-4">Rol</dt>
+                        <dd class="col-sm-8">
+                            @if (Model.UsuRole == "admin")
+                            {
+                                <span class="badge bg-danger">Administrador</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-primary">Usuario</span>
+                            }
+                        </dd>
+
+                        <dt class="col-sm-4">Estado</dt>
+                        <dd class="col-sm-8">
+                            @if (Model.UsuActivo)
+                            {
+                                <span class="badge bg-success">Activo</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">Inactivo</span>
+                            }
+                        </dd>
+
+                        <dt class="col-sm-4">Fecha de Creación</dt>
+                        <dd class="col-sm-8">@Model.UsuFechaCreacion.ToString("dd/MM/yyyy HH:mm")</dd>
+
+                        @if (Model.UsuUltimoLogin.HasValue)
+                        {
+                            <dt class="col-sm-4">Último Acceso</dt>
+                            <dd class="col-sm-8">
+                                @Model.UsuUltimoLogin.Value.ToString("dd/MM/yyyy HH:mm")
+                                <small class="text-muted">(@((DateTime.UtcNow - Model.UsuUltimoLogin.Value).Days) días)</small>
+                            </dd>
+                        }
+
+                        @if (Model.CreadoPor != null)
+                        {
+                            <dt class="col-sm-4">Creado Por</dt>
+                            <dd class="col-sm-8">@Model.CreadoPor.UsuNombreCompleto</dd>
+                        }
+
+                        @if (Model.UsuFechaModificacion.HasValue)
+                        {
+                            <dt class="col-sm-4">Última Modificación</dt>
+                            <dd class="col-sm-8">
+                                @Model.UsuFechaModificacion.Value.ToString("dd/MM/yyyy HH:mm")
+                            </dd>
+                        }
+                    </dl>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+                        <a asp-action="Index" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Volver
+                        </a>
+                        <div>
+                            <a asp-action="ResetPassword" asp-route-id="@Model.Id" class="btn btn-warning me-2">
+                                <i class="bi bi-key"></i> Resetear Contraseña
+                            </a>
+                            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">
+                                <i class="bi bi-pencil"></i> Editar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

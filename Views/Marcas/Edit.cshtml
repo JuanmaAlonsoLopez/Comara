@@ -1,0 +1,153 @@
+@model comara.Models.Marca
+
+@{
+    ViewData["Title"] = "Editar Marca";
+}
+
+<h1>Editar Marca</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" id="formMarca">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="marCod" />
+            <input type="hidden" name="confirmarSimilar" id="confirmarSimilar" value="false" />
+            <input type="hidden" name="confirmarEnUso" id="confirmarEnUso" value="false" />
+
+            <div class="form-group mb-3">
+                <label class="control-label">Codigo</label>
+                <input type="text" class="form-control" value="@Model.marCod" disabled />
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="marNombre" class="control-label">Nombre</label>
+                <input asp-for="marNombre" class="form-control" id="marNombre" />
+                <span asp-validation-for="marNombre" class="text-danger"></span>
+                <span id="nombreError" class="text-danger" style="display:none;"></span>
+                <div id="nombreWarning" class="alert alert-warning mt-2" style="display:none;">
+                    <strong>Marcas similares encontradas:</strong>
+                    <ul id="listaSimilares"></ul>
+                </div>
+            </div>
+
+            @if (ViewBag.MostrarConfirmacion == true && ViewBag.MarcasSimilares != null)
+            {
+                <div class="alert alert-warning">
+                    <strong>Se encontraron marcas con nombres similares:</strong>
+                    <ul>
+                        @foreach (var similar in (List<string>)ViewBag.MarcasSimilares)
+                        {
+                            <li>@similar</li>
+                        }
+                    </ul>
+                    <p>Si desea continuar de todas formas, haga clic en "Confirmar y Guardar".</p>
+                    <button type="submit" class="btn btn-warning btn-sm" onclick="$('#confirmarSimilar').val('true');">
+                        Confirmar y Guardar
+                    </button>
+                </div>
+            }
+
+            @if (ViewBag.MostrarConfirmacionEnUso == true)
+            {
+                <div class="alert alert-danger">
+                    <strong><i class="bi bi-exclamation-triangle-fill"></i> ¡Atención! Marca en uso</strong>
+                    <p class="mb-2">
+                        Esta marca está siendo utilizada por <strong>@ViewBag.ArticulosAsociados artículo(s)</strong>.
+                        Al modificar el nombre de la marca, todos los artículos asociados mostrarán el nuevo nombre.
+                    </p>
+                    <p class="mb-2">¿Está seguro que desea continuar con la modificación?</p>
+                    <button type="submit" class="btn btn-danger btn-sm" onclick="$('#confirmarEnUso').val('true'); $('#confirmarSimilar').val('true');">
+                        <i class="bi bi-check-circle"></i> Sí, Modificar Marca
+                    </button>
+                    <a asp-action="Index" class="btn btn-secondary btn-sm">
+                        <i class="bi bi-x-circle"></i> Cancelar
+                    </a>
+                </div>
+            }
+            else if (ViewBag.ArticulosAsociados != null && (int)ViewBag.ArticulosAsociados > 0)
+            {
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle"></i> Esta marca está siendo utilizada por <strong>@ViewBag.ArticulosAsociados artículo(s)</strong>.
+                </div>
+            }
+
+            <hr />
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-sm btn-success" id="btnGuardar" />
+                <a asp-action="Index" class="btn btn-sm btn-secondary">Volver a la Lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function() {
+            var nombreTimeout;
+            var haySimilares = false;
+            var excludeId = @Model.marCod;
+
+            $('#marNombre').on('input', function() {
+                clearTimeout(nombreTimeout);
+                var nombre = $(this).val();
+                var $error = $('#nombreError');
+                var $warning = $('#nombreWarning');
+                var $input = $(this);
+                var $listaSimilares = $('#listaSimilares');
+
+                if (!nombre || nombre.trim() === '') {
+                    $error.hide();
+                    $warning.hide();
+                    $input.removeClass('is-invalid is-warning');
+                    haySimilares = false;
+                    return;
+                }
+
+                nombreTimeout = setTimeout(function() {
+                    $.get('@Url.Action("VerificarNombre", "Marcas")', { nombre: nombre, excludeId: excludeId }, function(data) {
+                        if (data.existe) {
+                            $error.text('Ya existe otra marca con este nombre.').show();
+                            $warning.hide();
+                            $input.addClass('is-invalid');
+                            haySimilares = false;
+                        } else if (data.similares && data.similares.length > 0) {
+                            $error.hide();
+                            $listaSimilares.empty();
+                            data.similares.forEach(function(s) {
+                                $listaSimilares.append('<li>' + s + '</li>');
+                            });
+                            $warning.show();
+                            $input.removeClass('is-invalid').addClass('is-warning');
+                            haySimilares = true;
+                        } else {
+                            $error.hide();
+                            $warning.hide();
+                            $input.removeClass('is-invalid is-warning');
+                            haySimilares = false;
+                        }
+                    });
+                }, 500);
+            });
+
+            // Interceptar el submit para confirmar si hay similares
+            $('#formMarca').on('submit', function(e) {
+                if (haySimilares && $('#confirmarSimilar').val() !== 'true') {
+                    e.preventDefault();
+                    if (confirm('Se encontraron marcas con nombres similares. ¿Desea continuar de todas formas?')) {
+                        $('#confirmarSimilar').val('true');
+                        $(this).submit();
+                    }
+                }
+            });
+        });
+    </script>
+    <style>
+        .is-warning {
+            border-color: #ffc107 !important;
+            box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25) !important;
+        }
+    </style>
+}

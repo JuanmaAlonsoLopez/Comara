@@ -21,13 +21,13 @@ namespace comara.Models
 
         [Required]
         [Column("cobMonto")]
-        public float CobMonto { get; set; }
+        public decimal CobMonto { get; set; }
 
         [StringLength(50)]
         [Column("cobMetodo")]
         public string? CobMetodo { get; set; }
 
-        // Propiedad de Navegación
+        // Propiedad de Navegaciï¿½n
         [ForeignKey("CliCod")]
         public virtual Cliente? Cliente { get; set; }
     }

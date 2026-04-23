@@ -1,0 +1,49 @@
+@model comara.Models.Venta
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<h4>Venta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="VenCod" />
+            <div class="form-group">
+                <label asp-for="VenFech" class="control-label"></label>
+                <input asp-for="VenFech" class="form-control" />
+                <span asp-validation-for="VenFech" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CliCod" class="control-label"></label>
+                <select asp-for="CliCod" class="form-control" asp-items="ViewBag.cliCod"></select>
+                <span asp-validation-for="CliCod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VenTotal" class="control-label"></label>
+                <input asp-for="VenTotal" class="form-control" />
+                <span asp-validation-for="VenTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VenEstado" class="control-label"></label>
+                <input asp-for="VenEstado" class="form-control" />
+                <span asp-validation-for="VenEstado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

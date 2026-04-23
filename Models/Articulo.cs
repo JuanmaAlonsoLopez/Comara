@@ -7,11 +7,15 @@ namespace comara.Models
     public class Articulo
     {
         [Key]
+        [Column("id")]
+        public int Id { get; set; }
+
+        [StringLength(20)]
         [Column("artCod")]
-        public int ArtCod { get; set; }
+        public string? ArtCod { get; set; } // Mantenido en BD por compatibilidad, no se usa en el sistema
 
         [Required]
-        [StringLength(40)]
+        [StringLength(55)]
         [Column("artDesc")]
         public string? ArtDesc { get; set; }
 
@@ -19,13 +23,13 @@ namespace comara.Models
         public byte[]? Activo { get; set; }
 
         [Column("artStock")]
-        public float? ArtStock { get; set; }
+        public decimal? ArtStock { get; set; }
 
         [Column("artUni")]
         public int ArtUni { get; set; }
 
         [Column("artStockMin")]
-        public float? ArtStockMin { get; set; }
+        public decimal? ArtStockMin { get; set; }
 
         [Column("artExist")]
         public bool? ArtExist { get; set; }
@@ -51,22 +55,26 @@ namespace comara.Models
         public string? ArtAlt2 { get; set; }
 
         [Column("artL1")]
-        public float? ArtL1 { get; set; }
+        public decimal? ArtL1 { get; set; }
 
         [Column("artL2")]
-        public float? ArtL2 { get; set; }
+        public decimal? ArtL2 { get; set; }
 
         [Column("artL3")]
-        public float? ArtL3 { get; set; }
+        public decimal? ArtL3 { get; set; }
 
         [Column("artL4")]
-        public float? ArtL4 { get; set; }
+        public decimal? ArtL4 { get; set; }
 
         [Column("artL5")]
-        public float? ArtL5 { get; set; }
+        public decimal? ArtL5 { get; set; }
 
         [Column("proCod")]
         public int ProCod { get; set; }
+
+        [Column("artCosto")]
+        [Display(Name = "Costo Neto (sin IVA ni descuento)")]
+        public decimal? ArtCost { get; set; }
 
 
         // Propiedades de Navegación
@@ -75,5 +83,54 @@ namespace comara.Models
 
         [ForeignKey("ProCod")]
         public virtual Proveedor? Proveedor { get; set; }
+
+        [ForeignKey("IvaCod")]
+        public virtual Iva? Iva { get; set; }
+
+        // Propiedades Calculadas (No mapeadas a base de datos)
+
+        /// <summary>
+        /// Costo con descuento del proveedor aplicado (sin IVA)
+        /// Fórmula: CostoNeto * (1 - DescuentoProveedor/100)
+        /// </summary>
+        [NotMapped]
+        public decimal CostoConDescuento
+        {
+            get
+            {
+                if (ArtCost == null) return 0;
+
+                decimal costoNeto = ArtCost.Value;
+                decimal descuentoProveedor = Proveedor?.proDescuento ?? 0;
+
+                return costoNeto * (1 - (descuentoProveedor / 100));
+            }
+        }
+
+        /// <summary>
+        /// Costo final con descuento e IVA aplicado
+        /// Fórmula: CostoConDescuento * (1 + IVA/100)
+        /// </summary>
+        [NotMapped]
+        public decimal CostoFinal
+        {
+            get
+            {
+                decimal costoConDesc = CostoConDescuento;
+                decimal porcentajeIva = Iva?.Porcentaje ?? 0;
+
+                return costoConDesc * (1 + (porcentajeIva / 100));
+            }
+        }
+
+        /// <summary>
+        /// Calcula el precio de venta según la lista de precios especificada
+        /// </summary>
+        /// <param name="listaPorcentaje">Porcentaje de ganancia de la lista (ej: 30 para 30%)</param>
+        /// <returns>Precio de venta final</returns>
+        public decimal CalcularPrecioVenta(decimal listaPorcentaje)
+        {
+            return CostoFinal * (1 + (listaPorcentaje / 100));
+        }
     }
 }

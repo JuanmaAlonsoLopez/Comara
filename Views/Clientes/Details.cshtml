@@ -1,0 +1,66 @@
+@model comara.Models.Cliente
+
+@{
+    ViewData["Title"] = "Detalles del Cliente";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CliNombre)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.CliNombre)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CliNumDoc)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.CliNumDoc)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CliDireccion)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.CliDireccion)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CliTelefono)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.CliTelefono)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CliEmail)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.CliEmail)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CliTipoDoc)
+        </dt>
+        <dd class="col-sm-9">
+            @(Model.TipoDocumento != null ? Model.TipoDocumento.Descripcion : "No especificado")
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CliCondicionIVA)
+        </dt>
+        <dd class="col-sm-9">
+            @(Model.CondicionIVA != null ? Model.CondicionIVA.Descripcion : "No especificado")
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CliFormaPago)
+        </dt>
+        <dd class="col-sm-9">
+            @(Model.TipoFormaPago != null ? Model.TipoFormaPago.Descripcion : "No especificado")
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-sm btn-warning">Editar</a>
+    <a asp-action="Index" class="btn btn-sm btn-secondary">Volver a la lista</a>
+</div>

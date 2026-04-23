@@ -1,0 +1,42 @@
+@model comara.Models.Cobro
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>Cobranza</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CobFech)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CobFech)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cliente.CliNombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cliente.CliNombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CobMonto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CobMonto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CobMetodo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CobMetodo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CobCod">Editar</a> |
+    <a asp-action="Index">Volver a la lista</a>
+</div>

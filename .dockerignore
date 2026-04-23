@@ -1,0 +1,3 @@
+﻿# Excluir los artefactos de compilación
+**/bin/
+**/obj/

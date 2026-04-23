@@ -22,5 +22,21 @@ namespace comara.Models
         [StringLength(100)]
         [Column("proContacto")]
         public string? proContacto { get; set; }
+
+        [Column("proDescuento")]
+        [Display(Name = "Descuento (%)")]
+        [Range(0, 100, ErrorMessage = "El descuento debe estar entre 0 y 100")]
+        public decimal? proDescuento { get; set; }
+
+        [StringLength(100)]
+        [Column("proEmail")]
+        [EmailAddress(ErrorMessage = "El formato del email no es válido")]
+        [Display(Name = "Email")]
+        public string? proEmail { get; set; }
+
+        [StringLength(20)]
+        [Column("proCelular")]
+        [Display(Name = "Celular")]
+        public string? proCelular { get; set; }
     }
 }

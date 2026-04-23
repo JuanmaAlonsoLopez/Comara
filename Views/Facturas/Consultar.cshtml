@@ -1,0 +1,159 @@
+@{
+    ViewData["Title"] = "Consultar Factura en AFIP";
+}
+
+<div class="container mt-4">
+    <h2>Consultar Factura en AFIP</h2>
+    <p class="text-muted">Verificar estado de un comprobante electrónico</p>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Datos del Comprobante</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="ConsultarFactura" method="post">
+                        @Html.AntiForgeryToken()
+
+                        <div class="mb-3">
+                            <label class="form-label">Tipo de Comprobante</label>
+                            <select name="tipoComprobante" class="form-select" required>
+                                <option value="">-- Seleccionar --</option>
+                                <option value="1">Factura A</option>
+                                <option value="6">Factura B</option>
+                                <option value="11">Factura C</option>
+                                <option value="3">Nota de Crédito A</option>
+                                <option value="8">Nota de Crédito B</option>
+                                <option value="13">Nota de Crédito C</option>
+                                <option value="2">Nota de Débito A</option>
+                                <option value="7">Nota de Débito B</option>
+                                <option value="12">Nota de Débito C</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Punto de Venta</label>
+                            <input type="number" name="puntoVenta" class="form-control" required min="1" max="9999" placeholder="Ej: 1" />
+                            <small class="form-text text-muted">Número de 1 a 4 dígitos</small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Número de Comprobante</label>
+                            <input type="number" name="numeroComprobante" class="form-control" required min="1" placeholder="Ej: 12345678" />
+                            <small class="form-text text-muted">Número de comprobante (sin el punto de venta)</small>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-search"></i> Consultar en AFIP
+                            </button>
+                            <a asp-action="Index" class="btn btn-outline-secondary">
+                                <i class="bi bi-arrow-left"></i> Volver al Listado
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            @if (ViewBag.Resultado != null)
+            {
+                var resultado = ViewBag.Resultado as comara.Models.AFIP.FacturaResponse;
+                if (resultado != null)
+                {
+                    <div class="card">
+                        <div class="card-header @(resultado.Success ? "bg-success" : "bg-danger") text-white">
+                            <h5 class="mb-0">Resultado de la Consulta</h5>
+                        </div>
+                        <div class="card-body">
+                            @if (resultado.Success)
+                            {
+                                <div class="alert alert-success">
+                                    <h5><i class="bi bi-check-circle"></i> Comprobante Válido</h5>
+                                </div>
+
+                                <dl class="row">
+                                    <dt class="col-sm-4">CAE:</dt>
+                                    <dd class="col-sm-8"><code>@resultado.CAE</code></dd>
+
+                                    @if (resultado.CAEVencimiento.HasValue)
+                                    {
+                                        <dt class="col-sm-4">Vencimiento CAE:</dt>
+                                        <dd class="col-sm-8">@resultado.CAEVencimiento.Value.ToString("dd/MM/yyyy")</dd>
+                                    }
+
+                                    <dt class="col-sm-4">Estado:</dt>
+                                    <dd class="col-sm-8">
+                                        <span class="badge bg-success">Autorizado</span>
+                                    </dd>
+                                </dl>
+
+                                @if (!string.IsNullOrEmpty(resultado.Observaciones))
+                                {
+                                    <hr />
+                                    <p><strong>Observaciones:</strong></p>
+                                    <p>@resultado.Observaciones</p>
+                                }
+                            }
+                            else
+                            {
+                                <div class="alert alert-danger">
+                                    <h5><i class="bi bi-x-circle"></i> No se pudo obtener información</h5>
+                                </div>
+
+                                @if (resultado.Errores != null && resultado.Errores.Any())
+                                {
+                                    <p><strong>Errores:</strong></p>
+                                    <ul>
+                                        @foreach (var error in resultado.Errores)
+                                        {
+                                            <li>@error</li>
+                                        }
+                                    </ul>
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="card">
+                    <div class="card-body text-center text-muted">
+                        <i class="bi bi-search" style="font-size: 3rem;"></i>
+                        <p class="mt-3">Ingresa los datos del comprobante para consultar su estado en AFIP</p>
+                    </div>
+                </div>
+            }
+
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h6>Información</h6>
+                    <ul class="small">
+                        <li>Esta consulta verifica el estado del comprobante directamente en AFIP</li>
+                        <li>Solo se pueden consultar comprobantes ya autorizados</li>
+                        <li>El CAE tiene una validez mostrada en el comprobante</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

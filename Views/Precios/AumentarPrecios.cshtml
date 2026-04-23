@@ -27,16 +27,15 @@
                 <label for="proCod" class="control-label">Proveedor</label>
                 <select name="proCod" id="proCod" class="form-control" asp-items="ViewBag.Proveedores"></select>
             </div>
+            <hr />
             <div class="form-group">
-                <input type="submit" value="Aplicar Aumento" class="btn btn-primary" />
+                <input type="submit" value="Aplicar Aumento" class="btn btn-sm btn-primary" /> |
+                <a asp-controller="Listas" asp-action="Index" class="btn btn-sm btn-secondary">Volver a la lista de precios</a>
             </div>
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Volver a la lista de precios</a>
-</div>
+    
 
 @section Scripts {
     <script>

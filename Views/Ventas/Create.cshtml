@@ -1,47 +1,536 @@
-@model comara.Models.Venta
+@model comara.Models.ViewModels.VentaViewModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Nuevo Pedido";
 }
 
-<h1>Crear</h1>
+<h1>Nuevo Pedido</h1>
 
-<h4>Venta</h4>
-<hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
+    <div class="col-md-12">
+        <form asp-action="Create" id="formVenta">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="VenFech" class="control-label"></label>
-                <input asp-for="VenFech" class="form-control" />
-                <span asp-validation-for="VenFech" class="text-danger"></span>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="VenFech" class="control-label">Fecha</label>
+                        <input asp-for="VenFech" class="form-control" type="date" />
+                        <span asp-validation-for="VenFech" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="CliCod" class="control-label">Cliente</label>
+                        <select asp-for="CliCod" class="form-control" asp-items="ViewBag.CliCod">
+                            <option value="">Seleccione un cliente</option>
+                        </select>
+                        <span asp-validation-for="CliCod" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="ListaCod" class="control-label">Lista de Precios</label>
+                        <select asp-for="ListaCod" class="form-control" asp-items="ViewBag.Listas" id="listaPrecios">
+                            <option value="">Sin lista (costo)</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="CliCod" class="control-label"></label>
-                <select asp-for="CliCod" class ="form-control" asp-items="ViewBag.cliCod"></select>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="VenTipoCbte" class="control-label">Tipo de Comprobante (Opcional)</label>
+                        <select asp-for="VenTipoCbte" class="form-control" asp-items="ViewBag.TiposComprobante" id="tipoComprobante">
+                            <option value="">Asignar después</option>
+                        </select>
+                        <small class="form-text text-muted">Puede seleccionarse ahora o al generar la factura</small>
+                        <span asp-validation-for="VenTipoCbte" class="text-danger"></span>
+                        <div id="advertenciaTipoComprobante" class="alert alert-warning mt-2" style="display: none;"></div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="VenTotal" class="control-label"></label>
-                <input asp-for="VenTotal" class="form-control" />
-                <span asp-validation-for="VenTotal" class="text-danger"></span>
+
+            <hr />
+            <h4>Artículos</h4>
+
+            <div class="row mb-3">
+                <div class="col-md-5">
+                    <label class="control-label">Buscar Artículo</label>
+                    <div class="search-results-container">
+                        <input type="text" id="buscarArticulo" class="form-control" placeholder="Buscar por Id, descripción o marca..." autocomplete="off" />
+                        <div id="searchResults" class="search-results"></div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label class="control-label">Cantidad</label>
+                    <input type="text" id="cantidadArticulo" class="form-control" value="1" placeholder="Ej: 1 o 1,5" oninput="soloNumerosDecimales(this)" />
+                </div>
+                <div class="col-md-2">
+                    <label class="control-label">Precio</label>
+                    <input type="text" id="precioArticulo" class="form-control" placeholder="Ej: 100 o 100,50" oninput="soloNumerosDecimales(this)" />
+                </div>
+                <div class="col-md-2">
+                    <label class="control-label">&nbsp;</label>
+                    <button type="button" id="btnAgregarArticulo" class="btn btn-sm btn-success btn-block form-control" style="margin-top:0.2em">Agregar</button>
+                </div>
             </div>
+
+            <table class="table table-sm" id="tablaArticulos">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descripción</th>
+                        <th>Stock Disponible</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unit.</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="5" class="text-right">TOTAL:</th>
+                        <th id="totalVenta">$0.00</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <input type="hidden" name="itemsJson" id="itemsJson" />
+
             <div class="form-group">
-                <label asp-for="VenEstado" class="control-label"></label>
-                <input asp-for="VenEstado" class="form-control" />
-                <span asp-validation-for="VenEstado" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Crear" class="btn btn-primary" />
+                <input type="submit" value="Crear Pedido" class="btn btn-sm btn-primary" />
+                <a asp-action="Index" class="btn btn-sm btn-secondary">Cancelar</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Volver a la lista</a>
-</div>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        .no-spinner::-webkit-outer-spin-button,
+        .no-spinner::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        .no-spinner[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        /* Estilos para el buscador de artículos */
+        .search-results-container {
+            position: relative;
+        }
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #ccc;
+            border-top: none;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .search-results.show {
+            display: block;
+        }
+        .search-results-list {
+            max-height: 250px;
+            overflow-y: auto;
+        }
+        .search-result-item {
+            padding: 4px 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9em;
+            line-height: 1.3;
+        }
+        .search-result-item:hover, .search-result-item.selected {
+            background-color: #e9f5ff;
+        }
+        .search-result-item .item-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search-result-item .item-code {
+            font-weight: bold;
+            color: #333;
+            margin-right: 8px;
+        }
+        .search-result-item .item-desc {
+            color: #555;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .search-result-item .item-info {
+            font-size: 0.8em;
+            color: #888;
+            white-space: nowrap;
+            margin-left: 10px;
+        }
+        .search-pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 10px;
+            background: #f8f9fa;
+            border-top: 1px solid #ddd;
+        }
+        .search-pagination-info {
+            font-size: 0.8em;
+            color: #666;
+        }
+        .search-pagination-buttons button {
+            padding: 2px 10px;
+            margin-left: 5px;
+            font-size: 0.85em;
+        }
+        .search-loading, .search-no-results {
+            padding: 10px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+    <script>
+        let items = [];
+        let articuloSeleccionado = null;
+        let currentPage = 1;
+        let currentTerm = '';
+        let searchTimeout = null;
+        let selectedIndex = -1;
+
+        // Función para normalizar separador decimal (acepta punto o coma)
+        function parseDecimal(value) {
+            if (!value) return 0;
+            return parseFloat(value.toString().replace(',', '.')) || 0;
+        }
+
+        // Filtrar caracteres no numéricos en tiempo real (permite dígitos, punto y coma)
+        function soloNumerosDecimales(input) {
+            let val = input.value.replace(/[^0-9.,]/g, '');
+            const firstSep = val.search(/[.,]/);
+            if (firstSep !== -1) {
+                val = val.substring(0, firstSep + 1) + val.substring(firstSep + 1).replace(/[.,]/g, '');
+            }
+            input.value = val;
+        }
+
+        $(document).ready(function() {
+            // Seleccionar automáticamente la primera lista de precios
+            var firstOption = $('#listaPrecios option[value!=""]:first');
+            if (firstOption.length > 0) {
+                $('#listaPrecios').val(firstOption.val());
+            }
+
+            // Buscador de artículos con paginación
+            $('#buscarArticulo').on('input', function() {
+                const term = $(this).val();
+                clearTimeout(searchTimeout);
+
+                if (term.length < 2) {
+                    $('#searchResults').removeClass('show');
+                    return;
+                }
+
+                currentTerm = term;
+                currentPage = 1;
+
+                searchTimeout = setTimeout(function() {
+                    buscarArticulos(term, 1);
+                }, 300);
+            });
+
+            // Cerrar resultados al hacer clic fuera
+            $(document).on('click', function(e) {
+                if (!$(e.target).closest('.search-results-container').length) {
+                    $('#searchResults').removeClass('show');
+                }
+            });
+
+            // Mantener foco en el input
+            $('#buscarArticulo').on('focus', function() {
+                if (currentTerm.length >= 2) {
+                    $('#searchResults').addClass('show');
+                }
+            });
+
+            $('#listaPrecios').change(function() {
+                if (articuloSeleccionado) cargarPrecioArticulo(articuloSeleccionado.id);
+            });
+
+            $('#btnAgregarArticulo').click(function() { agregarArticulo(); });
+            $('#formVenta').submit(function() { $('#itemsJson').val(JSON.stringify(items)); });
+
+            // Enter en Cantidad/Precio → agregar artículo
+            $('#cantidadArticulo, #precioArticulo').on('keydown', function(e) {
+                if (e.key === 'Enter') { e.preventDefault(); agregarArticulo(); }
+            });
+
+            // Flechas + Enter en el buscador
+            $('#buscarArticulo').on('keydown', function(e) {
+                const $results = $('#searchResults');
+                const $items = $results.find('.search-result-item');
+                const dropdownAbierto = $results.hasClass('show') && $items.length > 0;
+
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    if (dropdownAbierto) {
+                        selectedIndex = Math.min(selectedIndex + 1, $items.length - 1);
+                        $items.removeClass('selected');
+                        $items.eq(selectedIndex).addClass('selected');
+                        $items.eq(selectedIndex)[0].scrollIntoView({ block: 'nearest' });
+                    }
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    if (dropdownAbierto) {
+                        selectedIndex = Math.max(selectedIndex - 1, 0);
+                        $items.removeClass('selected');
+                        $items.eq(selectedIndex).addClass('selected');
+                        $items.eq(selectedIndex)[0].scrollIntoView({ block: 'nearest' });
+                    }
+                } else if (e.key === 'Enter') {
+                    e.preventDefault();
+                    if (dropdownAbierto) {
+                        const idx = selectedIndex >= 0 ? selectedIndex : 0;
+                        const itemData = $items.eq(idx).data('item');
+                        if (itemData) seleccionarArticulo(itemData);
+                    } else if (articuloSeleccionado) {
+                        agregarArticulo();
+                    }
+                } else if (e.key === 'Escape') {
+                    $results.removeClass('show');
+                    selectedIndex = -1;
+                }
+            });
+        });
+
+        function buscarArticulos(term, page) {
+            $('#searchResults').html('<div class="search-loading">Buscando...</div>').addClass('show');
+
+            $.ajax({
+                url: '@Url.Action("BuscarArticulos", "Ventas")',
+                data: { term: term, page: page, pageSize: 10 },
+                success: function(data) {
+                    renderSearchResults(data);
+                },
+                error: function() {
+                    $('#searchResults').html('<div class="search-no-results">Error al buscar</div>');
+                }
+            });
+        }
+
+        function renderSearchResults(data) {
+            selectedIndex = -1;
+            const container = $('#searchResults');
+            container.empty();
+
+            if (data.items.length === 0) {
+                container.html('<div class="search-no-results">No se encontraron artículos</div>');
+                return;
+            }
+
+            // Contenedor con scroll para los items
+            const listContainer = $('<div class="search-results-list">');
+
+            // Renderizar items
+            data.items.forEach(function(item) {
+                const div = $('<div class="search-result-item">')
+                    .data('item', item)
+                    .html(
+                        '<div class="item-main">' +
+                            '<span class="item-code">' + item.codigo + '</span>' +
+                            '<span class="item-desc">' + item.descripcion + '</span>' +
+                            '<span class="item-info">Stock: ' + item.stock + ' | ' + item.marca + '</span>' +
+                        '</div>'
+                    )
+                    .on('click', function() {
+                        seleccionarArticulo($(this).data('item'));
+                    });
+                listContainer.append(div);
+            });
+
+            container.append(listContainer);
+
+            // Paginación siempre visible (fuera del scroll)
+            const pagination = $('<div class="search-pagination">');
+            pagination.append(
+                '<span class="search-pagination-info">' +
+                (data.totalPages > 1
+                    ? data.items.length + ' de ' + data.total + ' (Pág. ' + data.page + '/' + data.totalPages + ')'
+                    : data.total + ' resultado(s)') +
+                '</span>'
+            );
+
+            if (data.totalPages > 1) {
+                const buttons = $('<div class="search-pagination-buttons">');
+
+                if (data.page > 1) {
+                    buttons.append(
+                        $('<button type="button" class="btn btn-sm btn-outline-secondary">Anterior</button>')
+                            .on('click', function(e) {
+                                e.stopPropagation();
+                                currentPage = data.page - 1;
+                                buscarArticulos(currentTerm, currentPage);
+                            })
+                    );
+                }
+
+                if (data.page < data.totalPages) {
+                    buttons.append(
+                        $('<button type="button" class="btn btn-sm btn-outline-secondary">Siguiente</button>')
+                            .on('click', function(e) {
+                                e.stopPropagation();
+                                currentPage = data.page + 1;
+                                buscarArticulos(currentTerm, currentPage);
+                            })
+                    );
+                }
+
+                pagination.append(buttons);
+            }
+
+            container.append(pagination);
+            container.addClass('show');
+        }
+
+        function seleccionarArticulo(item) {
+            articuloSeleccionado = item;
+            $('#buscarArticulo').val(item.text);
+            $('#searchResults').removeClass('show');
+            cargarPrecioArticulo(item.id);
+        }
+
+        function cargarPrecioArticulo(artCod) {
+            const listaCod = $('#listaPrecios').val();
+            $.ajax({
+                url: '@Url.Action("GetArticuloPrecio", "Ventas")',
+                data: { artCod: artCod, listaCod: listaCod },
+                success: function(result) {
+                    if (result.success) {
+                        $('#precioArticulo').val(result.precio.toFixed(2));
+                        articuloSeleccionado.precio = result.precio;
+                        articuloSeleccionado.stock = result.stock;
+                    }
+                }
+            });
+        }
+
+        function agregarArticulo() {
+            if (!articuloSeleccionado) { alert('Debe seleccionar un artículo'); return; }
+            const cantidad = parseDecimal($('#cantidadArticulo').val());
+            const precio = parseDecimal($('#precioArticulo').val());
+            if (cantidad <= 0) { alert('La cantidad debe ser mayor a 0'); return; }
+            if (cantidad > articuloSeleccionado.stock) {
+                alert('Stock insuficiente. Disponible: ' + articuloSeleccionado.stock);
+                return;
+            }
+
+            items.push({
+                ArtCod: articuloSeleccionado.id,
+                ArtCodigoStr: articuloSeleccionado.codigo,
+                Cantidad: cantidad,
+                Precio: precio,
+                Subtotal: cantidad * precio,
+                ArtDesc: articuloSeleccionado.descripcion,
+                ArtStock: articuloSeleccionado.stock
+            });
+
+            actualizarTabla();
+            limpiarFormulario();
+        }
+
+        function actualizarTabla() {
+            const tbody = $('#tablaArticulos tbody');
+            tbody.empty();
+            let total = 0;
+            items.forEach((item, index) => {
+                const row = $('<tr>');
+                row.append($('<td>').text(item.ArtCod));
+                row.append($('<td>').text(item.ArtDesc));
+                row.append($('<td>').text(item.ArtStock));
+                row.append($('<td>').text(item.Cantidad));
+                row.append($('<td>').text('$' + item.Precio.toFixed(2)));
+                row.append($('<td>').text('$' + item.Subtotal.toFixed(2)));
+                row.append($('<td>').html('<button type="button" class="btn btn-sm btn-danger" onclick="eliminarItem(' + index + ')">Eliminar</button>'));
+                tbody.append(row);
+                total += item.Subtotal;
+            });
+            $('#totalVenta').text('$' + total.toFixed(2));
+        }
+
+        function eliminarItem(index) { items.splice(index, 1); actualizarTabla(); }
+        function limpiarFormulario() {
+            $('#buscarArticulo').val('');
+            $('#cantidadArticulo').val(1);
+            $('#precioArticulo').val('');
+            articuloSeleccionado = null;
+        }
+
+        // Cargar tipos de comprobante válidos cuando cambia el cliente
+        $('#CliCod').change(function() {
+            const clienteId = $(this).val();
+            if (clienteId) {
+                $.ajax({
+                    url: '@Url.Action("ObtenerTiposComprobanteCliente", "Ventas")',
+                    data: { clienteId: clienteId },
+                    success: function(result) {
+                        if (result.success) {
+                            const select = $('#tipoComprobante');
+                            select.empty();
+                            select.append('<option value="">Asignar después</option>');
+
+                            result.tiposComprobante.forEach(function(tipo) {
+                                const option = $('<option>')
+                                    .val(tipo.codigoAfip)
+                                    .text(tipo.descripcion + (tipo.esSugerido ? ' (Recomendado)' : ''));
+                                select.append(option);
+
+                                // Preseleccionar el tipo recomendado
+                                if (tipo.esSugerido) {
+                                    select.val(tipo.codigoAfip);
+                                }
+                            });
+
+                            // Mostrar información sobre la condición IVA
+                            if (result.condicionIVA) {
+                                $('#advertenciaTipoComprobante')
+                                    .text('Cliente: ' + result.condicionIVA)
+                                    .addClass('alert-info')
+                                    .removeClass('alert-warning')
+                                    .show();
+                            }
+                        } else {
+                            $('#advertenciaTipoComprobante')
+                                .text(result.error)
+                                .addClass('alert-warning')
+                                .removeClass('alert-info')
+                                .show();
+                        }
+                    },
+                    error: function() {
+                        $('#advertenciaTipoComprobante')
+                            .text('Error al cargar tipos de comprobante')
+                            .addClass('alert-danger')
+                            .show();
+                    }
+                });
+            } else {
+                $('#tipoComprobante').empty().append('<option value="">Asignar después</option>');
+                $('#advertenciaTipoComprobante').hide();
+            }
+        });
+    </script>
 }

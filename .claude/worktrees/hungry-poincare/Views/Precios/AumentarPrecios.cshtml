@@ -1,0 +1,57 @@
+@{
+    ViewData["Title"] = "Aumentar Precios";
+}
+
+<h1>Aumentar Precios</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AumentarPrecios">
+            <div class="form-group">
+                <label for="tipoAumento" class="control-label">Tipo de Aumento</label>
+                <select name="tipoAumento" id="tipoAumento" class="form-control">
+                    <option value="general">General</option>
+                    <option value="marca">Por Marca</option>
+                    <option value="proveedor">Por Proveedor</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="porcentaje" class="control-label">Porcentaje de Aumento</label>
+                <input type="number" name="porcentaje" id="porcentaje" class="form-control" step="0.01" required />
+            </div>
+            <div class="form-group" id="marcaDiv" style="display:none;">
+                <label for="marCod" class="control-label">Marca</label>
+                <select name="marCod" id="marCod" class="form-control" asp-items="ViewBag.Marcas"></select>
+            </div>
+            <div class="form-group" id="proveedorDiv" style="display:none;">
+                <label for="proCod" class="control-label">Proveedor</label>
+                <select name="proCod" id="proCod" class="form-control" asp-items="ViewBag.Proveedores"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Aplicar Aumento" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la lista de precios</a>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#tipoAumento').change(function () {
+                var selectedValue = $(this).val();
+                $('#marcaDiv').hide();
+                $('#proveedorDiv').hide();
+
+                if (selectedValue === 'marca') {
+                    $('#marcaDiv').show();
+                } else if (selectedValue === 'proveedor') {
+                    $('#proveedorDiv').show();
+                }
+            });
+        });
+    </script>
+}

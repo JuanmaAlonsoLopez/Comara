@@ -1,0 +1,87 @@
+@model comara.Models.Proveedor
+
+@{
+    ViewData["Title"] = "Crear Proveedor";
+}
+
+<h1>Crear</h1>
+
+<h4>Proveedor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Nombre</label>
+                <input asp-for="proNombre" class="form-control" />
+                <span asp-validation-for="proNombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">CUIT</label>
+                <input asp-for="proCUIT" class="form-control" id="proCUIT" />
+                <span asp-validation-for="proCUIT" class="text-danger"></span>
+                <span id="cuitWarning" class="text-danger" style="display:none;"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Contacto</label>
+                <input asp-for="proContacto" class="form-control" />
+                <span asp-validation-for="proContacto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="proEmail" class="control-label"></label>
+                <input asp-for="proEmail" class="form-control" type="email" />
+                <span asp-validation-for="proEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="proCelular" class="control-label"></label>
+                <input asp-for="proCelular" class="form-control" />
+                <span asp-validation-for="proCelular" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="proDescuento" class="control-label"></label>
+                <input asp-for="proDescuento" class="form-control" type="number" step="0.01" min="0" max="100" />
+                <span asp-validation-for="proDescuento" class="text-danger"></span>
+                <small class="form-text text-muted">Ingrese el porcentaje de descuento (0-100)</small>
+            </div>
+            <hr />
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-sm btn-primary" />
+                <a asp-action="Index" class="btn btn-sm btn-secondary">Volver a la lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(document).ready(function() {
+            var cuitTimeout;
+            $('#proCUIT').on('input', function() {
+                clearTimeout(cuitTimeout);
+                var cuit = $(this).val();
+                var $warning = $('#cuitWarning');
+                var $input = $(this);
+
+                if (!cuit || cuit.trim() === '') {
+                    $warning.hide();
+                    $input.removeClass('is-invalid');
+                    return;
+                }
+
+                cuitTimeout = setTimeout(function() {
+                    $.get('@Url.Action("VerificarCuit", "Proveedores")', { cuit: cuit }, function(data) {
+                        if (data.existe) {
+                            $warning.text('Ya existe un proveedor con este CUIT: ' + data.proveedor).show();
+                            $input.addClass('is-invalid');
+                        } else {
+                            $warning.hide();
+                            $input.removeClass('is-invalid');
+                        }
+                    });
+                }, 500);
+            });
+        });
+    </script>
+}

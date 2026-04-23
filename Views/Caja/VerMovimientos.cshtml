@@ -1,0 +1,170 @@
+@model IEnumerable<comara.Models.MovimientoCaja>
+
+@{
+    ViewData["Title"] = "Movimientos de Caja";
+    var mesSeleccionado = (int?)ViewData["MesSeleccionado"] ?? DateTime.Now.Month;
+    var anioSeleccionado = (int?)ViewData["AnioSeleccionado"] ?? DateTime.Now.Year;
+    var mesNombre = (string?)ViewData["MesNombre"] ?? "";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2>Movimientos de Caja</h2>
+            <p class="text-muted">Historial de ingresos y egresos - @mesNombre</p>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <a asp-action="Index" class="btn btn-secondary">Volver a Caja</a>
+            <a asp-action="RegistrarMovimiento" class="btn btn-primary">Nuevo Movimiento</a>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <form method="get" asp-action="VerMovimientos" class="row g-3">
+                        <div class="col-md-3">
+                            <label for="mes" class="form-label">Mes</label>
+                            <select class="form-select" id="mes" name="mes">
+                                <option value="1" selected="@(mesSeleccionado == 1)">Enero</option>
+                                <option value="2" selected="@(mesSeleccionado == 2)">Febrero</option>
+                                <option value="3" selected="@(mesSeleccionado == 3)">Marzo</option>
+                                <option value="4" selected="@(mesSeleccionado == 4)">Abril</option>
+                                <option value="5" selected="@(mesSeleccionado == 5)">Mayo</option>
+                                <option value="6" selected="@(mesSeleccionado == 6)">Junio</option>
+                                <option value="7" selected="@(mesSeleccionado == 7)">Julio</option>
+                                <option value="8" selected="@(mesSeleccionado == 8)">Agosto</option>
+                                <option value="9" selected="@(mesSeleccionado == 9)">Septiembre</option>
+                                <option value="10" selected="@(mesSeleccionado == 10)">Octubre</option>
+                                <option value="11" selected="@(mesSeleccionado == 11)">Noviembre</option>
+                                <option value="12" selected="@(mesSeleccionado == 12)">Diciembre</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="anio" class="form-label">Año</label>
+                            <select class="form-select" id="anio" name="anio">
+                                @for (int y = DateTime.Now.Year - 5; y <= DateTime.Now.Year; y++)
+                                {
+                                    <option value="@y" selected="@(anioSeleccionado == y)">@y</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">&nbsp;</label>
+                            <button type="submit" class="btn btn-info w-100">
+                                <i class="bi bi-search"></i> Filtrar
+                            </button>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">&nbsp;</label>
+                            <a asp-action="VerMovimientos" class="btn btn-outline-secondary w-100">Limpiar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Todos los Movimientos</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Tipo</th>
+                                    <th>Método de Pago</th>
+                                    <th class="text-end">Monto</th>
+                                    <th>Descripción</th>
+                                    <th>Cheque Asociado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null && Model.Any())
+                                {
+                                    decimal totalIngresos = 0;
+                                    decimal totalEgresos = 0;
+
+                                    @foreach (var movimiento in Model)
+                                    {
+                                        if (movimiento.TipoMovimiento?.Tipo == "INGRESO")
+                                        {
+                                            totalIngresos += movimiento.MovMonto;
+                                        }
+                                        else
+                                        {
+                                            totalEgresos += movimiento.MovMonto;
+                                        }
+
+                                        <tr>
+                                            <td>@movimiento.MovFecha.ToString("dd/MM/yyyy")</td>
+                                            <td>
+                                                @if (movimiento.TipoMovimiento?.Tipo == "INGRESO")
+                                                {
+                                                    <span class="badge bg-success">@movimiento.TipoMovimiento?.Descripcion</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-danger">@movimiento.TipoMovimiento?.Descripcion</span>
+                                                }
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-info">@movimiento.TipoMetodoPago?.Descripcion</span>
+                                            </td>
+                                            <td class="text-end">
+                                                @if (movimiento.TipoMovimiento?.Tipo == "INGRESO")
+                                                {
+                                                    <strong class="text-success">+@movimiento.MovMonto.ToString("C")</strong>
+                                                }
+                                                else
+                                                {
+                                                    <strong class="text-danger">-@movimiento.MovMonto.ToString("C")</strong>
+                                                }
+                                            </td>
+                                            <td>@(movimiento.MovDescripcion ?? "-")</td>
+                                            <td>
+                                                @if (movimiento.Cheque != null)
+                                                {
+                                                    <span>Cheque #@movimiento.Cheque.ChqNumero</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>-</span>
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+
+                                    <tr class="table-secondary fw-bold">
+                                        <td colspan="3" class="text-end">TOTALES:</td>
+                                        <td class="text-end">
+                                            <div class="text-success">Ingresos: @totalIngresos.ToString("C")</div>
+                                            <div class="text-danger">Egresos: @totalEgresos.ToString("C")</div>
+                                            <div class="text-primary">Neto: @((totalIngresos - totalEgresos).ToString("C"))</div>
+                                        </td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="6" class="text-center">No hay movimientos registrados</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

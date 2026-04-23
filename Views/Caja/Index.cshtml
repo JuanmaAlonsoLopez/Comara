@@ -1,0 +1,242 @@
+@model comara.Models.ViewModels.CajaIndexViewModel
+
+@{
+    ViewData["Title"] = "Caja - Gestión Integral";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h2>Caja</h2>
+            <p class="text-muted">Gestión integral de caja, pagos y movimientos</p>
+        </div>
+        <div class="col-md-4 text-end">
+            <div class="btn-group" role="group">
+                <a asp-action="RegistrarPago" class="btn btn-success">Registrar Pago</a>
+                <a asp-action="RegistrarMovimiento" class="btn btn-primary">Movimiento de Caja</a>
+            </div>
+        </div>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <form method="get" asp-action="Index" class="row g-3">
+                        <div class="col-md-4">
+                            <label for="mes" class="form-label">Mes</label>
+                            <select name="mes" id="mes" class="form-select" asp-for="MesSeleccionado">
+                                <option value="1">Enero</option>
+                                <option value="2">Febrero</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Mayo</option>
+                                <option value="6">Junio</option>
+                                <option value="7">Julio</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="anio" class="form-label">Año</label>
+                            <input type="number" name="anio" id="anio" class="form-control" value="@Model.AnioSeleccionado" min="2020" max="2100">
+                        </div>
+                        <div class="col-md-4 d-flex align-items-end">
+                            <button type="submit" class="btn btn-primary">Filtrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card bg-light">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Efectivo en Caja</h5>
+                </div>
+                <div class="card-body text-center">
+                    <h2 class="@(Model.TotalEfectivoEnCaja >= 0 ? "text-success" : "text-danger")">
+                        @Model.TotalEfectivoEnCaja.ToString("C")
+                    </h2>
+                    <p class="text-muted">Saldo actual del mes</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card bg-light">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Cheques en Caja</h5>
+                </div>
+                <div class="card-body text-center">
+                    <h2 class="text-info">@Model.ChequesEnCaja.Count</h2>
+                    <p class="text-muted">@Model.ChequesEnCaja.Sum(c => c.ChqMonto).ToString("C") en total</p>
+                    <a asp-action="VerCheques" class="btn btn-sm btn-info">Ver Detalle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Balance por Método de Pago - @DateTime.Parse($"{Model.AnioSeleccionado}-{Model.MesSeleccionado}-01").ToString("MMMM yyyy")</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Método de Pago</th>
+                                    <th class="text-end">Ingresos</th>
+                                    <th class="text-end">Egresos</th>
+                                    <th class="text-end">Saldo Neto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var balance in Model.BalancePorMetodo)
+                                {
+                                    <tr>
+                                        <td><strong>@balance.MetodoPago</strong></td>
+                                        <td class="text-end text-success">@balance.TotalIngresos.ToString("C")</td>
+                                        <td class="text-end text-danger">@balance.TotalEgresos.ToString("C")</td>
+                                        <td class="text-end">
+                                            <strong class="@(balance.SaldoNeto >= 0 ? "text-success" : "text-danger")">
+                                                @balance.SaldoNeto.ToString("C")
+                                            </strong>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot class="table-secondary">
+                                <tr>
+                                    <td><strong>TOTAL</strong></td>
+                                    <td class="text-end"><strong>@Model.BalancePorMetodo.Sum(b => b.TotalIngresos).ToString("C")</strong></td>
+                                    <td class="text-end"><strong>@Model.BalancePorMetodo.Sum(b => b.TotalEgresos).ToString("C")</strong></td>
+                                    <td class="text-end"><strong>@Model.BalancePorMetodo.Sum(b => b.SaldoNeto).ToString("C")</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (Model.VentasCuentaCorriente.Any())
+    {
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header bg-warning text-dark">
+                        <h5 class="mb-0">Ventas en Cuenta Corriente - @DateTime.Parse($"{Model.AnioSeleccionado}-{Model.MesSeleccionado}-01").ToString("MMMM yyyy")</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Venta #</th>
+                                        <th>Fecha</th>
+                                        <th>Cliente</th>
+                                        <th class="text-end">Total Venta</th>
+                                        <th class="text-end">Pagado</th>
+                                        <th class="text-end">Saldo Pendiente</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var venta in Model.VentasCuentaCorriente)
+                                    {
+                                        <tr>
+                                            <td>@venta.VenCod</td>
+                                            <td>@venta.VenFech.ToString("dd/MM/yyyy")</td>
+                                            <td>@venta.ClienteNombre</td>
+                                            <td class="text-end">@venta.VenTotal.ToString("C")</td>
+                                            <td class="text-end text-success">@venta.TotalPagado.ToString("C")</td>
+                                            <td class="text-end">
+                                                <strong class="@(venta.SaldoPendiente > 0 ? "text-danger" : "text-success")">
+                                                    @venta.SaldoPendiente.ToString("C")
+                                                </strong>
+                                            </td>
+                                            <td>
+                                                @if (venta.SaldoPendiente > 0)
+                                                {
+                                                    <a asp-controller="Ventas" asp-action="Details" asp-route-id="@venta.VenCod" class="btn btn-sm btn-info">Ver Venta</a>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-success">Pagada</span>
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (Model.ChequesEnCaja.Any())
+    {
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0">Cheques en Caja</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-sm table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Número</th>
+                                        <th>Banco</th>
+                                        <th>Librador</th>
+                                        <th>Fecha Cobro</th>
+                                        <th class="text-end">Monto</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var cheque in Model.ChequesEnCaja.OrderBy(c => c.ChqFechaCobro))
+                                    {
+                                        <tr class="@(cheque.ChqFechaCobro < DateTime.Now ? "table-warning" : "")">
+                                            <td>@cheque.ChqNumero</td>
+                                            <td>@cheque.ChqBanco</td>
+                                            <td>@cheque.ChqLibrador</td>
+                                            <td>@cheque.ChqFechaCobro.ToString("dd/MM/yyyy")</td>
+                                            <td class="text-end">@cheque.ChqMonto.ToString("C")</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <a asp-action="VerMovimientos" class="btn btn-outline-primary">Ver Todos los Movimientos</a>
+            <a asp-action="VerCheques" class="btn btn-outline-info">Ver Todos los Cheques</a>
+        </div>
+    </div>
+</div>

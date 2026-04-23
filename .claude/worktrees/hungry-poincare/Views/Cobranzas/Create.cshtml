@@ -1,0 +1,47 @@
+@model comara.Models.Cobro
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Crear</h1>
+
+<h4>Cobranza</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CliCod" class="control-label"></label>
+                <select asp-for="CliCod" class ="form-control" asp-items="ViewBag.cliCod"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CobFech" class="control-label"></label>
+                <input asp-for="CobFech" class="form-control" />
+                <span asp-validation-for="CobFech" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CobMonto" class="control-label"></label>
+                <input asp-for="CobMonto" class="form-control" />
+                <span asp-validation-for="CobMonto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CobMetodo" class="control-label"></label>
+                <input asp-for="CobMetodo" class="form-control" />
+                <span asp-validation-for="CobMetodo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

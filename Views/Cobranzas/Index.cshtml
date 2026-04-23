@@ -7,26 +7,26 @@
 <h1>Cobranzas</h1>
 
 <p>
-    <a asp-action="Create">Crear Nueva</a>
+    <a asp-action="Create" class="btn btn-sm btn-primary">Crear Nueva</a>
 </p>
 
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.CobCod)
+                Código
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CobFech)
+                Fecha
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cliente.CliNombre)
+                Cliente
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CobMonto)
+                Monto
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CobMetodo)
+                Método
             </th>
             <th></th>
         </tr>
@@ -45,15 +45,16 @@
                 @Html.DisplayFor(modelItem => item.Cliente.CliNombre)
             </td>
             <td>
+                <a>$</a>
                 @Html.DisplayFor(modelItem => item.CobMonto)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CobMetodo)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.CobCod">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.CobCod">Detalles</a> |
-                <a asp-action="Delete" asp-route-id="@item.CobCod">Eliminar</a>
+                <a asp-action="Edit" asp-route-id="@item.CobCod" class="btn btn-sm btn-warning">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.CobCod" class="btn btn-sm btn-info">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.CobCod" class="btn btn-sm btn-danger">Eliminar</a>
             </td>
         </tr>
 }

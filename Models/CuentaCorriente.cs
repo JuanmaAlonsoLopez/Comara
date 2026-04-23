@@ -25,17 +25,17 @@ namespace comara.Models
 
         [Required]
         [Column("cctaMonto")]
-        public float CctaMonto { get; set; }
+        public decimal CctaMonto { get; set; }
 
         [Required]
         [Column("cctaSaldo")]
-        public float CctaSaldo { get; set; }
+        public decimal CctaSaldo { get; set; }
 
         [StringLength(255)]
         [Column("cctaDesc")]
         public string? CctaDesc { get; set; }
 
-        // Propiedad de Navegación
+        // Propiedad de Navegaciï¿½n
         [ForeignKey("CliCod")]
         public virtual Cliente? Cliente { get; set; }
     }

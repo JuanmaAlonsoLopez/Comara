@@ -1,0 +1,97 @@
+@model comara.Models.Pago
+
+@{
+    ViewData["Title"] = "Registrar Pago";
+}
+
+<div class="container">
+    <h2>Registrar Pago</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-8">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="CliCod" class="form-label">Cliente</label>
+                    <select asp-for="CliCod" class="form-select" asp-items="ViewBag.CliCod" id="clienteSelect">
+                        <option value="">-- Seleccione un cliente --</option>
+                    </select>
+                    <span asp-validation-for="CliCod" class="text-danger"></span>
+                </div>
+
+                @if (ViewBag.SaldoActual != null)
+                {
+                    <div class="alert alert-info">
+                        <strong>Saldo actual del cliente:</strong> @(((float)ViewBag.SaldoActual).ToString("C"))
+                    </div>
+                }
+                <div id="saldoInfo" class="alert alert-info d-none">
+                    <strong>Saldo actual:</strong> <span id="saldoActual">$0.00</span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="PagFech" class="form-label">Fecha</label>
+                    <input asp-for="PagFech" type="date" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                    <span asp-validation-for="PagFech" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="PagMonto" class="form-label">Monto</label>
+                    <input asp-for="PagMonto" type="number" step="0.01" class="form-control" />
+                    <span asp-validation-for="PagMonto" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="PagMetodoPago" class="form-label">Método de Pago</label>
+                    <select asp-for="PagMetodoPago" class="form-select" asp-items="ViewBag.PagMetodoPago">
+                        <option value="">-- Seleccione un método de pago --</option>
+                    </select>
+                    <span asp-validation-for="PagMetodoPago" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="PagDesc" class="form-label">Descripción</label>
+                    <textarea asp-for="PagDesc" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="PagDesc" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Registrar Pago</button>
+                    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function() {
+            $('#clienteSelect').change(function() {
+                var clienteId = $(this).val();
+                if (clienteId) {
+                    $.ajax({
+                        url: '@Url.Action("GetSaldoCliente", "Caja")',
+                        type: 'GET',
+                        data: { clienteId: clienteId },
+                        success: function(response) {
+                            if (response.success) {
+                                $('#saldoActual').text('$' + response.saldo.toFixed(2));
+                                $('#saldoInfo').removeClass('d-none');
+                            }
+                        },
+                        error: function() {
+                            $('#saldoInfo').addClass('d-none');
+                        }
+                    });
+                } else {
+                    $('#saldoInfo').addClass('d-none');
+                }
+            });
+        });
+    </script>
+}

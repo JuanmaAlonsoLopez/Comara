@@ -1,0 +1,64 @@
+@model IEnumerable<comara.Models.CuentaCorriente>
+
+@{
+    ViewData["Title"] = "Reporte de Cuentas Corrientes";
+}
+
+<h1>Reporte de Cuentas Corrientes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CctaFech)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente != null ? model.Cliente.CliNombre : null)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CctaMovimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CctaMonto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CctaSaldo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CctaDesc)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CctaFech)
+            </td>
+            <td>
+                @if (item.Cliente != null)
+                {
+                    @Html.DisplayFor(modelItem => item.Cliente.CliNombre)
+                }
+                else
+                {
+                    <span class="text-muted">Sin cliente</span>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CctaMovimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CctaMonto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CctaSaldo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CctaDesc)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,260 @@
+@model comara.Models.ViewModels.RegistrarPagoViewModel
+
+@{
+    ViewData["Title"] = "Registrar Pago";
+}
+
+<div class="container">
+    <h2>Registrar Pago de Cuenta Corriente</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-8">
+            <form asp-action="RegistrarPago" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="card mb-3">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Datos del Pago</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="CliCod" class="control-label"></label>
+                                    <select asp-for="CliCod" class="form-select" asp-items="ViewBag.CliCod" id="clienteSelect">
+                                        <option value="">-- Seleccione un cliente --</option>
+                                    </select>
+                                    <span asp-validation-for="CliCod" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="PagFech" class="control-label"></label>
+                                    <input asp-for="PagFech" class="form-control" type="date" />
+                                    <span asp-validation-for="PagFech" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="PagMonto" class="control-label"></label>
+                                    <input asp-for="PagMonto" class="form-control" type="number" step="0.01" />
+                                    <span asp-validation-for="PagMonto" class="text-danger"></span>
+                                    <small class="form-text text-muted">Saldo actual: <strong id="saldoActual">$@Model.SaldoActual.ToString("N2")</strong></small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="PagMetodoPago" class="control-label"></label>
+                                    <select asp-for="PagMetodoPago" class="form-select" asp-items="ViewBag.PagMetodoPago" id="metodoPagoSelect">
+                                        <option value="">-- Seleccione método de pago --</option>
+                                    </select>
+                                    <span asp-validation-for="PagMetodoPago" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="VenCod" class="control-label"></label>
+                            <select asp-for="VenCod" class="form-select" id="ventaSelect">
+                                <option value="">-- Pago general a cuenta corriente --</option>
+                                @foreach (var venta in Model.VentasPendientes)
+                                {
+                                    <option value="@venta.VenCod">
+                                        Venta #@venta.VenCod - @venta.Descripcion - Pendiente: $@venta.Pendiente.ToString("N2")
+                                    </option>
+                                }
+                            </select>
+                            <span asp-validation-for="VenCod" class="text-danger"></span>
+                            <small class="form-text text-muted">Opcional: vincular este pago a una venta específica</small>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="PagDesc" class="control-label"></label>
+                            <textarea asp-for="PagDesc" class="form-control" rows="2"></textarea>
+                            <span asp-validation-for="PagDesc" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3" id="datosCheque" style="display: none;">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0">Datos del Cheque</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="ChqNumero" class="control-label"></label>
+                                    <input asp-for="ChqNumero" class="form-control" />
+                                    <span asp-validation-for="ChqNumero" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="ChqBanco" class="control-label"></label>
+                                    <input asp-for="ChqBanco" class="form-control" />
+                                    <span asp-validation-for="ChqBanco" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="ChqFechaEmision" class="control-label"></label>
+                                    <input asp-for="ChqFechaEmision" class="form-control" type="date" />
+                                    <span asp-validation-for="ChqFechaEmision" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="ChqFechaCobro" class="control-label"></label>
+                                    <input asp-for="ChqFechaCobro" class="form-control" type="date" />
+                                    <span asp-validation-for="ChqFechaCobro" class="text-danger"></span>
+                                    <small class="form-text text-muted">Fecha de pago diferido del cheque</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="ChqLibrador" class="control-label"></label>
+                                    <input asp-for="ChqLibrador" class="form-control" />
+                                    <span asp-validation-for="ChqLibrador" class="text-danger"></span>
+                                    <small class="form-text text-muted">Persona o empresa que emite el cheque</small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-3">
+                                    <label asp-for="ChqCUIT" class="control-label"></label>
+                                    <input asp-for="ChqCUIT" class="form-control" />
+                                    <span asp-validation-for="ChqCUIT" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="ChqObservaciones" class="control-label"></label>
+                            <textarea asp-for="ChqObservaciones" class="form-control" rows="2"></textarea>
+                            <span asp-validation-for="ChqObservaciones" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Registrar Pago</button>
+                    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card bg-light">
+                <div class="card-header">
+                    <h5 class="mb-0">Información</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Saldo actual del cliente:</strong></p>
+                    <h3 class="text-danger" id="saldoDisplay">$@Model.SaldoActual.ToString("N2")</h3>
+                    <hr />
+                    <p class="text-muted small">
+                        <strong>Nota:</strong> Al registrar el pago, se actualizará automáticamente
+                        la cuenta corriente del cliente y se descontará el monto del saldo pendiente.
+                    </p>
+                    @if (Model.SaldoActual == 0)
+                    {
+                        <div class="alert alert-warning">
+                            Este cliente no tiene saldo pendiente en su cuenta corriente.
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="card bg-light mt-3">
+                <div class="card-header">
+                    <h5 class="mb-0">Datos del Cheque</h5>
+                </div>
+                <div class="card-body">
+                    <p class="small text-muted">
+                        <strong>Componentes de un cheque argentino:</strong>
+                    </p>
+                    <ul class="small">
+                        <li><strong>Número:</strong> Identificador único del cheque</li>
+                        <li><strong>Banco:</strong> Entidad bancaria emisora</li>
+                        <li><strong>Fecha de Emisión:</strong> Cuándo se emitió</li>
+                        <li><strong>Fecha de Cobro:</strong> Fecha de pago (puede ser diferido)</li>
+                        <li><strong>Librador:</strong> Quien emite el cheque</li>
+                        <li><strong>CUIT:</strong> Identificación fiscal del librador</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(document).ready(function () {
+            // Mostrar/ocultar campos de cheque según método de pago seleccionado
+            $('#metodoPagoSelect').on('change', function () {
+                var metodoPago = $(this).val();
+                // 4 = Cheque según la base de datos
+                if (metodoPago == '4') {
+                    $('#datosCheque').slideDown();
+                } else {
+                    $('#datosCheque').slideUp();
+                }
+            });
+
+            // Obtener saldo y ventas pendientes del cliente cuando se selecciona
+            $('#clienteSelect').on('change', function () {
+                var clienteId = $(this).val();
+                if (clienteId) {
+                    // Obtener saldo
+                    $.ajax({
+                        url: '@Url.Action("GetSaldoCliente", "Caja")',
+                        type: 'GET',
+                        data: { clienteId: clienteId },
+                        success: function (response) {
+                            if (response.success) {
+                                $('#saldoActual').text('$' + response.saldo.toFixed(2));
+                                $('#saldoDisplay').text('$' + response.saldo.toFixed(2));
+                            }
+                        }
+                    });
+
+                    // Obtener ventas pendientes
+                    $.ajax({
+                        url: '@Url.Action("GetVentasPendientes", "Caja")',
+                        type: 'GET',
+                        data: { clienteId: clienteId },
+                        success: function (response) {
+                            var select = $('#ventaSelect');
+                            select.empty();
+                            select.append('<option value="">-- Pago general a cuenta corriente --</option>');
+                            if (response.success && response.ventas) {
+                                response.ventas.forEach(function (venta) {
+                                    select.append('<option value="' + venta.venCod + '">Venta #' + venta.venCod + ' - ' + venta.descripcion + ' - Pendiente: $' + venta.pendiente.toFixed(2) + '</option>');
+                                });
+                            }
+                        }
+                    });
+                } else {
+                    $('#ventaSelect').empty().append('<option value="">-- Pago general a cuenta corriente --</option>');
+                }
+            });
+
+            // Si ya hay un método de pago seleccionado, mostrar campos de cheque
+            var metodoPagoInicial = $('#metodoPagoSelect').val();
+            if (metodoPagoInicial == '4') {
+                $('#datosCheque').show();
+            }
+        });
+    </script>
+}

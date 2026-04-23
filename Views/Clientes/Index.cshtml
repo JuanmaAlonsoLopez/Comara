@@ -1,0 +1,113 @@
+@model IEnumerable<comara.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<h1>Clientes</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-sm btn-primary">Crear Nuevo</a>
+    <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#importModal">
+        Importar desde Excel
+    </button>
+    <a asp-action="DownloadTemplate" class="btn btn-sm btn-info">
+        <i class="bi bi-download"></i> Descargar Plantilla Excel
+    </a>
+</p>
+
+@if (TempData["ImportMessage"] != null)
+{
+    <div class="alert alert-@(TempData["ImportSuccess"] != null && (bool)TempData["ImportSuccess"] ? "success" : "danger") alert-dismissible fade show" role="alert">
+        @TempData["ImportMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<!-- Modal para importar Excel -->
+<div class="modal fade" id="importModal" tabindex="-1" aria-labelledby="importModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="importModalLabel">Importar Clientes desde Excel</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="ImportExcel" method="post" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="excelFile" class="form-label">Seleccionar archivo Excel (.xlsx)</label>
+                        <input type="file" class="form-control" id="excelFile" name="excelFile" accept=".xlsx" required>
+                    </div>
+                    <div class="alert alert-info">
+                        <strong>Formato del archivo:</strong>
+                        <ul class="mb-0">
+                            <li>El archivo debe ser .xlsx (Excel)</li>
+                            <li>La primera fila debe contener los encabezados</li>
+                            <li>Ver especificaciones completas en la documentación</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Importar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Número Documento
+            </th>
+            <th>
+                Dirección
+            </th>
+            <th>
+                Teléfono
+            </th>
+            <th>
+                Condición de IVA
+            </th>
+            <th>
+                Forma de Pago
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CliNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CliNumDoc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CliDireccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CliTelefono)
+            </td>
+            <td>
+                @(item.CondicionIVA != null ? item.CondicionIVA.Descripcion : "No especificado")
+            </td>
+            <td>
+                @(item.TipoFormaPago != null ? Html.DisplayFor(modelItem => item.TipoFormaPago.Descripcion) : "No especificado")
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

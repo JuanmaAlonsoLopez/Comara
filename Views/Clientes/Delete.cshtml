@@ -1,0 +1,82 @@
+@model comara.Models.Cliente
+
+@{
+    ViewData["Title"] = "Eliminar Cliente";
+    var tieneVentas = ViewBag.TieneVentas ?? false;
+}
+
+<h1>Eliminar</h1>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (tieneVentas)
+{
+    <div class="alert alert-warning" role="alert">
+        <strong>Atención:</strong> Este cliente tiene ventas asociadas y no puede ser eliminado.
+    </div>
+}
+else
+{
+    <h3>¿Está seguro de que desea eliminar este cliente?</h3>
+}
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            ID
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CliNombre)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.CliNombre)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CliNumDoc)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.CliNumDoc)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CliDireccion)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.CliDireccion)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CliTelefono)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.CliTelefono)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CliEmail)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.CliEmail)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        @if (!tieneVentas)
+        {
+            <input type="submit" value="Eliminar" class="btn btn-sm btn-danger" />
+        }
+        else
+        {
+            <button type="button" class="btn btn-sm btn-danger" disabled title="No se puede eliminar porque tiene ventas asociadas">Eliminar</button>
+        }
+        <a asp-action="Index" class="btn btn-sm btn-secondary">Volver a la lista</a>
+    </form>
+</div>

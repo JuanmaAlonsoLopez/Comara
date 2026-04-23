@@ -1,0 +1,294 @@
+@model comara.Models.ViewModels.RegistrarPagoFacturaViewModel
+
+@{
+    ViewData["Title"] = "Registrar Pago de Factura";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="mb-4">
+                <i class="bi bi-cash-coin"></i> Registrar Pago de Factura
+            </h2>
+        </div>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle"></i> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-triangle"></i> @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="row">
+        <!-- Datos de la Factura -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="bi bi-receipt"></i> Datos de la Factura</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row mb-0">
+                        <dt class="col-sm-5">Factura N:</dt>
+                        <dd class="col-sm-7"><strong>@Model.NumeroFactura</strong></dd>
+
+                        <dt class="col-sm-5">Tipo:</dt>
+                        <dd class="col-sm-7">@Model.TipoComprobante</dd>
+
+                        <dt class="col-sm-5">Fecha:</dt>
+                        <dd class="col-sm-7">@Model.FechaFactura.ToString("dd/MM/yyyy")</dd>
+
+                        <dt class="col-sm-5">Cliente:</dt>
+                        <dd class="col-sm-7">@Model.ClienteNombre</dd>
+
+                        <dt class="col-sm-5">Forma Pago:</dt>
+                        <dd class="col-sm-7">
+                            @if (!string.IsNullOrEmpty(Model.ClienteFormaPagoDescripcion))
+                            {
+                                <span class="badge bg-info">@Model.ClienteFormaPagoDescripcion</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">Sin configurar</span>
+                            }
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+            <!-- Estado de Pago -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="bi bi-graph-up"></i> Estado de Pago</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span>Total Factura:</span>
+                        <strong class="text-primary fs-5">$@string.Format("{0:N2}", Model.TotalFactura)</strong>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span>Total Pagado:</span>
+                        <strong class="text-success">$@string.Format("{0:N2}", Model.TotalPagado)</strong>
+                    </div>
+                    <hr />
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>Saldo Pendiente:</span>
+                        <strong class="text-danger fs-5">$@string.Format("{0:N2}", Model.SaldoPendiente)</strong>
+                    </div>
+
+                    <!-- Barra de progreso -->
+                    @{
+                        var porcentajePagado = Model.TotalFactura > 0 ? (Model.TotalPagado / Model.TotalFactura) * 100 : 0;
+                        var porcentajeRedondeado = (int)Math.Round(porcentajePagado);
+                        var colorBarra = porcentajeRedondeado >= 100 ? "bg-success" : (porcentajeRedondeado > 0 ? "bg-warning" : "bg-danger");
+                    }
+                    <div class="progress mt-3" style="height: 25px;">
+                        <div class="progress-bar @colorBarra" role="progressbar"
+                             style="width: @(porcentajeRedondeado)%;"
+                             aria-valuenow="@porcentajeRedondeado" aria-valuemin="0" aria-valuemax="100">
+                            @(porcentajeRedondeado)% pagado
+                        </div>
+                    </div>
+
+                    <!-- Badge de Estado -->
+                    <div class="text-center mt-3">
+                        @if (Model.EstadoPagoActual == 3)
+                        {
+                            <span class="badge bg-success fs-6">
+                                <i class="bi bi-check-circle"></i> Pagada
+                            </span>
+                        }
+                        else if (Model.EstadoPagoActual == 2)
+                        {
+                            <span class="badge bg-warning text-dark fs-6">
+                                <i class="bi bi-clock-history"></i> Parcialmente Pagada
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger fs-6">
+                                <i class="bi bi-exclamation-circle"></i> Pendiente
+                            </span>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario de Pago -->
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0"><i class="bi bi-plus-circle"></i> Registrar Nuevo Pago</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="RegistrarPagoFactura" method="post">
+                        <input type="hidden" asp-for="VenCod" />
+                        <input type="hidden" asp-for="ClienteId" />
+                        <input type="hidden" asp-for="NumeroFactura" />
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="MontoPago" class="form-label"></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input asp-for="MontoPago" class="form-control" type="number" step="0.01" min="0.01" max="@Model.SaldoPendiente" />
+                                </div>
+                                <span asp-validation-for="MontoPago" class="text-danger"></span>
+                                <small class="text-muted">Maximo: $@string.Format("{0:N2}", Model.SaldoPendiente)</small>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="MetodoPago" class="form-label"></label>
+                                <select asp-for="MetodoPago" class="form-select" id="metodoPagoSelect">
+                                    <option value="">-- Seleccionar --</option>
+                                    @foreach (var metodo in Model.MetodosPagoDisponibles)
+                                    {
+                                        <option value="@metodo.Id">@metodo.Descripcion</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="MetodoPago" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="FechaPago" class="form-label"></label>
+                                <input asp-for="FechaPago" class="form-control" type="date" />
+                                <span asp-validation-for="FechaPago" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="Descripcion" class="form-label"></label>
+                                <input asp-for="Descripcion" class="form-control" placeholder="Opcional" />
+                            </div>
+                        </div>
+
+                        <!-- Campos de Cheque (ocultos por defecto) -->
+                        <div id="chequeFields" style="display: none;">
+                            <hr />
+                            <h6 class="text-muted mb-3"><i class="bi bi-file-text"></i> Datos del Cheque</h6>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label asp-for="ChequeNumero" class="form-label"></label>
+                                    <input asp-for="ChequeNumero" class="form-control" />
+                                    <span asp-validation-for="ChequeNumero" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label asp-for="ChequeBanco" class="form-label"></label>
+                                    <input asp-for="ChequeBanco" class="form-control" />
+                                    <span asp-validation-for="ChequeBanco" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label asp-for="ChequeLibrador" class="form-label"></label>
+                                    <input asp-for="ChequeLibrador" class="form-control" />
+                                    <span asp-validation-for="ChequeLibrador" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label asp-for="ChequeFechaEmision" class="form-label"></label>
+                                    <input asp-for="ChequeFechaEmision" class="form-control" type="date" />
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label asp-for="ChequeFechaCobro" class="form-label"></label>
+                                    <input asp-for="ChequeFechaCobro" class="form-control" type="date" />
+                                    <span asp-validation-for="ChequeFechaCobro" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label asp-for="ChequeCUIT" class="form-label"></label>
+                                    <input asp-for="ChequeCUIT" class="form-control" placeholder="XX-XXXXXXXX-X" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr />
+                        <div class="d-flex justify-content-between">
+                            <a asp-action="Details" asp-route-id="@Model.VenCod" class="btn btn-secondary">
+                                <i class="bi bi-arrow-left"></i> Volver a Detalles
+                            </a>
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <i class="bi bi-check-lg"></i> Registrar Pago
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Historial de Pagos -->
+            @if (Model.PagosRealizados.Any())
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="bi bi-clock-history"></i> Historial de Pagos</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <table class="table table-striped mb-0">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Fecha</th>
+                                    <th>Metodo</th>
+                                    <th class="text-end">Monto</th>
+                                    <th>Descripcion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var pago in Model.PagosRealizados.OrderByDescending(p => p.Fecha))
+                                {
+                                    <tr>
+                                        <td>@pago.PagCod</td>
+                                        <td>@pago.Fecha.ToString("dd/MM/yyyy")</td>
+                                        <td><span class="badge bg-secondary">@pago.MetodoPago</span></td>
+                                        <td class="text-end text-success"><strong>$@string.Format("{0:N2}", pago.Monto)</strong></td>
+                                        <td>@pago.Descripcion</td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr class="table-dark">
+                                    <td colspan="3"><strong>Total Pagado:</strong></td>
+                                    <td class="text-end"><strong>$@string.Format("{0:N2}", Model.TotalPagado)</strong></td>
+                                    <td></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function() {
+            // Mostrar/ocultar campos de cheque segun metodo seleccionado
+            $('#metodoPagoSelect').on('change', function() {
+                var metodoId = $(this).val();
+                if (metodoId === '4') { // 4 = Cheque
+                    $('#chequeFields').slideDown();
+                } else {
+                    $('#chequeFields').slideUp();
+                }
+            });
+
+            // Verificar estado inicial
+            if ($('#metodoPagoSelect').val() === '4') {
+                $('#chequeFields').show();
+            }
+        });
+    </script>
+}

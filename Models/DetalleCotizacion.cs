@@ -20,17 +20,17 @@ namespace comara.Models
 
         [Required]
         [Column("detCant")]
-        public float DetCant { get; set; }
+        public decimal DetCant { get; set; }
 
         [Required]
         [Column("detPrecio")]
-        public float DetPrecio { get; set; }
+        public decimal DetPrecio { get; set; }
 
         [Required]
         [Column("detSubtotal")]
-        public float DetSubtotal { get; set; }
+        public decimal DetSubtotal { get; set; }
 
-        // Propiedades de Navegación
+        // Propiedades de Navegaciï¿½n
         [ForeignKey("CotCod")]
         public virtual Cotizacion? Cotizacion { get; set; }
 

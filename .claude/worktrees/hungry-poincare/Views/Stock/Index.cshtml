@@ -1,0 +1,49 @@
+@model IEnumerable<comara.Models.Articulo>
+
+@{
+    ViewData["Title"] = "Stock";
+}
+
+<h1>Stock de Artículos</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ArtCod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArtDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArtStock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArtStockMin)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArtCod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArtDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArtStock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArtStockMin)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ArtCod">Editar Stock</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

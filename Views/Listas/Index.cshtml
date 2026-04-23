@@ -1,0 +1,49 @@
+﻿@model IEnumerable<comara.Models.Lista>
+
+@{
+    ViewData["Title"] = "Listas de Precios";
+}
+
+<h1>Listas de Precios</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-sm btn-primary">Crear Nueva Lista</a>
+    <a asp-controller="Precios" asp-action="AumentarPrecios" class="btn btn-sm btn-success">Aumento de precios</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Código
+            </th>
+            <th>
+                Descripción
+            </th>
+            <th>
+                Porcentaje (%)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ListCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ListDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ListPercent)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ListCode" class="btn btn-sm btn-warning">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ListCode" class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

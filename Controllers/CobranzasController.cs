@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using comara.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -6,6 +7,7 @@ using comara.Models;
 
 namespace comara.Controllers
 {
+    [Authorize]
     public class CobranzasController : Controller
     {
         private readonly ApplicationDbContext _context;

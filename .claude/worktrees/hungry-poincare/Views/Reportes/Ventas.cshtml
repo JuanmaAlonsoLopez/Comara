@@ -1,0 +1,45 @@
+@model IEnumerable<comara.Models.Venta>
+
+@{
+    ViewData["Title"] = "Reporte de Ventas";
+}
+
+<h1>Reporte de Ventas</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VenFech)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente != null ? model.Cliente.CliNombre : null)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VenTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VenEstado)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VenFech)
+            </td>
+            <td>
+                @(item.Cliente != null ? Html.DisplayFor(modelItem => item.Cliente.CliNombre) : "")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VenTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VenEstado)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

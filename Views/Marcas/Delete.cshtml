@@ -1,0 +1,76 @@
+@model comara.Models.Marca
+
+@{
+    ViewData["Title"] = "Eliminar Marca";
+    var articulosAsociados = ViewBag.ArticulosAsociados ?? 0;
+}
+
+<h1>Eliminar Marca</h1>
+
+<h3>¿Esta seguro que desea eliminar esta marca?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Codigo
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.marCod)
+        </dd>
+        <dt class="col-sm-2">
+            Nombre
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.marNombre)
+        </dd>
+    </dl>
+
+    @if (articulosAsociados > 0)
+    {
+        <div class="alert alert-warning" role="alert">
+            <h5 class="alert-heading">
+                <i class="bi bi-exclamation-triangle"></i> Advertencia
+            </h5>
+            <p>
+                Esta marca tiene <strong>@articulosAsociados articulo(s)</strong> asociado(s).
+            </p>
+            <hr />
+            <p class="mb-0">
+                Si elimina esta marca, los articulos asociados quedaran <strong>sin marca asignada</strong>
+                y debera editarlos manualmente para asignarles una nueva marca.
+            </p>
+        </div>
+    }
+
+    <form asp-action="Delete" id="deleteForm">
+        <input type="hidden" asp-for="marCod" />
+
+        @if (articulosAsociados > 0)
+        {
+            <button type="button" class="btn btn-sm btn-danger" onclick="confirmarEliminacion()">
+                Eliminar de todas formas
+            </button>
+        }
+        else
+        {
+            <input type="submit" value="Eliminar" class="btn btn-sm btn-danger" />
+        }
+        <a asp-action="Index" class="btn btn-sm btn-secondary">Volver a la Lista</a>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        function confirmarEliminacion() {
+            var cantidadArticulos = @articulosAsociados;
+            var mensaje = 'Esta a punto de eliminar esta marca.\n\n' +
+                'IMPORTANTE: ' + cantidadArticulos + ' articulo(s) quedaran sin marca asignada.\n' +
+                'Debera editar cada uno de ellos para asignarles una nueva marca.\n\n' +
+                '¿Esta seguro que desea continuar?';
+
+            if (confirm(mensaje)) {
+                document.getElementById('deleteForm').submit();
+            }
+        }
+    </script>
+}

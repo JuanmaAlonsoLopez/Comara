@@ -1,0 +1,50 @@
+@model comara.Models.Pago
+
+@{
+    ViewData["Title"] = "Detalle del Pago";
+}
+
+<div class="container">
+    <h2>Detalle del Pago</h2>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-8">
+            <dl class="row">
+                <dt class="col-sm-4">Código de Pago</dt>
+                <dd class="col-sm-8">@Model.PagCod</dd>
+
+                <dt class="col-sm-4">Cliente</dt>
+                <dd class="col-sm-8">@Model.Cliente?.CliNombre</dd>
+
+                <dt class="col-sm-4">Fecha</dt>
+                <dd class="col-sm-8">@Model.PagFech.ToString("dd/MM/yyyy")</dd>
+
+                <dt class="col-sm-4">Monto</dt>
+                <dd class="col-sm-8"><strong class="text-success">@Model.PagMonto.ToString("C")</strong></dd>
+
+                <dt class="col-sm-4">Método de Pago</dt>
+                <dd class="col-sm-8">
+                    <span class="badge bg-info">@Model.TipoMetodoPago?.Descripcion</span>
+                </dd>
+
+                <dt class="col-sm-4">Descripción</dt>
+                <dd class="col-sm-8">@(Model.PagDesc ?? "-")</dd>
+
+                @if (Model.CuentaCorriente != null)
+                {
+                    <dt class="col-sm-4">Referencia Cuenta Corriente</dt>
+                    <dd class="col-sm-8">#@Model.CuentaCorriente.CctaCod - @Model.CuentaCorriente.CctaDesc</dd>
+                }
+            </dl>
+
+            <div class="mb-3">
+                <a asp-action="Index" class="btn btn-secondary">Volver al listado</a>
+                @if (Model.Cliente != null)
+                {
+                    <a asp-action="VerCuentaCorriente" asp-route-id="@Model.Cliente.Id" class="btn btn-info">Ver Cuenta Corriente</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>

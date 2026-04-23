@@ -1,0 +1,183 @@
+@using comara.Services
+@model comara.Models.Venta
+
+@{
+    ViewData["Title"] = "Detalle de Factura Electrónica";
+    var ivaData = FacturaIvaCalculadorService.CalcularIvaDiscriminado(Model);
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Factura Electrónica</h2>
+        <div>
+            <a asp-action="DescargarPDF" asp-route-id="@Model.VenCod" class="btn btn-danger">
+                <i class="bi bi-file-pdf"></i> Descargar PDF
+            </a>
+            <button onclick="window.print()" class="btn btn-outline-primary">
+                <i class="bi bi-printer"></i> Imprimir
+            </button>
+            @if (!string.IsNullOrEmpty(Model.VenCAE) && Model.VenTipoCbte != null && (Model.VenTipoCbte == 1 || Model.VenTipoCbte == 6 || Model.VenTipoCbte == 11))
+            {
+                <a asp-action="NotaCredito" asp-route-id="@Model.VenCod" class="btn btn-warning">
+                    <i class="bi bi-x-circle"></i> Nota de Crédito
+                </a>
+            }
+            <a asp-action="Index" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left"></i> Volver
+            </a>
+        </div>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <div class="row">
+                <div class="col-md-8">
+                    <h4 class="mb-0">@Model.TipoComprobante?.Descripcion</h4>
+                    <p class="mb-0">Nro: @Model.VenPuntoVenta?.ToString("D4")-@Model.VenNumComprobante?.ToString("D8")</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <p class="mb-0"><strong>Fecha:</strong> @Model.VenFech.ToString("dd/MM/yyyy")</p>
+                    @if (Model.VenResultadoAfip == "A")
+                    {
+                        <span class="badge bg-success">AUTORIZADO</span>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Datos del Cliente</h5>
+                    <p><strong>Razón Social:</strong> @Model.Cliente?.CliNombre</p>
+                    <p>
+                        <strong>@Model.Cliente?.TipoDocumento?.Descripcion:</strong>
+                        @Model.Cliente?.CliNumDoc
+                    </p>
+                    <p><strong>Condición IVA:</strong> @Model.Cliente?.CondicionIVA?.Descripcion</p>
+                    @if (!string.IsNullOrEmpty(Model.Cliente?.CliDireccion))
+                    {
+                        <p><strong>Dirección:</strong> @Model.Cliente?.CliDireccion</p>
+                    }
+                </div>
+                <div class="col-md-6">
+                    <h5>Datos de Autorización AFIP</h5>
+                    <div class="alert alert-success">
+                        <p class="mb-1"><strong>CAE:</strong></p>
+                        <h4 class="mb-2">@Model.VenCAE</h4>
+                        <p class="mb-1"><strong>Vencimiento CAE:</strong></p>
+                        <p class="mb-0">@Model.VenCAEVencimiento?.ToString("dd/MM/yyyy")</p>
+                    </div>
+                    @if (Model.VenFechaAutorizacion.HasValue)
+                    {
+                        <p class="small text-muted">
+                            <strong>Fecha Autorización:</strong>
+                            @Model.VenFechaAutorizacion.Value.ToString("dd/MM/yyyy HH:mm:ss")
+                        </p>
+                    }
+                </div>
+            </div>
+
+            <hr />
+
+            <h5>Detalle de Items</h5>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descripción</th>
+                        <th class="text-end">Cantidad</th>
+                        @if (ivaData.DiscriminarIva)
+                        {
+                            <th class="text-end">P. Unit. sin IVA</th>
+                            <th class="text-end">P. Unit. con IVA</th>
+                            <th class="text-end">Subtotal sin IVA</th>
+                            <th class="text-end">Subtotal con IVA</th>
+                        }
+                        else
+                        {
+                            <th class="text-end">Precio Unit.</th>
+                            <th class="text-end">Subtotal</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var detalle in ivaData.Detalles)
+                    {
+                        <tr>
+                            <td>@detalle.Codigo</td>
+                            <td>@detalle.Descripcion</td>
+                            <td class="text-end">@detalle.Cantidad.ToString("N2")</td>
+                            @if (ivaData.DiscriminarIva)
+                            {
+                                <td class="text-end">@detalle.PrecioUnitarioSinIva.ToString("C")</td>
+                                <td class="text-end">@detalle.PrecioUnitarioConIva.ToString("C")</td>
+                                <td class="text-end">@detalle.SubtotalSinIva.ToString("C")</td>
+                                <td class="text-end">@detalle.SubtotalConIva.ToString("C")</td>
+                            }
+                            else
+                            {
+                                <td class="text-end">@detalle.PrecioUnitarioConIva.ToString("C")</td>
+                                <td class="text-end">@detalle.SubtotalConIva.ToString("C")</td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    @if (ivaData.DiscriminarIva)
+                    {
+                        <!-- Factura Tipo A - Discriminar IVA -->
+                        <tr>
+                            <th colspan="5" class="text-end">Subtotal (sin IVA):</th>
+                            <th class="text-end">@ivaData.SubtotalNeto.ToString("C")</th>
+                            <th></th>
+                        </tr>
+                        <tr class="table-active">
+                            <th colspan="5" class="text-end">TOTAL (con IVA):</th>
+                            <th></th>
+                            <th class="text-end">@ivaData.Total.ToString("C")</th>
+                        </tr>
+                    }
+                    else
+                    {
+                        <!-- Factura Tipo B, C, etc. - IVA incluido -->
+                        <tr class="table-active">
+                            <th colspan="4" class="text-end">TOTAL:</th>
+                            <th class="text-end">@Model.VenTotal.ToString("C")</th>
+                        </tr>
+                    }
+                </tfoot>
+            </table>
+
+            @if (!string.IsNullOrEmpty(Model.VenObservacionesAfip))
+            {
+                <div class="alert alert-warning">
+                    <strong>Observaciones AFIP:</strong>
+                    <p class="mb-0">@Model.VenObservacionesAfip</p>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body text-center">
+            <p class="small text-muted mb-0">
+                Este documento ha sido autorizado por AFIP mediante el sistema de Facturación Electrónica.
+                Para verificar su validez puede consultar en: <a href="https://www.afip.gob.ar/fe/qr/" target="_blank">www.afip.gob.ar/fe/qr/</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+    @@media print {
+        .btn, .alert-dismissible { display: none !important; }
+    }
+</style>

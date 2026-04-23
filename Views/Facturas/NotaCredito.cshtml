@@ -1,0 +1,144 @@
+@model comara.Models.Venta
+
+@{
+    ViewData["Title"] = "Generar Nota de Crédito";
+}
+
+<div class="container mt-4">
+    <h2>Generar Nota de Crédito</h2>
+    <p class="text-muted">Anular factura electrónica</p>
+
+    <div class="alert alert-warning">
+        <strong>Atención:</strong> Esto generará una Nota de Crédito en AFIP que anulará esta factura.
+        La operación no se puede revertir una vez autorizada por AFIP.
+    </div>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header bg-danger text-white">
+                    <h5 class="mb-0">Factura a Anular</h5>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-5">Tipo:</dt>
+                        <dd class="col-sm-7">@Model.TipoComprobante?.Descripcion</dd>
+
+                        <dt class="col-sm-5">Número:</dt>
+                        <dd class="col-sm-7">@Model.VenPuntoVenta?.ToString("D4")-@Model.VenNumComprobante?.ToString("D8")</dd>
+
+                        <dt class="col-sm-5">Fecha:</dt>
+                        <dd class="col-sm-7">@Model.VenFech.ToString("dd/MM/yyyy")</dd>
+
+                        <dt class="col-sm-5">Cliente:</dt>
+                        <dd class="col-sm-7">@Model.Cliente?.CliNombre</dd>
+
+                        <dt class="col-sm-5">CAE:</dt>
+                        <dd class="col-sm-7"><code>@Model.VenCAE</code></dd>
+
+                        <dt class="col-sm-5">Total:</dt>
+                        <dd class="col-sm-7"><strong class="text-danger">@Model.VenTotal.ToString("C")</strong></dd>
+                    </dl>
+
+                    @if (Model.DetalleVentas != null && Model.DetalleVentas.Any())
+                    {
+                        <hr />
+                        <h6>Items a Anular:</h6>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Artículo</th>
+                                    <th>Cant.</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.DetalleVentas)
+                                {
+                                    <tr>
+                                        <td>@item.Articulo?.ArtDesc</td>
+                                        <td>@item.DetCant</td>
+                                        <td>@item.DetSubtotal.ToString("C")</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Confirmar Anulación</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="GenerarNotaCredito" asp-route-id="@Model.VenCod" method="post">
+                        @Html.AntiForgeryToken()
+
+                        <div class="mb-3">
+                            <label class="form-label">Motivo de la Anulación</label>
+                            <textarea name="motivo" class="form-control" rows="4" required placeholder="Describa el motivo de la anulación..."></textarea>
+                            <small class="form-text text-muted">Este motivo quedará registrado en el sistema</small>
+                        </div>
+
+                        <div class="alert alert-info">
+                            <h6>Se Generará:</h6>
+                            <ul class="mb-0">
+                                <li>
+                                    Nota de Crédito
+                                    @{
+                                        var tipoNC = Model.VenTipoCbte switch
+                                        {
+                                            1 => "A",
+                                            6 => "B",
+                                            11 => "C",
+                                            _ => ""
+                                        };
+                                    }
+                                    tipo @tipoNC
+                                </li>
+                                <li>Por el monto de <strong>@Model.VenTotal.ToString("C")</strong></li>
+                                <li>Autorización automática en AFIP</li>
+                                <li>Nueva factura en estado "Anulada"</li>
+                            </ul>
+                        </div>
+
+                        <div class="alert alert-danger">
+                            <strong>Importante:</strong> Esta acción no se puede deshacer. Una vez autorizada por AFIP,
+                            la Nota de Crédito quedará registrada permanentemente.
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-danger btn-lg" onclick="return confirm('¿Está seguro que desea anular esta factura? Esta acción no se puede revertir.');">
+                                <i class="bi bi-x-circle"></i> Generar Nota de Crédito
+                            </button>
+                            <a asp-action="Detalle" asp-route-id="@Model.VenCod" class="btn btn-outline-secondary">
+                                <i class="bi bi-arrow-left"></i> Cancelar
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h6>¿Qué es una Nota de Crédito?</h6>
+                    <p class="small">
+                        Una Nota de Crédito es un comprobante que anula total o parcialmente una factura emitida.
+                        En este caso, al ser una anulación total, se generará una NC por el mismo monto de la factura original.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

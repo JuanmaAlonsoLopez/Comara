@@ -1,0 +1,563 @@
+================================================================================
+                    ISSUES PENDIENTES - SISTEMA COMARA
+================================================================================
+Fecha: 2026-01-31
+Actualizado por: Auditoria de Sistema (Segunda revision)
+
+Este archivo contiene los issues identificados que requieren cambios en la base
+de datos o son de menor prioridad y fueron dejados para implementacion posterior.
+
+================================================================================
+FASE 1 - CRITICOS (Requieren cambios en BD) - COMPLETADA
+================================================================================
+
+1. [COMPLETADO 2026-01-31] Campos monetarios usan float en lugar de decimal
+   -------------------------------------------------------------------------
+   BD actualizada: Todos los campos monetarios son numeric(15,2) o numeric(10,2)
+   Modelos C# actualizados: Todos usan tipo decimal
+
+   Campos corregidos:
+   - ARTICULOS: artCosto numeric(10,2), artL1-artL5 numeric(15,2)
+   - VENTAS: venTotal numeric(15,2)
+   - DETALLE_VENTAS: detPrecio, detSubtotal numeric(15,2)
+   - CUENTAS_CORRIENTES: cctaMonto, cctaSaldo numeric(15,2)
+   - PAGOS: pagMonto numeric(15,2)
+   - CHEQUES: chqMonto numeric(15,2)
+   - MOVIMIENTOS_CAJA: movMonto numeric(15,2)
+
+2. [COMPLETADO 2026-01-31] FK Articulo.ArtCod es varchar inconsistente
+   --------------------------------------------------------------------
+   Resuelto: DetalleVenta y DetalleCotizacion usan artCod (integer)
+   como FK a ARTICULOS(id), no al campo string artCod
+
+================================================================================
+FASE 2 - SEGURIDAD CRITICA (Nueva - Auditoria 2026-01-31)
+================================================================================
+
+15. [PENDIENTE] Bypass de validacion de certificados TLS
+    -----------------------------------------------------
+    Archivo: Program.cs, Linea 92
+    Severidad: CRITICA
+
+    Problema:
+    ```csharp
+    ServerCertificateCustomValidationCallback =
+        HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+    ```
+
+    La aplicacion deshabilita TODA validacion de certificados SSL/TLS para
+    conexiones AFIP. Esto hace vulnerable la aplicacion a ataques MITM.
+
+    Solucion:
+    - Remover DangerousAcceptAnyServerCertificateValidator
+    - Configurar validacion de certificados correctamente para AFIP
+    - Solo usar en desarrollo con advertencias explicitas
+
+16. [COMPLETADO 2026-02-01] Race condition en deduccion de stock
+    --------------------------------------------------------------
+    Archivo: Controllers/VentasController.cs
+    Severidad: CRITICA
+
+    Solucion implementada:
+    - Eliminada verificacion de stock ANTES de la transaccion
+    - TODA la verificacion ahora ocurre DENTRO de la transaccion con FOR UPDATE
+    - Se adquieren locks de TODOS los articulos ANTES de verificar stock
+    - Se usa Dictionary<int, Articulo> para mantener articulos bloqueados
+    - Aplicado tanto en Create como en Edit
+
+17. [COMPLETADO 2026-02-01] Multiples SaveChangesAsync en una transaccion
+    ----------------------------------------------------------------------
+    Archivo: Controllers/VentasController.cs
+    Severidad: ALTA
+
+    Solucion implementada:
+    - Reducido de 3 llamadas a SaveChangesAsync() a una sola
+    - Todos los cambios (venta, cuenta corriente, detalles, stock) se
+      acumulan y persisten atomicamente antes del commit
+    - Aplicado tanto en Create como en Edit
+
+18. [COMPLETADO 2026-02-01] Validacion insuficiente en deserializacion JSON
+    ------------------------------------------------------------------------
+    Archivo: Controllers/VentasController.cs
+    Severidad: ALTA
+
+    Solucion implementada:
+    - Try-catch especifico para JsonSerializer.Deserialize con logging
+    - Validacion explicita de cada item deserializado:
+      * ArtCod > 0 (codigo de articulo valido)
+      * Cantidad > 0 (no permite cantidades cero o negativas)
+      * Precio >= 0 (no permite precios negativos)
+      * Subtotal >= 0 (no permite subtotales negativos)
+    - Mensajes de error genericos al usuario, logging detallado interno
+    - Aplicado tanto en Create como en Edit
+    - Agregado metodo helper CargarViewDataVenta() para evitar codigo duplicado
+
+19. [COMPLETADO 2026-02-01] Race condition en conversion Cotizacion a Venta
+    -----------------------------------------------------------------------
+    Archivo: Controllers/CotizacionesController.cs
+    Severidad: MEDIA
+
+    Solucion implementada:
+    - Agregado transaccion con FOR UPDATE locks (mismo patron que VentasController)
+    - Validacion de JSON con try-catch y logging
+    - Validacion de cada item deserializado (ArtCod, Cantidad, Precio)
+    - Un solo SaveChangesAsync para atomicidad
+    - Manejo de errores con logging estructurado
+
+================================================================================
+FASE 3 - IMPORTANTES - COMPLETADA
+================================================================================
+
+3. [NO REQUERIDO] Validacion de permisos por rol en controllers
+   -------------------------------------------------------------
+   El usuario decidio que no es necesario restringir Delete solo a admins.
+   UsuariosController ya tiene [Authorize(Policy = "AdminOnly")] a nivel de clase.
+
+4. [COMPLETADO 2026-01-31] Auditoria de cambios (audit trail)
+   -----------------------------------------------------------
+   Tabla AUDIT_LOG creada en BD (script en Scripts/C1_CambiarFloatADecimal.sql)
+   Modelo Models/AuditLog.cs creado
+   SaveChangesAsync override implementado en ApplicationDbContext
+
+   Tablas auditadas: ARTICULOS, CLIENTES, VENTAS, COTIZACIONES,
+   PROVEEDORES, MARCAS, USUARIOS, PAGOS, CHEQUES
+
+   Registra automaticamente: INSERT, UPDATE, DELETE con valores
+   anteriores/nuevos en JSON, usuario, fecha e IP.
+
+5. [COMPLETADO - YA EXISTIA] N+1 Query en varios controllers
+   ----------------------------------------------------------
+   ArticulosController.Index() ya usa Include() y paginacion
+   ClientesController.Index() ya usa Include() para relaciones
+
+6. [COMPLETADO - YA EXISTIA] Validacion de CUIT completa
+   ------------------------------------------------------
+   CuitValidatorService.cs ya implementa:
+   - Validacion de 11 digitos
+   - Validacion de tipos (20, 23, 24, 27, 30, 33, 34)
+   - Algoritmo mod 11 para digito verificador
+   - Metodo ObtenerErrorValidacion() con mensajes descriptivos
+
+================================================================================
+FASE 4 - DEUDA TECNICA (Puntos 7-9 Completados)
+================================================================================
+
+7. [COMPLETADO 2026-01-31] Codigo duplicado en ViewData de controllers
+   --------------------------------------------------------------------
+   Creado Services/IDropdownService.cs (interfaz)
+   Creado Services/DropdownService.cs (implementacion)
+   Registrado en Program.cs como servicio Scoped
+
+   Uso en controllers:
+   ```csharp
+   private readonly IDropdownService _dropdownService;
+
+   // En el constructor:
+   _dropdownService = dropdownService;
+
+   // En las acciones:
+   var dropdowns = await _dropdownService.GetDropdownsVentaAsync(clienteId, listaId);
+   ViewData["CliCod"] = dropdowns.Clientes;
+   ViewData["Listas"] = dropdowns.Listas;
+   ```
+
+8. [COMPLETADO 2026-01-31] Strings magicos en todo el codigo
+   ----------------------------------------------------------
+   Creado Models/Constants.cs con todas las constantes:
+   - MovimientoTipo.Debe, MovimientoTipo.Haber
+   - VentaEstado.Completada, .Pendiente, .Cancelada, .Facturada
+   - VentaEstadoPagoConstantes.Pendiente, .Parcial, .Pagada
+   - MetodoPago.Efectivo, .Cheque, .CuentaCorriente, etc.
+   - TipoMovimientoCajaConstantes.Ingreso, .Egreso
+   - AfipResultado.Aprobado, .Rechazado, .Parcial
+
+   Uso: Reemplazar "DEBE" por MovimientoTipo.Debe, etc.
+
+9. [COMPLETADO 2026-01-31] Falta manejo de errores consistente
+   ------------------------------------------------------------
+   Creado Filters/GlobalExceptionFilter.cs
+   Registrado globalmente en Program.cs
+
+   Comportamiento:
+   - Peticiones AJAX: Devuelve JSON con { success: false, error: "..." }
+   - Peticiones normales: Guarda error en TempData y redirige
+   - En desarrollo: Muestra mensaje completo de error
+   - En produccion: Muestra mensaje generico
+
+10. [PARCIAL - YA EXISTIA] ViewModels incompletos
+    ------------------------------------------------
+    El proyecto YA USA ViewModels en los lugares principales:
+    - VentaViewModel, VentaItemViewModel
+    - CotizacionViewModel, CotizacionItemViewModel
+    - RegistrarPagoFacturaViewModel, GenerarPresupuestoViewModel
+
+    Algunas vistas Index/Details usan modelos de dominio directamente,
+    lo cual es aceptable para vistas de solo lectura.
+
+11. [COMPLETADO 2026-02-01] Falta logging estructurado
+    ---------------------------------------------------
+    Solucion implementada:
+    - Agregado Serilog.AspNetCore y enrichers al proyecto
+    - Configurado en Program.cs con:
+      * Output a consola con formato estructurado
+      * Output a archivos en /logs con rotacion diaria (30 dias)
+      * Enrichers: MachineName, ThreadId, FromLogContext
+    - Log level configurado: Info por defecto, Warning para EF y AspNetCore
+
+12. [COMPLETADO 2026-02-01] Falta cache para datos de solo lectura
+    ---------------------------------------------------------------
+    Solucion implementada:
+    - Agregado IMemoryCache en Program.cs
+    - Creado Services/CachedDropdownService.cs que:
+      * Cachea IVAs, Estados, MetodosPago, TiposComprobante (15 min)
+      * Cachea ListasPrecios (5 min)
+      * NO cachea Clientes, Marcas, Proveedores (cambian frecuentemente)
+      * Metodos InvalidateCache() e InvalidateAllCache() disponibles
+    - Registrado como implementacion de IDropdownService
+
+13. [COMPLETADO 2026-02-01] Conexion string con credenciales en appsettings.json
+    -----------------------------------------------------------------------------
+    Solucion implementada:
+    - Agregado UserSecretsId al .csproj (comara-dev-secrets-2026)
+    - Documentado en appsettings.Development.json los comandos para configurar
+    - CREDENCIALES REMOVIDAS de appsettings.json (valores vacios)
+    - Agregada validacion en Program.cs que:
+      * Falla con mensaje descriptivo si falta ConnectionString
+      * Advierte si falta Afip:CertificadoPassword (excepto modo testing)
+      * Muestra comandos exactos para configurar User Secrets
+
+    Comandos para configurar (ya ejecutados por el usuario):
+      dotnet user-secrets set "ConnectionStrings:DefaultConnection" "Host=localhost;Database=comara;Username=postgres;Password=TU_PASSWORD"
+      dotnet user-secrets set "Afip:CertificadoPassword" "TU_PASSWORD_CERTIFICADO"
+
+14. [COMPLETADO 2026-02-01] Falta validacion de tamanio de archivos en upload
+    --------------------------------------------------------------------------
+    Solucion implementada en Program.cs:
+    ```csharp
+    builder.Services.Configure<FormOptions>(options =>
+    {
+        options.MultipartBodyLengthLimit = 10 * 1024 * 1024; // 10 MB
+        options.ValueLengthLimit = 10 * 1024 * 1024;
+        options.MultipartHeadersLengthLimit = 32 * 1024; // 32 KB
+    });
+    ```
+
+================================================================================
+FASE 5 - CALIDAD DE CODIGO (Nueva - Auditoria 2026-01-31)
+================================================================================
+
+20. [COMPLETADO 2026-02-01] Null Reference Exceptions - Faltan null checks
+    -----------------------------------------------------------------------
+    Archivo: Controllers/VentasController.cs
+    Severidad: ALTA
+
+    Solucion implementada:
+    - Agregados null checks explicitos para TipoComprobante y CondicionIVA
+      antes de acceder a sus propiedades en AutorizarConAfip
+    - Eliminados operadores null-forgiving innecesarios
+    - Mensajes de error claros cuando faltan datos requeridos
+
+21. [COMPLETADO 2026-02-01] Excepciones no manejadas en bloques try-catch
+    ----------------------------------------------------------------------
+    Archivo: Controllers/VentasController.cs
+    Severidad: MEDIA
+
+    Solucion implementada:
+    - Logging estructurado con _logger.LogError() incluyendo contexto
+    - Mensajes genericos al usuario sin exponer detalles internos
+    - Aplicado en Create, Edit, y otros metodos
+
+22. [COMPLETADO 2026-02-01] Validacion null faltante en propiedades string
+    -----------------------------------------------------------------------
+    Archivo: Controllers/VentasController.cs (BuscarArticulos)
+    Severidad: MEDIA
+
+    Solucion implementada:
+    - Validacion de term vacio/null al inicio del metodo
+    - Verificacion null antes de ILike:
+      `(a.ArtDesc != null && EF.Functions.ILike(a.ArtDesc, ...))`
+    - Aplicado a ArtDesc, ArtCod y Marca.marNombre
+
+23. [COMPLETADO 2026-02-01] Valores hardcodeados en logica de negocio
+    ------------------------------------------------------------------
+    Archivo: Controllers/VentasController.cs, PreciosController.cs
+    Severidad: MEDIA
+
+    Solucion implementada - Reemplazados TODOS los numeros magicos:
+    - VenEstado = 2 → VentaEstado.Pendiente
+    - VenEstado = 1 → VentaEstado.Completada
+    - VenEstado = 4 → VentaEstado.Facturada
+    - VenMetodoPago == 3 → MetodoPago.CuentaCorriente
+    - VenMetodoPago == 4 → MetodoPago.Cheque
+    - MovTipo = 1 → TipoMovimientoCajaConstantes.Ingreso
+    - "DEBE"/"HABER" → MovimientoTipo.Debe/Haber
+    - VenEstadoPago 1,2,3 → VentaEstadoPagoConstantes.*
+
+24. [COMPLETADO 2026-02-01] Manejo inconsistente de DateTime
+    ---------------------------------------------------------
+    Archivo: Controllers/VentasController.cs
+    Severidad: MEDIA
+
+    Solucion implementada:
+    - Creado metodo utilitario ToUtcNoon(DateTime date)
+    - Documentado proposito: PostgreSQL necesita UTC, mediodia evita
+      cambio de dia por zona horaria
+    - Usado en Create y otros lugares donde se convierte fecha
+
+25. [COMPLETADO 2026-02-01] Validacion faltante en valores decimales
+    -----------------------------------------------------------------
+    Archivo: Controllers/PreciosController.cs
+    Severidad: MEDIA
+
+    Solucion implementada:
+    - Cambiado parametro de float a decimal (precision financiera)
+    - Validacion de rango: porcentaje > -100 y <= 1000
+    - Validacion de tipoAumento valido
+    - Redondeo a 2 decimales con Math.Round()
+    - TempData["Error"] con mensajes descriptivos
+
+================================================================================
+FASE 6 - RENDIMIENTO (Nueva - Auditoria 2026-01-31) - COMPLETADA 2026-02-01
+================================================================================
+
+26. [COMPLETADO 2026-02-01] Carga completa de tablas para dropdowns
+    ----------------------------------------------------------------
+    Archivo: Controllers/VentasController.cs
+    Severidad: MEDIA
+
+    Solucion implementada:
+    - Estados: Proyeccion con Select() solo Id y Descripcion
+    - Clientes: Filtro Where(c => c.CliStatus == true) + Select() solo Id y CliNombre
+    - Reduccion significativa de memoria y tiempo de carga
+
+27. [COMPLETADO 2026-02-01] Include() chains innecesarios
+    ------------------------------------------------------
+    Archivo: Controllers/VentasController.cs
+    Severidad: BAJA
+
+    Solucion implementada:
+    - Index(): Removido Include(DetalleVentas) - se carga bajo demanda en Details
+    - Mantenidos solo los Includes necesarios: Cliente, TipoEstado, TipoComprobante, EstadoPago
+    - Details mantiene todos los Includes por ser vista de detalle
+
+28. [COMPLETADO 2026-02-01] Claves de sesion string-based
+    ------------------------------------------------------
+    Archivos modificados:
+    - Models/Constants.cs: Agregada clase SessionKeys
+    - Controllers/VentasController.cs
+    - Controllers/ReportesController.cs
+    - ViewComponents/StockCriticoNotificationViewComponent.cs
+
+    Solucion implementada:
+    ```csharp
+    public static class SessionKeys
+    {
+        public const string StockCriticoViewed = "StockCriticoViewed";
+        public const string UltimaVenta = "UltimaVenta";
+        public const string UltimaCotizacion = "UltimaCotizacion";
+    }
+    ```
+    - Todos los usos de "StockCriticoViewed" reemplazados por SessionKeys.StockCriticoViewed
+
+================================================================================
+FASE 7 - LOGICA DE NEGOCIO (Nueva - Auditoria 2026-01-31) - COMPLETADA 2026-02-01
+================================================================================
+
+29. [COMPLETADO 2026-02-01] Validacion faltante de combinaciones IVA
+    -----------------------------------------------------------------
+    Archivo: Controllers/VentasController.cs, Models/Constants.cs
+    Severidad: MEDIA
+
+    Solucion implementada:
+    - Agregadas constantes CodigoIvaAfip y CondicionIvaAfip en Constants.cs
+    - Logica de validacion que determina codigo IVA segun condicion del cliente:
+      * Cliente Exento: CodigoIvaAfip.Exento
+      * Consumidor Final: CodigoIvaAfip.NoGravado
+      * Responsable Inscripto/Monotributista sin items IVA: Warning + NoGravado
+    - Logging de advertencia cuando hay discrepancia
+
+30. [COMPLETADO 2026-02-01] Validacion de precio calculado faltante
+    ----------------------------------------------------------------
+    Archivo: Controllers/VentasController.cs (GetArticuloPrecio)
+    Severidad: MEDIA
+
+    Solucion implementada:
+    - Validacion despues de CalcularPrecioVenta: `if (precioBase <= 0)`
+    - Retorna JSON con success=false y mensaje descriptivo
+    - Logging de warning con artCod, listaCod y precio calculado
+
+31. [COMPLETADO 2026-02-01] Tolerancia fija en validacion de pagos
+    ---------------------------------------------------------------
+    Archivos: Models/Constants.cs, Controllers/VentasController.cs
+    Severidad: BAJA
+
+    Solucion implementada:
+    - Creada clase ValidacionPago con:
+      * ToleranciaRelativa = 0.001m (0.1%)
+      * ToleranciaMinimaAbsoluta = 0.01m (1 centavo)
+      * Metodo CalcularTolerancia(monto) que retorna el mayor entre ambas
+    - Reemplazados todos los usos de 0.01m por ValidacionPago.CalcularTolerancia()
+
+32. [COMPLETADO 2026-02-01] Validacion de cheque incompleta
+    --------------------------------------------------------
+    Archivos: Models/Constants.cs, Controllers/VentasController.cs
+    Severidad: MEDIA
+
+    Solucion implementada:
+    - Creada clase ValidacionCheque con constantes:
+      * LongitudMinimaNumero = 6
+      * LongitudMaximaNumero = 20
+      * DiasMaximosAtras = 30
+      * DiasMaximosAdelante = 365
+    - Validaciones agregadas:
+      * Numero solo digitos
+      * Longitud entre 6 y 20 caracteres
+      * Verificacion de cheques duplicados (mismo numero + banco)
+      * Fecha de cobro no mayor a 365 dias en futuro
+      * Fecha de emision no mayor a 30 dias en pasado
+      * Fecha emision no posterior a fecha cobro
+
+================================================================================
+RESUMEN DE ISSUES POR PRIORIDAD (Actualizado 2026-02-12)
+================================================================================
+
+| Prioridad | Pendientes | Completados | Categoria                           |
+|-----------|------------|-------------|-------------------------------------|
+| CRITICA   | 1          | 2           | TLS bypass (pend), Race cond (done) |
+| ALTA      | 0          | 5           | Null checks, Excepciones, JSON      |
+| MEDIA     | 0          | 13          | Validacion, Rendimiento, Logica     |
+| BAJA      | 2          | 5           | Concepto AFIP, Tributos AFIP        |
+
+Total: 3 pendientes, 25 completados
+- #15 TLS bypass (CRITICA) - Seguridad
+- #33 Concepto fijo Productos (BAJA) - Solo si venden servicios
+- #34 Tributos en cero (BAJA) - Solo si son agentes IIBB
+
+================================================================================
+FASE 8 - FACTURACION AFIP (Nueva - Auditoria 2026-02-12)
+================================================================================
+
+33. [PENDIENTE] Concepto fijo en "Productos" - No soporta Servicios
+    ----------------------------------------------------------------
+    Archivo: Services/ARCAApiService.cs, Linea 268
+    Severidad: BAJA (solo si se venden servicios)
+
+    Problema:
+    El sistema siempre envia `Concepto = "Productos"` (codigo 1) a AFIP.
+    No soporta facturacion de servicios ni productos+servicios.
+
+    AFIP permite 3 valores de Concepto:
+    | Concepto             | Codigo | Campos Adicionales Requeridos        |
+    |----------------------|--------|--------------------------------------|
+    | Productos            | 1      | Ninguno                              |
+    | Servicios            | 2      | FchServDesde, FchServHasta, FchVtoPago |
+    | Productos y Servicios| 3      | FchServDesde, FchServHasta, FchVtoPago |
+
+    Para servicios, AFIP exige:
+    - FchServDesde: Fecha inicio del periodo de servicio (formato yyyyMMdd)
+    - FchServHasta: Fecha fin del periodo de servicio (formato yyyyMMdd)
+    - FchVtoPago: Fecha de vencimiento del pago (formato yyyyMMdd)
+
+    Solucion propuesta:
+    1. Agregar campo VenConcepto (int?) a modelo Venta
+    2. Agregar campos VenFchServDesde, VenFchServHasta, VenFchVtoPago (DateTime?)
+    3. Modificar vista Facturas/Generar para permitir seleccionar concepto
+    4. Si concepto = 2 o 3, mostrar campos de fecha de servicio
+    5. Modificar ARCAApiService para enviar concepto y fechas dinamicamente
+    6. Agregar validacion: si concepto != 1, fechas son obligatorias
+
+    Impacto: Solo afecta si se venden servicios (consultorias, alquileres,
+    mantenimiento, etc.). Para venta de productos fisicos, no se requiere cambio.
+
+34. [PENDIENTE] Tributos siempre en cero - No soporta IIBB ni otros
+    ----------------------------------------------------------------
+    Archivo: Services/ARCAApiService.cs, Linea 266
+    Severidad: BAJA (solo si se requiere discriminar tributos)
+
+    Problema:
+    El sistema siempre envia `ImporteTributos = 0` a AFIP.
+    No permite discriminar tributos adicionales al IVA en las facturas.
+
+    Tributos soportados por AFIP:
+    | Codigo | Tributo                | Ejemplo                      |
+    |--------|------------------------|------------------------------|
+    | 1      | Impuestos Nacionales   | Impuesto PAIS                |
+    | 2      | Impuestos Provinciales | IIBB (Ingresos Brutos)       |
+    | 3      | Impuestos Municipales  | Tasa seguridad e higiene     |
+    | 4      | Impuestos Internos     | Cigarrillos, bebidas         |
+    | 99     | Otros                  | Percepciones, retenciones    |
+
+    Estructura requerida por AFIP para tributos:
+    ```json
+    {
+      "Tributos": [
+        {
+          "Id": 2,           // Tipo de tributo (codigo AFIP)
+          "Desc": "IIBB",    // Descripcion del tributo
+          "BaseImp": 1000,   // Base imponible
+          "Alic": 3.5,       // Alicuota (porcentaje)
+          "Importe": 35      // Importe calculado
+        }
+      ]
+    }
+    ```
+
+    Solucion propuesta:
+    1. Crear tabla TRIBUTOS con Id, Descripcion, Alicuota, Activo
+    2. Crear tabla ARTICULO_TRIBUTOS (relacion N:N con articulos)
+    3. O agregar campo TributoCod a Articulo si es uno solo por articulo
+    4. Modificar ARCAApiService para calcular y enviar tributos
+    5. Modificar vista de factura para mostrar tributos discriminados
+    6. Agregar configuracion de agente de retencion/percepcion
+
+    Impacto: Solo afecta si la empresa es agente de retencion/percepcion
+    de IIBB o necesita discriminar otros tributos. En comercio minorista
+    tipico, generalmente no se requiere.
+
+    Nota: Si solo se necesita agregar percepcion de IIBB, se puede
+    simplificar agregando un campo de alicuota IIBB al cliente y
+    calculandolo automaticamente sobre el neto.
+
+================================================================================
+NOTAS ADICIONALES
+================================================================================
+
+- FASE 2: Puntos 16, 17, 18, 19 completados (2026-02-01)
+  * Race condition en stock: RESUELTO - verificacion dentro de transaccion
+  * Multiples SaveChangesAsync: RESUELTO - un solo save atomico
+  * Validacion JSON: RESUELTO - try-catch + validacion de campos
+  * Race condition ConvertToSale: RESUELTO - FOR UPDATE locks
+- FASE 4: Puntos 10, 11, 12, 13, 14 completados (2026-02-01)
+  * ViewModels: YA EXISTIAN en lugares principales
+  * Logging estructurado: RESUELTO - Serilog configurado
+  * Cache dropdowns: RESUELTO - CachedDropdownService con IMemoryCache
+  * User Secrets: RESUELTO - Configuracion completa con validacion en Program.cs
+  * Limite archivos: RESUELTO - FormOptions 10MB configurado
+- FASE 5: Puntos 20, 21, 22, 23, 24, 25 completados (2026-02-01)
+  * Null checks: RESUELTO - Verificaciones explicitas antes de desreferenciar
+  * Excepciones: RESUELTO - Logging estructurado, mensajes genericos
+  * Validacion null strings: RESUELTO - Verificar null antes de ILike
+  * Constantes: RESUELTO - Todos los numeros magicos reemplazados
+  * DateTime: RESUELTO - Metodo ToUtcNoon() creado
+  * Validacion porcentaje: RESUELTO - decimal + validacion rango
+- FASE 6: Puntos 26, 27, 28 completados (2026-02-01)
+  * Dropdowns optimizados: RESUELTO - Select() con solo campos necesarios
+  * Include chains: RESUELTO - Removidos Includes innecesarios en Index
+  * Session keys: RESUELTO - Clase SessionKeys con constantes
+- FASE 7: Puntos 29, 30, 31, 32 completados (2026-02-01)
+  * Validacion IVA: RESUELTO - Codigo IVA segun condicion cliente
+  * Validacion precio: RESUELTO - Verificar precio > 0 con logging
+  * Tolerancia pagos: RESUELTO - ValidacionPago.CalcularTolerancia()
+  * Validacion cheque: RESUELTO - Formato, duplicados, fechas
+- Punto 15 (TLS bypass) debe priorizarse antes de ir a produccion
+- El error de concurrencia en CajaService.cs fue corregido (2026-01-31)
+- Considerar implementar tests de integracion para escenarios de concurrencia
+- FASE 8: Puntos 33, 34 agregados (2026-02-12) - Auditoria de facturacion AFIP
+  * Concepto fijo: Solo implementar si se venden servicios
+  * Tributos: Solo implementar si son agentes de retencion/percepcion IIBB
+  * Ambos son de baja prioridad para comercio minorista tipico
+
+Para cualquier duda sobre implementacion, consultar el archivo CLAUDE.md
+que contiene la documentacion del proyecto.
+
+================================================================================

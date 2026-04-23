@@ -1,0 +1,118 @@
+@model IEnumerable<comara.Models.CuentaCorriente>
+
+@{
+    ViewData["Title"] = "Cuenta Corriente";
+    var cliente = ViewBag.Cliente as comara.Models.Cliente;
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h2>Cuenta Corriente - @cliente?.CliNombre</h2>
+            <hr />
+        </div>
+    </div>
+
+    @if (Model != null && Model.Any())
+    {
+        var saldoActual = Model.OrderByDescending(m => m.CctaCod).First().CctaSaldo;
+
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <div class="alert @(saldoActual > 0 ? "alert-warning" : "alert-success")">
+                    <h4>Saldo Actual: <strong>@saldoActual.ToString("C")</strong></h4>
+                </div>
+            </div>
+        </div>
+
+        @if (saldoActual > 0)
+        {
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <a asp-action="RegistrarPago" asp-route-clienteId="@cliente?.Id" class="btn btn-success">Registrar Pago</a>
+                </div>
+            </div>
+        }
+    }
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Movimientos</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Tipo</th>
+                                    <th>Descripción</th>
+                                    <th class="text-end">Debe</th>
+                                    <th class="text-end">Haber</th>
+                                    <th class="text-end">Saldo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null && Model.Any())
+                                {
+                                    @foreach (var movimiento in Model)
+                                    {
+                                        <tr>
+                                            <td>@movimiento.CctaFech.ToString("dd/MM/yyyy")</td>
+                                            <td>
+                                                @if (movimiento.CctaMovimiento == "DEBE")
+                                                {
+                                                    <span class="badge bg-danger">DEBE</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-success">HABER</span>
+                                                }
+                                            </td>
+                                            <td>@movimiento.CctaDesc</td>
+                                            <td class="text-end">
+                                                @if (movimiento.CctaMovimiento == "DEBE")
+                                                {
+                                                    <span class="text-danger">@movimiento.CctaMonto.ToString("C")</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>-</span>
+                                                }
+                                            </td>
+                                            <td class="text-end">
+                                                @if (movimiento.CctaMovimiento == "HABER")
+                                                {
+                                                    <span class="text-success">@movimiento.CctaMonto.ToString("C")</span>
+                                                }
+                                                else
+                                                {
+                                                    <span>-</span>
+                                                }
+                                            </td>
+                                            <td class="text-end"><strong>@movimiento.CctaSaldo.ToString("C")</strong></td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="6" class="text-center">No hay movimientos registrados</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <a asp-action="Index" class="btn btn-secondary">Volver a Caja</a>
+        </div>
+    </div>
+</div>

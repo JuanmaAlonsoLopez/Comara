@@ -1,3 +1,1043 @@
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Web.config
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\appsettings.Development.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\appsettings.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\appsettings.Production.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Integraciones\Afip\Wsfe\dotnet-svcutil.params.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\comara.staticwebassets.runtime.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\comara.staticwebassets.endpoints.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-Black.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-BlackItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-Bold.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-BoldItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-ExtraBold.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-ExtraBoldItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-ExtraLight.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-ExtraLightItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-Italic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-Light.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-LightItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-Medium.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-MediumItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-Regular.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-SemiBold.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-SemiBoldItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-Thin.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\Lato-ThinItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\LatoFont\OFL.txt
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\comara.exe
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\comara.deps.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\comara.runtimeconfig.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\comara.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\comara.pdb
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\BCrypt.Net-Next.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\EPPlus.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\EPPlus.Interfaces.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\EPPlus.System.Drawing.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Humanizer.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Bcl.Cryptography.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Build.Locator.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.CodeAnalysis.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.EntityFrameworkCore.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Extensions.DependencyModel.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Extensions.Http.Polly.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Extensions.Logging.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Extensions.ObjectPool.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Extensions.Options.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Extensions.Primitives.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Microsoft.Win32.SystemEvents.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Mono.TextTemplating.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Npgsql.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Polly.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Polly.Extensions.Http.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\QRCoder.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\QuestPDF.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Serilog.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Serilog.AspNetCore.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Serilog.Enrichers.Environment.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Serilog.Enrichers.Thread.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Serilog.Extensions.Hosting.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Serilog.Extensions.Logging.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Serilog.Formatting.Compact.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Serilog.Settings.Configuration.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Serilog.Sinks.Console.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Serilog.Sinks.Debug.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\Serilog.Sinks.File.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.CodeDom.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.Composition.AttributedModel.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.Composition.Convention.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.Composition.Hosting.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.Composition.Runtime.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.Composition.TypedParts.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.Diagnostics.DiagnosticSource.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.Drawing.Common.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.Formats.Asn1.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.IO.Pipelines.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.Security.Cryptography.Pkcs.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.Security.Cryptography.Xml.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.ServiceModel.Http.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.ServiceModel.NetFramingBase.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.ServiceModel.NetTcp.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.ServiceModel.Duplex.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.ServiceModel.Primitives.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.ServiceModel.Security.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.ServiceModel.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.Text.Encodings.Web.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\System.Text.Json.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\cs\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\de\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\es\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\fr\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\it\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ja\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ko\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pl\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pt-BR\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ru\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\tr\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hans\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hant\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\cs\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\de\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\es\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\fr\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\it\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ja\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ko\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pl\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pt-BR\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ru\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\tr\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hans\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hant\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\cs\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\de\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\es\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\fr\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\it\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ja\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ko\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pl\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pt-BR\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ru\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\tr\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hans\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hant\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\cs\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\de\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\es\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\fr\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\it\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ja\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ko\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pl\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\pt-BR\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\ru\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\tr\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hans\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\zh-Hant\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\linux-arm64\native\libQuestPdfSkia.so
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\linux-arm64\native\libqpdf.so
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\linux-musl-x64\native\libQuestPdfSkia.so
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\linux-musl-x64\native\libqpdf.so
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\linux-x64\native\libQuestPdfSkia.so
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\linux-x64\native\libqpdf.so
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\osx-arm64\native\libQuestPdfSkia.dylib
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\osx-arm64\native\libqpdf.dylib
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\osx-x64\native\libQuestPdfSkia.dylib
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\osx-x64\native\libqpdf.dylib
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\win-x64\native\QuestPdfSkia.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\win-x64\native\libgcc_s_seh-1.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\win-x64\native\libstdc++-6.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\win-x64\native\libwinpthread-1.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\win-x64\native\qpdf.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\win-x64\native\zlib1.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\win-x86\native\QuestPdfSkia.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\win-x86\native\libgcc_s_dw2-1.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\win-x86\native\libstdc++-6.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\win-x86\native\libwinpthread-1.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\win-x86\native\qpdf.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\win-x86\native\zlib1.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\temp_build\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Web.config
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\appsettings.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\appsettings.Production.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Integraciones\Afip\Wsfe\dotnet-svcutil.params.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.staticwebassets.runtime.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.staticwebassets.endpoints.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Black.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-BlackItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Bold.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-BoldItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ExtraBold.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ExtraBoldItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ExtraLight.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ExtraLightItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Italic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Light.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-LightItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Medium.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-MediumItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Regular.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-SemiBold.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-SemiBoldItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Thin.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ThinItalic.ttf
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\OFL.txt
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.exe
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.deps.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.runtimeconfig.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.pdb
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\EPPlus.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\EPPlus.Interfaces.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\EPPlus.System.Drawing.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Humanizer.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Build.Locator.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Http.Polly.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Npgsql.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Polly.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Polly.Extensions.Http.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\QRCoder.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\QuestPDF.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Enrichers.Environment.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Enrichers.Thread.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Formats.Asn1.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.Http.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.NetFramingBase.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.NetTcp.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.Duplex.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.Primitives.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.Security.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\System.ServiceModel.Http.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\System.ServiceModel.NetTcp.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\System.ServiceModel.Primitives.resources.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-arm64\native\libQuestPdfSkia.so
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-arm64\native\libqpdf.so
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libQuestPdfSkia.so
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libqpdf.so
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-x64\native\libQuestPdfSkia.so
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-x64\native\libqpdf.so
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\osx-arm64\native\libQuestPdfSkia.dylib
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\osx-arm64\native\libqpdf.dylib
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\osx-x64\native\libQuestPdfSkia.dylib
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\osx-x64\native\libqpdf.dylib
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\QuestPdfSkia.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\libgcc_s_seh-1.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\libstdc++-6.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\libwinpthread-1.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\qpdf.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\zlib1.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\QuestPdfSkia.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\libgcc_s_dw2-1.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\libstdc++-6.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\libwinpthread-1.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\qpdf.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\zlib1.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.csproj.AssemblyReference.cache
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.AssemblyInfoInputs.cache
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.AssemblyInfo.cs
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.csproj.CoreCompileInputs.cache
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.RazorAssemblyInfo.cache
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.RazorAssemblyInfo.cs
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.sourcelink.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\scopedcss\bundle\comara.styles.css
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\scopedcss\projectbundle\comara.bundle.scp.css
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.csproj.Up2Date
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\refint\comara.dll
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.pdb
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.genruntimeconfig.cache
+C:\Users\jmalo\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\ref\comara.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Web.config
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\appsettings.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\appsettings.Production.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Integraciones\Afip\Wsfe\dotnet-svcutil.params.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.staticwebassets.runtime.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.staticwebassets.endpoints.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Black.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-BlackItalic.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Bold.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-BoldItalic.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ExtraBold.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ExtraBoldItalic.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ExtraLight.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ExtraLightItalic.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Italic.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Light.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-LightItalic.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Medium.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-MediumItalic.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Regular.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-SemiBold.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-SemiBoldItalic.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Thin.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ThinItalic.ttf
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\OFL.txt
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.exe
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.deps.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.runtimeconfig.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.pdb
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\EPPlus.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\EPPlus.Interfaces.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\EPPlus.System.Drawing.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Humanizer.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Build.Locator.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Http.Polly.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Npgsql.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Polly.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Polly.Extensions.Http.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\QRCoder.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\QuestPDF.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Enrichers.Environment.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Enrichers.Thread.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Formats.Asn1.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.Http.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.NetFramingBase.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.NetTcp.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.Duplex.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.Primitives.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.Security.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-arm64\native\libQuestPdfSkia.so
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-arm64\native\libqpdf.so
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libQuestPdfSkia.so
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libqpdf.so
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-x64\native\libQuestPdfSkia.so
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-x64\native\libqpdf.so
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\osx-arm64\native\libQuestPdfSkia.dylib
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\osx-arm64\native\libqpdf.dylib
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\osx-x64\native\libQuestPdfSkia.dylib
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\osx-x64\native\libqpdf.dylib
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\QuestPdfSkia.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\libgcc_s_seh-1.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\libstdc++-6.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\libwinpthread-1.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\qpdf.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\zlib1.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\QuestPdfSkia.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\libgcc_s_dw2-1.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\libstdc++-6.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\libwinpthread-1.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\qpdf.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\zlib1.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.csproj.AssemblyReference.cache
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.AssemblyInfoInputs.cache
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.AssemblyInfo.cs
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.csproj.CoreCompileInputs.cache
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.RazorAssemblyInfo.cache
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.RazorAssemblyInfo.cs
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.sourcelink.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\scopedcss\bundle\comara.styles.css
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\scopedcss\projectbundle\comara.bundle.scp.css
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.csproj.Up2Date
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\refint\comara.dll
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.pdb
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.genruntimeconfig.cache
+C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\ref\comara.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Web.config
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\appsettings.json
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\appsettings.Production.json
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Integraciones\Afip\Wsfe\dotnet-svcutil.params.json
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.staticwebassets.runtime.json
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.staticwebassets.endpoints.json
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Black.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-BlackItalic.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Bold.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-BoldItalic.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ExtraBold.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ExtraBoldItalic.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ExtraLight.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ExtraLightItalic.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Italic.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Light.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-LightItalic.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Medium.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-MediumItalic.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Regular.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-SemiBold.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-SemiBoldItalic.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-Thin.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\Lato-ThinItalic.ttf
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\LatoFont\OFL.txt
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.exe
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.deps.json
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.runtimeconfig.json
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.pdb
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\EPPlus.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\EPPlus.Interfaces.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\EPPlus.System.Drawing.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Humanizer.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Build.Locator.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Http.Polly.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Npgsql.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Polly.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Polly.Extensions.Http.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\QRCoder.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\QuestPDF.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Enrichers.Environment.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Enrichers.Thread.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Serilog.Sinks.File.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Formats.Asn1.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.IO.Pipelines.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.Http.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.NetFramingBase.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.NetTcp.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.Duplex.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.Primitives.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.Security.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.ServiceModel.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Text.Json.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\System.ServiceModel.Http.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\System.ServiceModel.NetFramingBase.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\System.ServiceModel.NetTcp.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\cs\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\de\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\es\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\fr\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\it\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ja\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ko\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pl\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\pt-BR\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\ru\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\tr\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hans\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\zh-Hant\System.ServiceModel.Primitives.resources.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-arm64\native\libQuestPdfSkia.so
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-arm64\native\libqpdf.so
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libQuestPdfSkia.so
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libqpdf.so
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-x64\native\libQuestPdfSkia.so
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\linux-x64\native\libqpdf.so
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\osx-arm64\native\libQuestPdfSkia.dylib
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\osx-arm64\native\libqpdf.dylib
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\osx-x64\native\libQuestPdfSkia.dylib
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\osx-x64\native\libqpdf.dylib
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\QuestPdfSkia.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\libgcc_s_seh-1.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\libstdc++-6.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\libwinpthread-1.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\qpdf.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x64\native\zlib1.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\QuestPdfSkia.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\libgcc_s_dw2-1.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\libstdc++-6.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\libwinpthread-1.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\qpdf.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win-x86\native\zlib1.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.csproj.AssemblyReference.cache
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\rpswa.dswa.cache.json
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.GeneratedMSBuildEditorConfig.editorconfig
@@ -8,30 +1048,6 @@ C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.RazorAssemblyInfo.cache
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.RazorAssemblyInfo.cs
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.sourcelink.json
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\appsettings.json
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.staticwebassets.runtime.json
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.staticwebassets.endpoints.json
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.exe
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.deps.json
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.runtimeconfig.json
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\comara.pdb
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Npgsql.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -42,10 +1058,11 @@ C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.csproj.Up2Date
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.dll
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\refint\comara.dll
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.pdb
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\comara.genruntimeconfig.cache
 C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\ref\comara.dll
-C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

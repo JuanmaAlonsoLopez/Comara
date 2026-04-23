@@ -1,0 +1,159 @@
+@model comara.Models.ViewModels.VentaViewModel
+
+@{
+    ViewData["Title"] = "Convertir Cotización a Venta";
+}
+
+<h1>Convertir Cotización a Venta</h1>
+<h4>Cliente: @Model.Cliente?.CliNombre</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="ConvertToSale" id="formVenta">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CotizacionOrigen" />
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="VenFech" class="control-label">Fecha Venta</label>
+                        <input asp-for="VenFech" class="form-control" type="date" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CliCod" class="control-label">Cliente</label>
+                        <select asp-for="CliCod" class="form-control" asp-items="ViewBag.CliCod"></select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label asp-for="VenEstado" class="control-label">Estado</label>
+                        <select asp-for="VenEstado" class="form-control" asp-items="ViewBag.VenEstado">
+                            <option value="">Seleccione estado...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="VenMetodoPago" class="control-label">Método de Pago</label>
+                        <select asp-for="VenMetodoPago" class="form-control" asp-items="ViewBag.VenMetodoPago">
+                            <option value="">Seleccione método...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="VenTipoCbte" class="control-label">Tipo Comprobante</label>
+                        <select asp-for="VenTipoCbte" class="form-control" asp-items="ViewBag.VenTipoCbte">
+                            <option value="">Sin comprobante</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="ListaCod" class="control-label">Lista de Precios</label>
+                        <select asp-for="ListaCod" class="form-control" asp-items="ViewBag.Listas">
+                            <option value="">Sin lista</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+            <h4>Artículos (ajuste cantidades si es necesario)</h4>
+
+            <table class="table table-sm" id="tablaArticulos">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Descripción</th>
+                        <th>Stock Disponible</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unit.</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="5" class="text-right">TOTAL:</th>
+                        <th id="totalVenta">$0.00</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <input type="hidden" name="itemsJson" id="itemsJson" />
+
+            <div class="form-group">
+                <input type="submit" value="Crear Venta" class="btn btn-sm btn-primary" />
+                <a asp-action="Index" class="btn btn-sm btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let items = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.Items));
+
+        // Función para normalizar separador decimal (acepta punto o coma)
+        function parseDecimal(value) {
+            if (!value) return 0;
+            return parseFloat(value.toString().replace(',', '.')) || 0;
+        }
+
+        // Filtrar caracteres no numéricos en tiempo real (permite dígitos, punto y coma)
+        function soloNumerosDecimales(input) {
+            let val = input.value.replace(/[^0-9.,]/g, '');
+            const firstSep = val.search(/[.,]/);
+            if (firstSep !== -1) {
+                val = val.substring(0, firstSep + 1) + val.substring(firstSep + 1).replace(/[.,]/g, '');
+            }
+            input.value = val;
+        }
+
+        $(document).ready(function() {
+            actualizarTabla();
+            $('#formVenta').submit(function() { $('#itemsJson').val(JSON.stringify(items)); });
+        });
+
+        function actualizarTabla() {
+            const tbody = $('#tablaArticulos tbody');
+            tbody.empty();
+            let total = 0;
+            items.forEach((item, index) => {
+                const row = $('<tr>');
+                row.append($('<td>').text(item.ArtCod || item.artCod));
+                row.append($('<td>').text(item.ArtDesc || item.artDesc));
+                row.append($('<td>').text(item.ArtStock || item.artStock));
+                const cantInput = $('<input>').attr('type', 'text').addClass('form-control form-control-sm')
+                    .val(item.Cantidad || item.cantidad).attr('placeholder', 'Ej: 1,5')
+                    .on('input', function() { soloNumerosDecimales(this); })
+                    .on('change', function() { updateItemCantidad(index, parseDecimal($(this).val())); });
+                row.append($('<td>').append(cantInput));
+                row.append($('<td>').text('$' + (item.Precio || item.precio).toFixed(2)));
+                row.append($('<td>').text('$' + (item.Subtotal || item.subtotal).toFixed(2)));
+                row.append($('<td>').html('<button type="button" class="btn btn-sm btn-danger" onclick="eliminarItem(' + index + ')">Eliminar</button>'));
+                tbody.append(row);
+                total += (item.Subtotal || item.subtotal);
+            });
+            $('#totalVenta').text('$' + total.toFixed(2));
+        }
+
+        function updateItemCantidad(index, newCant) {
+            const precio = items[index].Precio || items[index].precio;
+            items[index].Cantidad = newCant;
+            items[index].Subtotal = newCant * precio;
+            actualizarTabla();
+        }
+
+        function eliminarItem(index) { items.splice(index, 1); actualizarTabla(); }
+    </script>
+}

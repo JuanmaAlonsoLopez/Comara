@@ -1,5 +1,4 @@
-@model comara.Models.Articulo
-
+@model comara.Models.ArticuloStock
 @{
     ViewData["Title"] = "Edit Stock";
 }
@@ -15,23 +14,21 @@
             <input type="hidden" asp-for="ArtCod" />
             <div class="form-group">
                 <label asp-for="ArtStock" class="control-label"></label>
-                <input asp-for="ArtStock" class="form-control" />
+                <input type="text" name="ArtStockStr" value="@(Model.ArtStock?.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) ?? "")" class="form-control" placeholder="Ej: 10 o 10.5 o 10,5" />
                 <span asp-validation-for="ArtStock" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ArtStockMin" class="control-label"></label>
-                <input asp-for="ArtStockMin" class="form-control" />
+                <label asp-for="ArtStockMin" class="control-label">Stock mínimo</label>
+                <input type="text" name="ArtStockMinStr" value="@(Model.ArtStockMin?.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) ?? "")" class="form-control" placeholder="Ej: 5 o 5.5 o 5,5" />
                 <span asp-validation-for="ArtStockMin" class="text-danger"></span>
             </div>
+            <hr />
             <div class="form-group">
-                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <input type="submit" value="Guardar" class="btn btn-sm btn-success" /> |
+                <a asp-action="Index" class="btn btn-sm btn-secondary">Volver a la lista</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Volver a la lista</a>
 </div>
 
 @section Scripts {

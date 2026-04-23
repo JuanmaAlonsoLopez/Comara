@@ -1,0 +1,190 @@
+@model comara.Models.ViewModels.GenerarFacturaViewModel
+
+@{
+    ViewData["Title"] = "Generar Factura Electrónica";
+}
+
+<div class="container mt-4">
+    <h2>Generar Factura Electrónica AFIP</h2>
+    <p class="text-muted">Autorización de comprobante electrónico</p>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (ViewBag.AdvertenciasArticulos != null)
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Advertencias:</strong>
+            <ul class="mb-0">
+                @foreach (var advertencia in ViewBag.AdvertenciasArticulos)
+                {
+                    <li>@advertencia</li>
+                }
+            </ul>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Datos de la Venta</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><strong>Número de Venta:</strong> @Model.Venta?.VenCod</p>
+                            <p><strong>Fecha:</strong> @Model.Venta?.VenFech.ToString("dd/MM/yyyy")</p>
+                            <p><strong>Cliente:</strong> @Model.Venta?.Cliente?.CliNombre</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>CUIT/DNI:</strong> @Model.Venta?.Cliente?.CliNumDoc</p>
+                            <p><strong>Condición IVA:</strong> @Model.Venta?.Cliente?.CondicionIVA?.Descripcion</p>
+                            <p><strong>Total:</strong> <span class="h5 text-success">@Model.Venta?.VenTotal.ToString("C")</span></p>
+                        </div>
+                    </div>
+
+                    @if (Model.Venta?.DetalleVentas != null && Model.Venta.DetalleVentas.Any())
+                    {
+                        <hr />
+                        <h6>Detalle de Items</h6>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Artículo</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio Unit.</th>
+                                    <th>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Venta.DetalleVentas)
+                                {
+                                    <tr>
+                                        <td>@item.Articulo?.ArtDesc</td>
+                                        <td>@item.DetCant</td>
+                                        <td>@item.DetPrecio.ToString("C")</td>
+                                        <td>@item.DetSubtotal.ToString("C")</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Configuración de Factura</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="GenerarFactura" asp-route-id="@Model.VenCod" method="post">
+                        @Html.AntiForgeryToken()
+
+                        <div class="mb-3">
+                            <label class="form-label">Tipo de Comprobante</label>
+                            <select name="tipoComprobante" class="form-select" required id="selectTipoComprobante">
+                                <option value="">-- Seleccionar --</option>
+                                @foreach (var tipo in Model.TiposDisponibles)
+                                {
+                                    if (tipo.EsRecomendado)
+                                    {
+                                        <option value="@tipo.CodigoAfip" data-advertencia="@tipo.MensajeAdvertencia" selected>
+                                            @tipo.Descripcion ★ Recomendado
+                                        </option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@tipo.CodigoAfip" data-advertencia="@tipo.MensajeAdvertencia">
+                                            @tipo.Descripcion
+                                        </option>
+                                    }
+                                }
+                            </select>
+                            <small class="form-text text-muted" id="descripcionTipo">
+                                Selecciona el tipo de comprobante según la condición IVA del cliente
+                            </small>
+                            <div id="advertenciaTipo" class="alert alert-info mt-2" style="display: none;"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Punto de Venta</label>
+                            <input type="number" name="puntoVenta" class="form-control" value="@Model.PuntoVenta" required min="1" max="9999" />
+                            <small class="form-text text-muted">
+                                Número de punto de venta autorizado en AFIP
+                            </small>
+                        </div>
+
+                        <div class="alert alert-info">
+                            <small>
+                                <i class="bi bi-info-circle"></i> El número de comprobante se obtendrá automáticamente de AFIP
+                            </small>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success btn-lg" id="btnAutorizar">
+                                <i class="bi bi-check-circle"></i> Autorizar en AFIP
+                            </button>
+                            <a asp-controller="Ventas" asp-action="Index" class="btn btn-outline-secondary">
+                                <i class="bi bi-x-circle"></i> Cancelar
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h6 class="card-title">Guía Rápida</h6>
+                    <ul class="small">
+                        <li><strong>Factura A:</strong> Para Responsables Inscriptos con CUIT</li>
+                        <li><strong>Factura B:</strong> Para Consumidor Final, Monotributo o Exento</li>
+                        <li><strong>Factura C:</strong> Para Monotributo o Exento (operaciones simplificadas)</li>
+                    </ul>
+                    <p class="small text-muted mb-0">
+                        <i class="bi bi-star-fill text-warning"></i> = Tipo recomendado para este cliente
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Mostrar advertencia al seleccionar tipo de comprobante
+            $('#selectTipoComprobante').change(function() {
+                const selectedOption = $(this).find('option:selected');
+                const advertencia = selectedOption.data('advertencia');
+
+                if (advertencia) {
+                    $('#advertenciaTipo').text(advertencia).slideDown();
+                } else {
+                    $('#advertenciaTipo').slideUp();
+                }
+            });
+
+            // Trigger change para mostrar advertencia del tipo preseleccionado
+            $('#selectTipoComprobante').trigger('change');
+
+            // Confirmar antes de enviar
+            $('form').submit(function(e) {
+                const tipoSeleccionado = $('#selectTipoComprobante option:selected').text();
+
+                if (!confirm('¿Está seguro de generar ' + tipoSeleccionado + ' para esta venta?')) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,117 @@
+@model IEnumerable<comara.Models.Venta>
+
+@{
+    ViewData["Title"] = "Facturas Electrónicas";
+}
+
+<div class="container mt-4">
+    <h2>Facturas Electrónicas Autorizadas</h2>
+    <p class="text-muted">Listado de facturas autorizadas por AFIP con CAE</p>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="mb-3">
+        <a asp-controller="Ventas" asp-action="Index" class="btn btn-outline-primary">
+            <i class="bi bi-arrow-left"></i> Ver Todas las Ventas
+        </a>
+        <a asp-action="Consultar" class="btn btn-outline-secondary">
+            <i class="bi bi-search"></i> Consultar Factura en AFIP
+        </a>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Tipo Comprobante</th>
+                            <th>Punto Venta</th>
+                            <th>Número</th>
+                            <th>Cliente</th>
+                            <th>Total</th>
+                            <th>CAE</th>
+                            <th>Vencimiento CAE</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            @foreach (var factura in Model)
+                            {
+                                <tr>
+                                    <td>@factura.VenFech.ToString("dd/MM/yyyy")</td>
+                                    <td>
+                                        <span class="badge bg-info">
+                                            @(factura.TipoComprobante?.Descripcion ?? "N/A")
+                                        </span>
+                                    </td>
+                                    <td>@factura.VenPuntoVenta?.ToString("D4")</td>
+                                    <td>@factura.VenNumComprobante?.ToString("D8")</td>
+                                    <td>@factura.Cliente?.CliNombre</td>
+                                    <td>@factura.VenTotal.ToString("C")</td>
+                                    <td>
+                                        <code class="text-success">@factura.VenCAE</code>
+                                    </td>
+                                    <td>
+                                        @if (factura.VenCAEVencimiento.HasValue)
+                                        {
+                                            var vencido = factura.VenCAEVencimiento.Value < DateTime.Now;
+                                            <span class="badge @(vencido ? "bg-danger" : "bg-success")">
+                                                @factura.VenCAEVencimiento.Value.ToString("dd/MM/yyyy")
+                                            </span>
+                                        }
+                                    </td>
+                                    <td>
+                                        @if (factura.VenResultadoAfip == "A")
+                                        {
+                                            <span class="badge bg-success">Aprobado</span>
+                                        }
+                                        else if (factura.VenResultadoAfip == "R")
+                                        {
+                                            <span class="badge bg-danger">Rechazado</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-warning">Parcial</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <a asp-action="Detalle" asp-route-id="@factura.VenCod" class="btn btn-sm btn-primary" title="Ver Detalle">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="10" class="text-center text-muted">
+                                    No hay facturas electrónicas autorizadas
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

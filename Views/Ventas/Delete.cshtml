@@ -1,7 +1,7 @@
 @model comara.Models.Venta
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Eliminar";
 }
 
 <h1>Eliminar</h1>
@@ -11,35 +11,54 @@
     <h4>Venta</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.VenFech)
+        <dt class="col-sm-3">
+            Fecha
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.VenFech)
+        <dd class="col-sm-9">
+            @Model.VenFech.ToString("dd/MM/yyyy")
         </dd>
-        <dt class = "col-sm-2">
-                @Html.DisplayNameFor(model => model.Cliente!.CliNombre)
+        <dt class="col-sm-3">
+            Cliente
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cliente!.CliNombre)
+        <dd class="col-sm-9">
+            @(Model.Cliente?.CliNombre ?? "No especificado")
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.VenTotal)
+        <dt class="col-sm-3">
+            Total
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.VenTotal)
+        <dd class="col-sm-9">
+            @string.Format("${0:N2}", Model.VenTotal)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.VenEstado)
+        <dt class="col-sm-3">
+            Estado
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.VenEstado)
+        <dd class="col-sm-9">
+            @(Model.TipoEstado?.Descripcion ?? "No especificado")
+        </dd>
+        <dt class="col-sm-3">
+            Método de Pago
+        </dt>
+        <dd class="col-sm-9">
+            @(Model.TipoMetodoPago?.Descripcion ?? "No especificado")
+        </dd>
+        <dt class="col-sm-3">
+            Lista de Precio
+        </dt>
+        <dd class="col-sm-9">
+            @(Model.Lista?.ListDesc ?? "No especificado")
+        </dd>
+        <dt class="col-sm-3">
+            Tipo Comprobante
+        </dt>
+        <dd class="col-sm-9">
+            @(Model.TipoComprobante?.Descripcion ?? "No especificado")
         </dd>
     </dl>
-    
+    <hr />
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="VenCod" />
-        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
-        <a asp-action="Index">Volver a la lista</a>
+        <input type="submit" value="Eliminar" class="btn btn-sm btn-danger" /> |
+        <a asp-action="Index" class="btn btn-sm btn-secondary">Volver a la lista</a>
     </form>
 </div>

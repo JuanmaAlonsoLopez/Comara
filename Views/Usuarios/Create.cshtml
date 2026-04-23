@@ -1,0 +1,70 @@
+@model comara.Models.ViewModels.CreateUsuarioViewModel
+
+@{
+    ViewData["Title"] = "Crear Usuario";
+}
+
+<h1>Crear Usuario</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="UsuUsername" class="control-label"></label>
+                <input asp-for="UsuUsername" class="form-control" />
+                <span asp-validation-for="UsuUsername" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="UsuNombreCompleto" class="control-label"></label>
+                <input asp-for="UsuNombreCompleto" class="form-control" />
+                <span asp-validation-for="UsuNombreCompleto" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="UsuEmail" class="control-label"></label>
+                <input asp-for="UsuEmail" class="form-control" type="email" />
+                <span asp-validation-for="UsuEmail" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="UsuRole" class="control-label"></label>
+                <select asp-for="UsuRole" class="form-control">
+                    <option value="">-- Seleccionar --</option>
+                    <option value="user">Usuario</option>
+                    <option value="admin">Administrador</option>
+                </select>
+                <span asp-validation-for="UsuRole" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="ConfirmPassword" class="control-label"></label>
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+
+            <div class="form-check mb-3">
+                <input asp-for="UsuActivo" class="form-check-input" type="checkbox" checked />
+                <label asp-for="UsuActivo" class="form-check-label"></label>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

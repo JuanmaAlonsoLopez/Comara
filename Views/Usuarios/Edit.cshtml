@@ -1,0 +1,75 @@
+@model comara.Models.ViewModels.EditUsuarioViewModel
+
+@{
+    ViewData["Title"] = "Editar Usuario";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header bg-warning text-white">
+                    <h4><i class="bi bi-pencil-square"></i> Editar Usuario</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                        <input type="hidden" asp-for="Id" />
+
+                        <div class="mb-3">
+                            <label asp-for="UsuUsername" class="form-label"></label>
+                            <input asp-for="UsuUsername" class="form-control" readonly />
+                            <small class="text-muted">El nombre de usuario no se puede modificar</small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="UsuNombreCompleto" class="form-label"></label>
+                            <input asp-for="UsuNombreCompleto" class="form-control" />
+                            <span asp-validation-for="UsuNombreCompleto" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="UsuEmail" class="form-label"></label>
+                            <input asp-for="UsuEmail" type="email" class="form-control" />
+                            <span asp-validation-for="UsuEmail" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="UsuRole" class="form-label"></label>
+                            <select asp-for="UsuRole" class="form-select">
+                                <option value="user">Usuario</option>
+                                <option value="admin">Administrador</option>
+                            </select>
+                            <span asp-validation-for="UsuRole" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input asp-for="UsuActivo" class="form-check-input" />
+                                <label asp-for="UsuActivo" class="form-check-label"></label>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info">
+                            <i class="bi bi-info-circle"></i>
+                            Para cambiar la contraseña de este usuario, use la opción <strong>Resetear Contraseña</strong>.
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a asp-action="Index" class="btn btn-secondary">
+                                <i class="bi bi-arrow-left"></i> Cancelar
+                            </a>
+                            <button type="submit" class="btn btn-warning text-white">
+                                <i class="bi bi-save"></i> Guardar Cambios
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,24 @@
+# Agregar columnas para días de oferta y días de pago, y una columna para la razón de creación
+
+ALTER TABLE "COTIZACIONES" ADD COLUMN "cotDiasOferta" integer NULL;
+ALTER TABLE "COTIZACIONES" ADD COLUMN "cotDiasPago" integer NULL;
+alter table "COTIZACIONES" add column "razonCrea" integer null;
+
+# Crear tabla para tipos de razón de creación y agregar datos
+
+CREATE TABLE "tipoRazonCrea" (
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    nombre_razon VARCHAR(50) NOT NULL
+);
+
+# Agregar datos a la tabla de tipos de razón de creación
+
+INSERT INTO "tipoRazonCrea" (nombre_razon) VALUES 
+('ASCAR'), 
+('COMARA');
+
+# Agregar clave foránea para la columna de razón de creación
+
+ALTER TABLE "COTIZACIONES"
+ADD CONSTRAINT fk_cotizaciones_razoncrea 
+FOREIGN KEY ("razonCrea") REFERENCES "tipoRazonCrea" (id);

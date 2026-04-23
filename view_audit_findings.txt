@@ -1,0 +1,127 @@
+View Audit Findings Summary:
+
+The following views were identified as containing logic that, while sometimes functional, ideally should be moved to controllers or view models to better adhere to the MVC pattern:
+
+1.  **Articulos/Details.cshtml**:
+    *   **Finding**: Contains calls to a calculation method (`Model.CalcularPrecioVenta`) inside a loop to determine prices.
+    *   **Recommendation**: Price calculation should occur in the controller, and the results (list name and calculated price) should be passed to the view via a view model.
+
+2.  **Articulos/Index.cshtml**:
+    *   **Finding**: Contains C# logic for pagination (determining `startPage`, `endPage`, etc.).
+    *   **Recommendation**: Pagination logic should be encapsulated within the controller or a dedicated helper, and a pagination view model should provide the view with all necessary display data.
+
+3.  **Caja/Index.cshtml**:
+    *   **Finding**: Contains LINQ queries (`.Sum()`, `.OrderBy()`) for calculating totals and ordering collections (e.g., `Model.ChequesEnCaja.Sum(c => c.ChqMonto)`).
+    *   **Recommendation**: Aggregation and ordering operations should be performed in the controller, populating the view model with pre-calculated totals and sorted lists.
+
+4.  **Caja/VerCuentaCorriente.cshtml**:
+    *   **Finding**: Contains logic to calculate the `saldoActual` by performing LINQ operations (`.OrderByDescending().First().CctaSaldo`) on the model.
+    *   **Recommendation**: The current balance should be calculated in the controller and passed explicitly to the view.
+
+5.  **Caja/VerMovimientos.cshtml**:
+    *   **Finding**: Contains logic to calculate `totalIngresos` and `totalEgresos` by iterating through the model (`@foreach (var movimiento in Model)`).
+    *   **Recommendation**: These totals should be computed in the controller and provided to the view as properties of the view model.
+
+6.  **Cotizaciones/Index.cshtml**:
+    *   **Finding**: Contains a LINQ query to find a selected state (`estadosLocal.FirstOrDefault(e => e.Id == (int)ViewBag.EstadoFilter)`) and duplicates the pagination logic found in `Articulos/Index.cshtml`.
+    *   **Recommendation**: The selected state should be identified in the controller, and pagination logic should be centralized outside the view.
+
+7.  **Facturas/Detalle.cshtml**:
+    *   **Finding**: Makes a direct call to a static service method (`FacturaIvaCalculadorService.CalcularIvaDiscriminado(Model)`).
+    *   **Recommendation**: Service calls belong in the controller. The result of this calculation (`ivaData`) should be retrieved by the controller and passed to the view, preferably within a view model.
+
+8.  **Reportes/CuentasCorrientes.cshtml**:
+    *   **Finding**: Performs balance calculation (`(Model.TotalDebe - Model.TotalHaber)`) and contains pagination logic.
+    *   **Recommendation**: Both the balance calculation and pagination display logic should be handled by the controller/view model.
+
+9.  **Reportes/ReporteStock.cshtml**:
+    *   **Finding**: Contains pagination logic.
+    *   **Recommendation**: Pagination logic should be handled by the controller/view model.
+
+10. **Reportes/StockCritico.cshtml**:
+    *   **Finding**: Uses `Model.Count()` directly in the view and calculates `diferencia` (`item.ArtStock - item.ArtStockMin`) within the loop.
+    *   **Recommendation**: The count of critical items and the stock difference should be pre-calculated in the controller and included in the view model.
+
+11. **Reportes/Ventas.cshtml**:
+    *   **Finding**: Contains pagination logic.
+    *   **Recommendation**: Pagination logic should be handled by the controller/view model.
+
+12. **Stock/Index.cshtml**:
+    *   **Finding**: Contains pagination logic.
+    *   **Recommendation**: Pagination logic should be handled by the controller/view model.
+
+13. **Ventas/Details.cshtml**:
+    *   **Finding**: Contains multiple LINQ queries (`.Where()`, `.Select()`, `.Distinct()`, `.Sum()`, `.OrderByDescending()`) for processing payment methods and calculating total paid amounts and pending balances.
+    *   **Recommendation**: All data processing, aggregation, and ordering should be performed in the controller, and the prepared data should be passed to the view via a view model.
+
+**Views that generally adhere to the MVC pattern with acceptable presentation logic:**
+
+*   `_ViewImports.cshtml`
+*   `_ViewStart.cshtml`
+*   `Account/AccessDenied.cshtml`
+*   `Account/ChangePassword.cshtml`
+*   `Account/Login.cshtml`
+*   `Articulos/Create.cshtml`
+*   `Articulos/Delete.cshtml`
+*   `Articulos/Edit.cshtml`
+*   `Caja/Create.cshtml`
+*   `Caja/Details.cshtml`
+*   `Caja/RegistrarMovimiento.cshtml`
+*   `Caja/RegistrarPago.cshtml`
+*   `Caja/VerCheques.cshtml`
+*   `Clientes/Create.cshtml`
+*   `Clientes/Delete.cshtml`
+*   `Clientes/Details.cshtml`
+*   `Clientes/Edit.cshtml`
+*   `Clientes/Index.cshtml`
+*   `Cobranzas/Create.cshtml`
+*   `Cobranzas/Delete.cshtml`
+*   `Cobranzas/Details.cshtml`
+*   `Cobranzas/Edit.cshtml`
+*   `Cobranzas/Index.cshtml`
+*   `Cotizaciones/ConvertToSale.cshtml`
+*   `Cotizaciones/Create.cshtml`
+*   `Cotizaciones/Delete.cshtml`
+*   `Cotizaciones/Details.cshtml`
+*   `Cotizaciones/Edit.cshtml`
+*   `Facturas/Consultar.cshtml`
+*   `Facturas/Generar.cshtml`
+*   `Facturas/Index.cshtml`
+*   `Facturas/NotaCredito.cshtml`
+*   `Home/Index.cshtml`
+*   `Home/Privacy.cshtml`
+*   `Listas/Create.cshtml`
+*   `Listas/Delete.cshtml`
+*   `Listas/Edit.cshtml`
+*   `Listas/Index.cshtml`
+*   `Marcas/Create.cshtml`
+*   `Marcas/Delete.cshtml`
+*   `Marcas/Details.cshtml`
+*   `Marcas/Edit.cshtml`
+*   `Marcas/Index.cshtml`
+*   `Precios/AumentarPrecios.cshtml`
+*   `Precios/Index.cshtml`
+*   `Proveedores/Create.cshtml`
+*   `Proveedores/Delete.cshtml`
+*   `Proveedores/Details.cshtml`
+*   `Proveedores/Edit.cshtml`
+*   `Proveedores/Index.cshtml`
+*   `Reportes/Index.cshtml`
+*   `Shared/_Layout.cshtml`
+*   `Shared/_ValidationScriptsPartial.cshtml`
+*   `Shared/Components/StockCriticoNotification/Default.cshtml`
+*   `Shared/Error.cshtml`
+*   `Stock/Edit.cshtml`
+*   `Usuarios/Create.cshtml`
+*   `Usuarios/Delete.cshtml`
+*   `Usuarios/Details.cshtml`
+*   `Usuarios/Edit.cshtml`
+*   `Usuarios/Index.cshtml`
+*   `Usuarios/ResetPassword.cshtml`
+*   `Ventas/Create.cshtml`
+*   `Ventas/Delete.cshtml`
+*   `Ventas/Edit.cshtml`
+*   `Ventas/Index.cshtml`
+*   `Ventas/Presupuesto.cshtml`
+*   `Ventas/PresupuestoGenerado.cshtml`
+*   `Ventas/RegistrarPagoFactura.cshtml`

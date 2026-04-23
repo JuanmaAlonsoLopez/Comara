@@ -1,0 +1,44 @@
+﻿@model comara.Models.Lista
+
+@{
+    ViewData["Title"] = "Crear Lista";
+}
+
+<h1>Crear Nueva Lista</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="ListDesc" class="control-label">Descripción</label>
+                <input asp-for="ListDesc" class="form-control" />
+                <span asp-validation-for="ListDesc" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="ListPercent" class="control-label">Porcentaje</label>
+                <input asp-for="ListPercent" class="form-control" />
+                <span asp-validation-for="ListPercent" class="text-danger"></span>
+            </div>
+
+            <div class="form-group form-check mb-3">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ListStatus" /> ¿Está Activa?
+                </label>
+            </div>
+            <hr />
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-sm btn-success" />
+                <a asp-action="Index" class="btn btn-sm btn-secondary">Volver a la Lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Usuario - Sistema COMARA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-bg: #f8f9fa;
+            --border-color: #dee2e6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: var(--primary-color);
+            padding: 20px 0;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .sidebar-header {
+            padding: 0 20px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 15px;
+        }
+
+        .sidebar-header h4 {
+            color: #fff;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .sidebar-header small {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-nav li a {
+            display: block;
+            padding: 10px 20px;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+        }
+
+        .sidebar-nav li a:hover {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border-left-color: var(--secondary-color);
+        }
+
+        .sidebar-nav li a.active {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border-left-color: var(--secondary-color);
+        }
+
+        .sidebar-nav li a i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 280px;
+            padding: 30px 50px;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .content-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .content-header h1 {
+            margin: 0 0 10px;
+            font-weight: 700;
+        }
+
+        .content-header p {
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        .manual-section {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .manual-section h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .manual-section h3 {
+            color: var(--secondary-color);
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .manual-section h4 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Tables */
+        .table {
+            margin-bottom: 20px;
+        }
+
+        .table thead {
+            background: var(--light-bg);
+        }
+
+        .table th {
+            font-weight: 600;
+            color: var(--primary-color);
+            border-bottom-width: 2px;
+        }
+
+        /* Alerts and Notes */
+        .note {
+            background: #e3f2fd;
+            border-left: 4px solid var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 0 5px 5px 0;
+            margin: 15px 0;
+        }
+
+        .note-warning {
+            background: #fff3e0;
+            border-left-color: #ff9800;
+        }
+
+        .note-danger {
+            background: #ffebee;
+            border-left-color: var(--accent-color);
+        }
+
+        .note-success {
+            background: #e8f5e9;
+            border-left-color: #4caf50;
+        }
+
+        /* Code blocks */
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        /* Steps */
+        .steps {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+
+        .steps li {
+            counter-increment: step-counter;
+            padding: 15px 15px 15px 60px;
+            position: relative;
+            background: var(--light-bg);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background: var(--secondary-color);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Download Button */
+        .download-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1001;
+        }
+
+        .download-btn .btn {
+            padding: 15px 25px;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Print styles */
+        @media print {
+            .sidebar {
+                display: none;
+            }
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+            }
+            .download-btn {
+                display: none;
+            }
+            .manual-section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 992px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .main-content {
+                margin-left: 0;
+                padding: 20px;
+            }
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 1001;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h4><i class="bi bi-book"></i> COMARA</h4>
+            <small>Manual de Usuario</small>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="#introduccion"><i class="bi bi-house"></i> Introduccion</a></li>
+            <li><a href="#acceso"><i class="bi bi-key"></i> Acceso al Sistema</a></li>
+            <li><a href="#navegacion"><i class="bi bi-compass"></i> Navegacion</a></li>
+            <li><a href="#clientes"><i class="bi bi-people"></i> Clientes</a></li>
+            <li><a href="#articulos"><i class="bi bi-box"></i> Articulos</a></li>
+            <li><a href="#stock"><i class="bi bi-boxes"></i> Stock</a></li>
+            <li><a href="#ventas"><i class="bi bi-cart"></i> Ventas</a></li>
+            <li><a href="#cotizaciones"><i class="bi bi-file-text"></i> Cotizaciones</a></li>
+            <li><a href="#facturacion"><i class="bi bi-receipt"></i> Facturacion AFIP</a></li>
+            <li><a href="#caja"><i class="bi bi-cash-stack"></i> Caja</a></li>
+            <li><a href="#cobranzas"><i class="bi bi-wallet2"></i> Cobranzas</a></li>
+            <li><a href="#precios"><i class="bi bi-tags"></i> Precios y Listas</a></li>
+            <li><a href="#proveedores"><i class="bi bi-truck"></i> Proveedores</a></li>
+            <li><a href="#marcas"><i class="bi bi-bookmark"></i> Marcas</a></li>
+            <li><a href="#reportes"><i class="bi bi-graph-up"></i> Reportes</a></li>
+            <li><a href="#usuarios"><i class="bi bi-person-gear"></i> Usuarios</a></li>
+            <li><a href="#flujos"><i class="bi bi-diagram-3"></i> Flujos de Trabajo</a></li>
+            <li><a href="#faq"><i class="bi bi-question-circle"></i> Preguntas Frecuentes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <div class="content-header">
+            <h1><i class="bi bi-book"></i> Manual de Usuario</h1>
+            <p>Sistema de Gestion Comercial COMARA - Guia completa de uso</p>
+        </div>
+
+        <!-- Introduccion -->
+        <section id="introduccion" class="manual-section">
+            <h2><i class="bi bi-info-circle"></i> Introduccion</h2>
+
+            <h3>Que es COMARA?</h3>
+            <p>COMARA es un sistema integral de gestion comercial diseñado para empresas que necesitan administrar:</p>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="bi bi-check-circle text-success"></i> <strong>Inventario:</strong> Control de stock de productos</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle text-success"></i> <strong>Ventas:</strong> Registro y seguimiento de ventas</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle text-success"></i> <strong>Cotizaciones:</strong> Generacion de presupuestos</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="bi bi-check-circle text-success"></i> <strong>Facturacion:</strong> Integracion con AFIP</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle text-success"></i> <strong>Caja:</strong> Control de movimientos de dinero</li>
+                        <li class="list-group-item"><i class="bi bi-check-circle text-success"></i> <strong>Clientes/Proveedores:</strong> Gestion de relaciones</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Requisitos del Sistema</h3>
+            <ul>
+                <li>Navegador web moderno (Chrome, Firefox, Edge)</li>
+                <li>Conexion a internet (requerida para facturacion electronica)</li>
+            </ul>
+        </section>
+
+        <!-- Acceso al Sistema -->
+        <section id="acceso" class="manual-section">
+            <h2><i class="bi bi-key"></i> Acceso al Sistema</h2>
+
+            <h3>Inicio de Sesion</h3>
+            <ol class="steps">
+                <li>Abra su navegador web</li>
+                <li>Ingrese la direccion del sistema</li>
+                <li>Complete los campos: <strong>Usuario</strong> y <strong>Contraseña</strong></li>
+                <li>Haga clic en <strong>"Iniciar Sesion"</strong></li>
+            </ol>
+
+            <h3>Cerrar Sesion</h3>
+            <ol class="steps">
+                <li>Haga clic en su nombre de usuario (esquina superior derecha)</li>
+                <li>Seleccione <strong>"Cerrar Sesion"</strong></li>
+            </ol>
+
+            <h3>Cambiar Contraseña</h3>
+            <ol class="steps">
+                <li>Haga clic en su nombre de usuario</li>
+                <li>Seleccione <strong>"Cambiar Contraseña"</strong></li>
+                <li>Ingrese la contraseña actual</li>
+                <li>Ingrese la nueva contraseña (dos veces)</li>
+                <li>Haga clic en <strong>"Guardar"</strong></li>
+            </ol>
+        </section>
+
+        <!-- Navegacion -->
+        <section id="navegacion" class="manual-section">
+            <h2><i class="bi bi-compass"></i> Navegacion Principal</h2>
+
+            <h3>Barra de Menu Superior</h3>
+            <p>El sistema cuenta con una barra de navegacion en la parte superior con los siguientes modulos:</p>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Menu</th>
+                        <th>Descripcion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Clientes</strong></td><td>Gestion de clientes</td></tr>
+                    <tr><td><strong>Ventas</strong></td><td>Registro de ventas</td></tr>
+                    <tr><td><strong>Facturas</strong></td><td>Facturacion electronica AFIP</td></tr>
+                    <tr><td><strong>Caja</strong></td><td>Control de movimientos de caja</td></tr>
+                    <tr><td><strong>Cotizaciones</strong></td><td>Presupuestos y ofertas</td></tr>
+                    <tr><td><strong>Stock</strong></td><td>Control de inventario</td></tr>
+                    <tr><td><strong>Reportes</strong></td><td>Informes y analisis</td></tr>
+                    <tr><td><strong>Listas</strong></td><td>Listas de precios</td></tr>
+                    <tr><td><strong>Articulos</strong></td><td>Catalogo de productos</td></tr>
+                    <tr><td><strong>Proveedores</strong></td><td>Gestion de proveedores</td></tr>
+                    <tr><td><strong>Marcas</strong></td><td>Marcas de productos</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Botones de Accion Comunes</h3>
+            <p>En la mayoria de las pantallas encontrara estos botones:</p>
+            <ul>
+                <li><span class="badge bg-primary">Crear Nuevo</span> - Crear un nuevo registro</li>
+                <li><span class="badge bg-warning text-dark">Editar</span> - Modificar un registro existente</li>
+                <li><span class="badge bg-info">Detalles</span> - Ver informacion completa</li>
+                <li><span class="badge bg-danger">Eliminar</span> - Borrar un registro</li>
+            </ul>
+        </section>
+
+        <!-- Clientes -->
+        <section id="clientes" class="manual-section">
+            <h2><i class="bi bi-people"></i> Modulo de Clientes</h2>
+
+            <p><strong>Acceso:</strong> Menu Principal &rarr; Clientes</p>
+
+            <h3>Lista de Clientes</h3>
+            <p>Al ingresar vera una tabla con todos los clientes registrados mostrando:</p>
+            <ul>
+                <li>Nombre del cliente</li>
+                <li>Direccion</li>
+                <li>Telefono</li>
+                <li>Email</li>
+                <li>Acciones disponibles</li>
+            </ul>
+
+            <h3>Buscar Clientes</h3>
+            <ol class="steps">
+                <li>Use el campo de busqueda en la parte superior</li>
+                <li>Escriba el nombre o parte del nombre</li>
+                <li>Los resultados se filtran automaticamente</li>
+            </ol>
+
+            <h3>Crear Nuevo Cliente</h3>
+            <ol class="steps">
+                <li>Haga clic en <strong>"Crear Nuevo"</strong></li>
+                <li>Complete los campos del formulario</li>
+                <li>Haga clic en <strong>"Guardar"</strong></li>
+            </ol>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Campo</th>
+                        <th>Descripcion</th>
+                        <th>Obligatorio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Nombre</td><td>Nombre completo o razon social</td><td><span class="badge bg-success">Si</span></td></tr>
+                    <tr><td>Direccion</td><td>Direccion completa</td><td><span class="badge bg-secondary">No</span></td></tr>
+                    <tr><td>Telefono</td><td>Numero de contacto</td><td><span class="badge bg-secondary">No</span></td></tr>
+                    <tr><td>Email</td><td>Correo electronico</td><td><span class="badge bg-secondary">No</span></td></tr>
+                    <tr><td>Tipo de Documento</td><td>CUIT, DNI, etc.</td><td><span class="badge bg-warning text-dark">Para facturacion</span></td></tr>
+                    <tr><td>Numero de Documento</td><td>Numero del documento</td><td><span class="badge bg-warning text-dark">Para facturacion</span></td></tr>
+                    <tr><td>Condicion IVA</td><td>Resp. Inscripto, Monotributista, etc.</td><td><span class="badge bg-warning text-dark">Para facturacion</span></td></tr>
+                </tbody>
+            </table>
+
+            <div class="note note-warning">
+                <strong><i class="bi bi-exclamation-triangle"></i> Nota:</strong> No se pueden eliminar clientes que tengan ventas o cotizaciones asociadas.
+            </div>
+
+            <h3>Importar Clientes desde Excel</h3>
+            <ol class="steps">
+                <li>Haga clic en <strong>"Importar desde Excel"</strong></li>
+                <li>(Opcional) Descargue la plantilla haciendo clic en <strong>"Descargar Plantilla"</strong></li>
+                <li>Prepare su archivo Excel (.xlsx) con las columnas requeridas</li>
+                <li>Haga clic en <strong>"Seleccionar archivo"</strong> y elija su archivo</li>
+                <li>Haga clic en <strong>"Importar"</strong></li>
+            </ol>
+        </section>
+
+        <!-- Articulos -->
+        <section id="articulos" class="manual-section">
+            <h2><i class="bi bi-box"></i> Modulo de Articulos</h2>
+
+            <p><strong>Acceso:</strong> Menu Principal &rarr; Articulos</p>
+
+            <div class="note note-danger">
+                <strong><i class="bi bi-exclamation-triangle"></i> IMPORTANTE - Antes de crear articulos:</strong>
+                <p class="mb-2">Para poder crear articulos, primero debe tener registrados:</p>
+                <ol class="mb-0">
+                    <li><strong>Marcas</strong> (obligatorio) - Vaya a Menu &rarr; Marcas &rarr; Crear Nueva</li>
+                    <li><strong>Proveedores</strong> (recomendado) - Vaya a Menu &rarr; Proveedores &rarr; Crear Nuevo</li>
+                </ol>
+                <p class="mt-2 mb-0"><strong>Sin al menos una marca creada, no podra guardar nuevos articulos.</strong></p>
+            </div>
+
+            <h3>Lista de Articulos</h3>
+            <p>Muestra los articulos del catalogo con codigo, descripcion, marca, stock actual y precios.</p>
+
+            <h3>Buscar Articulos</h3>
+            <p>Puede buscar por:</p>
+            <ul>
+                <li>Codigo del articulo</li>
+                <li>Descripcion</li>
+                <li>Marca</li>
+                <li>Proveedor</li>
+            </ul>
+
+            <h3>Crear Nuevo Articulo</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Campo</th>
+                        <th>Descripcion</th>
+                        <th>Obligatorio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Codigo</td><td>Identificador unico del articulo</td><td><span class="badge bg-success">Si</span></td></tr>
+                    <tr><td>Descripcion</td><td>Nombre del producto</td><td><span class="badge bg-success">Si</span></td></tr>
+                    <tr><td>Marca</td><td>Marca del producto</td><td><span class="badge bg-success">Si</span></td></tr>
+                    <tr><td>Proveedor</td><td>Proveedor del producto</td><td><span class="badge bg-secondary">No</span></td></tr>
+                    <tr><td>IVA</td><td>Alicuota de IVA (21%, 10.5%, etc.)</td><td><span class="badge bg-secondary">No</span></td></tr>
+                    <tr><td>Stock Actual</td><td>Cantidad en inventario</td><td><span class="badge bg-secondary">No</span></td></tr>
+                    <tr><td>Stock Minimo</td><td>Cantidad que activa alerta</td><td><span class="badge bg-secondary">No</span></td></tr>
+                    <tr><td>Costo</td><td>Precio de costo sin IVA</td><td><span class="badge bg-secondary">No</span></td></tr>
+                    <tr><td>Precio Lista 1-5</td><td>Precios de venta por lista</td><td><span class="badge bg-secondary">No</span></td></tr>
+                </tbody>
+            </table>
+
+            <h3>Importar Articulos desde Excel</h3>
+            <ol class="steps">
+                <li>Haga clic en <strong>"Importar desde Excel"</strong></li>
+                <li>Descargue la plantilla si necesita ver el formato</li>
+                <li>Prepare su archivo con los datos</li>
+                <li>Seleccione el archivo y haga clic en <strong>"Importar"</strong></li>
+            </ol>
+        </section>
+
+        <!-- Stock -->
+        <section id="stock" class="manual-section">
+            <h2><i class="bi bi-boxes"></i> Modulo de Stock</h2>
+
+            <p><strong>Acceso:</strong> Menu Principal &rarr; Stock</p>
+
+            <h3>Visualizar Stock</h3>
+            <p>La pantalla muestra todos los articulos con:</p>
+            <ul>
+                <li>Codigo y descripcion</li>
+                <li>Stock actual</li>
+                <li>Stock minimo</li>
+                <li>Estado (normal o critico)</li>
+            </ul>
+
+            <h3>Editar Stock de un Articulo</h3>
+            <ol class="steps">
+                <li>Haga clic en <strong>"Editar"</strong> junto al articulo</li>
+                <li>Modifique el <strong>Stock Actual</strong> y/o <strong>Stock Minimo</strong></li>
+                <li>Haga clic en <strong>"Guardar"</strong></li>
+            </ol>
+
+            <div class="note note-danger">
+                <strong><i class="bi bi-exclamation-triangle"></i> Alertas de Stock Critico:</strong> Cuando un articulo tiene stock actual menor o igual al stock minimo, aparece una notificacion en el menu <strong>Reportes</strong> y se muestra en el <strong>Reporte de Stock Critico</strong>.
+            </div>
+        </section>
+
+        <!-- Ventas -->
+        <section id="ventas" class="manual-section">
+            <h2><i class="bi bi-cart"></i> Modulo de Ventas</h2>
+
+            <p><strong>Acceso:</strong> Menu Principal &rarr; Ventas</p>
+
+            <h3>Lista de Ventas</h3>
+            <p>Muestra todas las ventas con numero, fecha, cliente, total, estado y CAE (si esta facturada).</p>
+
+            <h3>Filtrar Ventas</h3>
+            <p>Use los filtros disponibles:</p>
+            <ul>
+                <li><strong>Fecha desde/hasta:</strong> Rango de fechas</li>
+                <li><strong>Estado:</strong> Pendiente, Facturada, Cancelada</li>
+                <li><strong>Cliente:</strong> Buscar por cliente especifico</li>
+            </ul>
+
+            <h3>Crear Nueva Venta</h3>
+            <ol class="steps">
+                <li>Haga clic en <strong>"Crear Nueva"</strong></li>
+                <li>Complete la cabecera: Fecha, Cliente, Lista de Precios (opcional), Metodo de Pago</li>
+                <li>Busque el articulo por codigo o descripcion</li>
+                <li>Ingrese la cantidad y precio unitario</li>
+                <li>Haga clic en <strong>"Agregar"</strong></li>
+                <li>Repita para cada articulo</li>
+                <li>Verifique el <strong>Total</strong> calculado automaticamente</li>
+                <li>Haga clic en <strong>"Guardar"</strong></li>
+            </ol>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Campo</th>
+                        <th>Descripcion</th>
+                        <th>Obligatorio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Fecha</td><td>Fecha de la venta</td><td><span class="badge bg-success">Si</span></td></tr>
+                    <tr><td>Cliente</td><td>Seleccione el cliente</td><td><span class="badge bg-success">Si</span></td></tr>
+                    <tr><td>Lista de Precios</td><td>Lista a aplicar</td><td><span class="badge bg-secondary">No</span></td></tr>
+                    <tr><td>Metodo de Pago</td><td>Efectivo, Tarjeta, etc.</td><td><span class="badge bg-secondary">No</span></td></tr>
+                </tbody>
+            </table>
+
+            <div class="note">
+                <strong><i class="bi bi-info-circle"></i> Nota:</strong> Las ventas facturadas no pueden modificarse.
+            </div>
+        </section>
+
+        <!-- Cotizaciones -->
+        <section id="cotizaciones" class="manual-section">
+            <h2><i class="bi bi-file-text"></i> Modulo de Cotizaciones</h2>
+
+            <p><strong>Acceso:</strong> Menu Principal &rarr; Cotizaciones</p>
+
+            <h3>Que es una Cotizacion?</h3>
+            <p>Una cotizacion es un <strong>presupuesto</strong> que se entrega al cliente. A diferencia de las ventas:</p>
+            <ul>
+                <li><strong>No afecta el stock</strong></li>
+                <li><strong>No se puede facturar directamente</strong></li>
+                <li><strong>Puede convertirse en venta</strong> cuando el cliente acepta</li>
+            </ul>
+
+            <h3>Estados de Cotizacion</h3>
+            <ul>
+                <li><span class="badge bg-warning text-dark">Pendiente</span> - Esperando respuesta del cliente</li>
+                <li><span class="badge bg-success">Aprobada</span> - Cliente acepto el presupuesto</li>
+                <li><span class="badge bg-danger">Rechazada</span> - Cliente no acepto</li>
+            </ul>
+
+            <h3>Convertir Cotizacion a Venta</h3>
+            <p>Cuando el cliente acepta la cotizacion:</p>
+            <ol class="steps">
+                <li>Vaya a la lista de cotizaciones</li>
+                <li>Encuentre la cotizacion aprobada</li>
+                <li>Haga clic en <strong>"Convertir a Venta"</strong></li>
+                <li>El sistema crea una nueva venta con los mismos datos</li>
+                <li>La nueva venta queda lista para facturar</li>
+            </ol>
+        </section>
+
+        <!-- Facturacion -->
+        <section id="facturacion" class="manual-section">
+            <h2><i class="bi bi-receipt"></i> Modulo de Facturacion Electronica</h2>
+
+            <p><strong>Acceso:</strong> Menu Principal &rarr; Facturas</p>
+
+            <h3>Tipos de Comprobantes</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Codigo AFIP</th>
+                        <th>Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Factura A</strong></td><td>1</td><td>Para clientes Responsables Inscriptos con CUIT</td></tr>
+                    <tr><td><strong>Factura B</strong></td><td>6</td><td>Para consumidores finales o monotributistas</td></tr>
+                    <tr><td><strong>Factura C</strong></td><td>11</td><td>Emitida por Monotributistas</td></tr>
+                    <tr><td><strong>Nota de Credito A</strong></td><td>3</td><td>Anulacion/descuento para Factura A</td></tr>
+                    <tr><td><strong>Nota de Credito B</strong></td><td>8</td><td>Anulacion/descuento para Factura B</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Generar Factura desde una Venta</h3>
+            <ol class="steps">
+                <li>Vaya a <strong>Ventas</strong></li>
+                <li>Encuentre la venta a facturar (sin CAE)</li>
+                <li>Haga clic en <strong>"Ver Detalles"</strong></li>
+                <li>Haga clic en <strong>"Generar Factura"</strong></li>
+                <li>El sistema valida los datos del cliente</li>
+                <li>Seleccione el <strong>Tipo de Comprobante</strong> apropiado</li>
+                <li>Revise los datos mostrados</li>
+                <li>Haga clic en <strong>"Autorizar"</strong></li>
+                <li>El sistema se conecta con AFIP</li>
+                <li>Si es exitoso, recibira el <strong>CAE</strong> y <strong>Numero de Comprobante</strong></li>
+            </ol>
+
+            <div class="note note-warning">
+                <strong><i class="bi bi-exclamation-triangle"></i> Importante:</strong>
+                <ul>
+                    <li>Para <strong>Factura A</strong>: requiere CUIT valido del cliente</li>
+                    <li>Para <strong>Factura B</strong>: acepta DNI o consumidor final</li>
+                </ul>
+            </div>
+
+            <h3>Errores Comunes de Facturacion</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Error</th>
+                        <th>Causa</th>
+                        <th>Solucion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>"CUIT invalido"</td><td>CUIT del cliente incorrecto</td><td>Edite el cliente y corrija el CUIT</td></tr>
+                    <tr><td>"Falta condicion IVA"</td><td>Cliente sin condicion IVA</td><td>Edite el cliente y seleccione condicion</td></tr>
+                    <tr><td>"Tipo no valido"</td><td>Incompatibilidad cliente/comprobante</td><td>Use el tipo correcto segun condicion IVA</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Caja -->
+        <section id="caja" class="manual-section">
+            <h2><i class="bi bi-cash-stack"></i> Modulo de Caja</h2>
+
+            <p><strong>Acceso:</strong> Menu Principal &rarr; Caja</p>
+
+            <h3>Dashboard Principal</h3>
+            <p>Al ingresar vera un resumen del mes actual:</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Indicador</th>
+                        <th>Descripcion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Efectivo en Caja</strong></td><td>Saldo actual de efectivo</td></tr>
+                    <tr><td><strong>Cheques Pendientes</strong></td><td>Total en cheques sin cobrar</td></tr>
+                    <tr><td><strong>Cuentas Corrientes</strong></td><td>Total pendiente de cobro</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Filtrar por Periodo</h3>
+            <ol class="steps">
+                <li>Seleccione el <strong>Mes</strong> deseado</li>
+                <li>Seleccione el <strong>Año</strong></li>
+                <li>Los totales se actualizan automaticamente</li>
+            </ol>
+
+            <h3>Registrar Pago de Cliente</h3>
+            <ol class="steps">
+                <li>Haga clic en <strong>"Registrar Pago"</strong></li>
+                <li>Seleccione el <strong>Cliente</strong></li>
+                <li>Ingrese <strong>Fecha</strong>, <strong>Monto</strong> y <strong>Metodo de Pago</strong></li>
+                <li>Haga clic en <strong>"Guardar"</strong></li>
+            </ol>
+
+            <h3>Registrar Movimiento de Caja</h3>
+            <p>Para ingresos o egresos que no son pagos de clientes:</p>
+            <ol class="steps">
+                <li>Haga clic en <strong>"Registrar Movimiento"</strong></li>
+                <li>Seleccione <strong>Tipo:</strong> INGRESO o EGRESO</li>
+                <li>Complete los demas campos</li>
+                <li>Haga clic en <strong>"Guardar"</strong></li>
+            </ol>
+        </section>
+
+        <!-- Cobranzas -->
+        <section id="cobranzas" class="manual-section">
+            <h2><i class="bi bi-wallet2"></i> Modulo de Cobranzas</h2>
+
+            <p><strong>Acceso:</strong> Menu Principal &rarr; Cobranzas</p>
+
+            <h3>Lista de Cobros</h3>
+            <p>Muestra todos los cobros registrados con cliente, fecha, monto y metodo de cobro.</p>
+
+            <h3>Registrar Nuevo Cobro</h3>
+            <ol class="steps">
+                <li>Haga clic en <strong>"Crear Nuevo"</strong></li>
+                <li>Seleccione el <strong>Cliente</strong></li>
+                <li>Ingrese la <strong>Fecha de Cobro</strong></li>
+                <li>Ingrese el <strong>Monto</strong></li>
+                <li>Seleccione el <strong>Metodo</strong> (Efectivo, Cheque, Tarjeta, Transferencia)</li>
+                <li>Haga clic en <strong>"Guardar"</strong></li>
+            </ol>
+        </section>
+
+        <!-- Precios -->
+        <section id="precios" class="manual-section">
+            <h2><i class="bi bi-tags"></i> Modulo de Precios y Listas</h2>
+
+            <h3>Listas de Precios</h3>
+            <p><strong>Acceso:</strong> Menu Principal &rarr; Listas</p>
+
+            <h4>Que es una Lista de Precios?</h4>
+            <p>Las listas de precios permiten manejar diferentes tarifas para diferentes tipos de clientes. Cada lista tiene un <strong>porcentaje de margen</strong> que se aplica sobre el costo del producto.</p>
+
+            <p><strong>Ejemplo:</strong></p>
+            <ul>
+                <li>Lista "Minorista": 50% de margen</li>
+                <li>Lista "Mayorista": 30% de margen</li>
+                <li>Lista "Especial": 20% de margen</li>
+            </ul>
+
+            <h3>Gestion de Precios</h3>
+            <p><strong>Acceso:</strong> Menu Principal &rarr; Precios</p>
+
+            <h4>Ver Precios</h4>
+            <p>La pantalla muestra todos los articulos con sus precios en cada lista (L1 a L5).</p>
+
+            <h4>Aumentar Precios Masivamente</h4>
+            <ol class="steps">
+                <li>Vaya a <strong>Precios &rarr; Aumentar Precios</strong></li>
+                <li>Seleccione el criterio: <strong>Por Marca</strong> o <strong>Por Proveedor</strong></li>
+                <li>Seleccione la marca o proveedor</li>
+                <li>Ingrese el <strong>Porcentaje de Aumento</strong> (ej: 10 para 10%)</li>
+                <li>Haga clic en <strong>"Aplicar"</strong></li>
+            </ol>
+
+            <div class="note note-success">
+                <strong><i class="bi bi-check-circle"></i> El sistema actualiza automaticamente:</strong>
+                <ul>
+                    <li>Todos los precios de listas (L1 a L5)</li>
+                    <li>El costo del articulo</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Proveedores -->
+        <section id="proveedores" class="manual-section">
+            <h2><i class="bi bi-truck"></i> Modulo de Proveedores</h2>
+
+            <p><strong>Acceso:</strong> Menu Principal &rarr; Proveedores</p>
+
+            <h3>Crear Nuevo Proveedor</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Campo</th>
+                        <th>Descripcion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Nombre</td><td>Razon social del proveedor</td></tr>
+                    <tr><td>CUIT</td><td>CUIT del proveedor</td></tr>
+                    <tr><td>Contacto</td><td>Persona de contacto</td></tr>
+                    <tr><td>Descuento (%)</td><td>Descuento que aplica el proveedor</td></tr>
+                    <tr><td>Email</td><td>Correo electronico</td></tr>
+                    <tr><td>Celular</td><td>Telefono de contacto</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Descuento de Proveedor</h3>
+            <p>El campo <strong>Descuento</strong> es importante porque afecta el calculo de costos:</p>
+            <div class="code-block">
+                Costo Final = Costo x (1 - Descuento/100)
+            </div>
+            <p><strong>Ejemplo:</strong> Si un articulo cuesta $100 y el proveedor da 10% de descuento:</p>
+            <div class="code-block">
+                Costo Final = $100 x (1 - 10/100) = $100 x 0.90 = $90
+            </div>
+        </section>
+
+        <!-- Marcas -->
+        <section id="marcas" class="manual-section">
+            <h2><i class="bi bi-bookmark"></i> Modulo de Marcas</h2>
+
+            <p><strong>Acceso:</strong> Menu Principal &rarr; Marcas</p>
+
+            <h3>Crear Nueva Marca</h3>
+            <ol class="steps">
+                <li>Haga clic en <strong>"Crear Nueva"</strong></li>
+                <li>Ingrese el <strong>Nombre</strong> de la marca</li>
+                <li>Haga clic en <strong>"Guardar"</strong></li>
+            </ol>
+
+            <div class="note">
+                <strong><i class="bi bi-info-circle"></i> Nota:</strong> Cada articulo debe tener una marca asignada.
+            </div>
+        </section>
+
+        <!-- Reportes -->
+        <section id="reportes" class="manual-section">
+            <h2><i class="bi bi-graph-up"></i> Modulo de Reportes</h2>
+
+            <p><strong>Acceso:</strong> Menu Principal &rarr; Reportes</p>
+
+            <h3>Reportes Disponibles</h3>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header bg-primary text-white">
+                            <i class="bi bi-cart"></i> Reporte de Ventas
+                        </div>
+                        <div class="card-body">
+                            <p>Muestra todas las ventas con fecha, cliente, total, estado y CAE.</p>
+                            <p>Permite filtrar por rango de fechas, estado y cliente.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header bg-danger text-white">
+                            <i class="bi bi-exclamation-triangle"></i> Reporte de Stock Critico
+                        </div>
+                        <div class="card-body">
+                            <p>Muestra articulos con stock igual o menor al stock minimo.</p>
+                            <p>Incluye notificacion visual en el menu.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header bg-info text-white">
+                            <i class="bi bi-boxes"></i> Reporte de Stock Completo
+                        </div>
+                        <div class="card-body">
+                            <p>Lista todos los articulos con codigo, descripcion, marca, proveedor, stock actual, stock minimo e IVA.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-header bg-warning text-dark">
+                            <i class="bi bi-wallet2"></i> Reporte de Cuentas Corrientes
+                        </div>
+                        <div class="card-body">
+                            <p>Muestra los saldos pendientes de cobro por cliente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usuarios -->
+        <section id="usuarios" class="manual-section">
+            <h2><i class="bi bi-person-gear"></i> Gestion de Usuarios</h2>
+
+            <p><strong>Acceso:</strong> Menu Usuario &rarr; Gestion de Usuarios <em>(solo administradores)</em></p>
+
+            <h3>Crear Nuevo Usuario</h3>
+            <ol class="steps">
+                <li>Haga clic en <strong>"Crear Nuevo"</strong></li>
+                <li>Complete: Nombre de Usuario, Nombre Completo, Email, Contraseña, Rol</li>
+                <li>Haga clic en <strong>"Guardar"</strong></li>
+            </ol>
+
+            <h3>Desactivar Usuario</h3>
+            <ol class="steps">
+                <li>Haga clic en <strong>"Editar"</strong> junto al usuario</li>
+                <li>Desmarque la opcion <strong>"Activo"</strong></li>
+                <li>Haga clic en <strong>"Guardar"</strong></li>
+            </ol>
+        </section>
+
+        <!-- Flujos de Trabajo -->
+        <section id="flujos" class="manual-section">
+            <h2><i class="bi bi-diagram-3"></i> Flujos de Trabajo Comunes</h2>
+
+            <h3>Flujo 1: Venta Completa con Facturacion</h3>
+            <div class="code-block">
+1. Crear Cliente (si es nuevo)
+   → Menu → Clientes → Crear Nuevo
+   → Completar datos (especialmente CUIT/DNI y Condicion IVA)
+
+2. Crear Venta
+   → Menu → Ventas → Crear Nueva
+   → Seleccionar cliente
+   → Agregar articulos
+   → Guardar
+
+3. Facturar
+   → Ver detalles de la venta
+   → Generar Factura
+   → Seleccionar tipo de comprobante
+   → Autorizar con AFIP
+
+4. Registrar Cobro (si es necesario)
+   → Menu → Caja → Registrar Pago
+   → Seleccionar cliente y monto
+            </div>
+
+            <h3>Flujo 2: Cotizacion que se Convierte en Venta</h3>
+            <div class="code-block">
+1. Crear Cotizacion
+   → Menu → Cotizaciones → Crear Nueva
+   → Seleccionar cliente, agregar articulos
+   → Estado: Pendiente → Guardar
+
+2. Entregar presupuesto al cliente
+
+3. Si el cliente acepta:
+   → Editar cotizacion → Estado: Aprobada
+   → Convertir a Venta
+
+4. Facturar la nueva venta
+            </div>
+
+            <h3>Flujo 3: Control de Stock</h3>
+            <div class="code-block">
+1. Configurar stock minimo de articulos
+   → Menu → Stock → Editar cada articulo
+   → Establecer stock minimo
+
+2. Revisar alertas periodicamente
+   → Ver notificacion en menu Reportes
+   → Ir a Reporte de Stock Critico
+
+3. Reponer stock
+   → Contactar proveedor
+   → Actualizar stock cuando llegue mercaderia
+   → Menu → Stock → Editar → Actualizar cantidad
+            </div>
+
+            <h3>Flujo 4: Aumento de Precios</h3>
+            <div class="code-block">
+1. Ir a Precios → Aumentar Precios
+
+2. Seleccionar criterio:
+   → Por Marca (todos los productos de esa marca)
+   → Por Proveedor (todos los productos de ese proveedor)
+
+3. Ingresar porcentaje (ej: 15 para 15%)
+
+4. Aplicar
+
+5. Verificar en Precios → Index
+            </div>
+
+            <h3>Flujo 5: Cierre de Caja Mensual</h3>
+            <div class="code-block">
+1. Ir a Caja → Index
+
+2. Seleccionar mes y año
+
+3. Revisar:
+   → Efectivo en caja
+   → Cheques pendientes
+   → Cuentas corrientes
+
+4. Verificar balance por metodo de pago
+
+5. Exportar o imprimir si es necesario
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="manual-section">
+            <h2><i class="bi bi-question-circle"></i> Preguntas Frecuentes</h2>
+
+            <div class="accordion" id="faqAccordion">
+                <!-- General -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Como busco un articulo rapidamente?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            En cualquier pantalla de ventas o cotizaciones, escriba el codigo o parte de la descripcion en el campo de busqueda de articulos.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Puedo modificar una venta despues de facturarla?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            No. Una vez que una venta tiene CAE de AFIP, no puede modificarse. Si necesita hacer cambios, debe emitir una Nota de Credito.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Que datos necesito para facturar a un cliente?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Nombre completo o razon social</li>
+                                <li>Tipo y numero de documento (CUIT para Factura A)</li>
+                                <li>Condicion IVA</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            Cual es la diferencia entre Factura A, B y C?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Factura A:</strong> Para clientes Responsables Inscriptos (requiere CUIT)</li>
+                                <li><strong>Factura B:</strong> Para consumidores finales o monotributistas</li>
+                                <li><strong>Factura C:</strong> Cuando usted es Monotributista</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            El sistema descuenta stock automaticamente?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Si, al crear una venta el stock se descuenta automaticamente. Las cotizaciones NO afectan el stock.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                            Como funcionan las listas de precios?
+                        </button>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Cada lista tiene un porcentaje de margen. Al seleccionar una lista en una venta, los precios se calculan automaticamente aplicando ese porcentaje sobre el costo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                            Como registro un gasto?
+                        </button>
+                    </h2>
+                    <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Use Caja → Registrar Movimiento → Tipo: EGRESO
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                            Como se cuanto dinero tengo en caja?
+                        </button>
+                    </h2>
+                    <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Vaya a Caja → Index y vea el indicador "Efectivo en Caja" del mes actual.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-5 py-4 border-top">
+            <p class="text-muted mb-0">
+                <strong>Manual de Usuario - Sistema COMARA</strong><br>
+                <small>Version 1.0</small>
+            </p>
+        </footer>
+    </main>
+
+    <!-- Download Button -->
+    <div class="download-btn">
+        <button class="btn btn-primary btn-lg" onclick="window.print()">
+            <i class="bi bi-printer"></i> Imprimir / Guardar PDF
+        </button>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top btn btn-secondary">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active link highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.manual-section');
+            const navLinks = document.querySelectorAll('.sidebar-nav a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Back to top button visibility
+            const backToTop = document.querySelector('.back-to-top');
+            if (scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>

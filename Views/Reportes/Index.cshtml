@@ -6,6 +6,12 @@
 
 <ul>
     <li><a asp-controller="Reportes" asp-action="Ventas">Reporte de Ventas</a></li>
-    <li><a asp-controller="Reportes" asp-action="StockCritico">Reporte de Stock Crítico</a></li>
+    <li>
+        <a asp-controller="Reportes" asp-action="StockCritico" class="list-item-with-notification">
+            Reporte de Stock Crítico
+            @await Component.InvokeAsync("StockCriticoNotification")
+        </a>
+    </li>
+    <li><a asp-controller="Reportes" asp-action="ReporteStock">Reporte de Stock</a></li>
     <li><a asp-controller="Reportes" asp-action="CuentasCorrientes">Reporte de Cuentas Corrientes</a></li>
 </ul>

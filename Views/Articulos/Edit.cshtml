@@ -10,48 +10,54 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+        <form asp-action="Edit" asp-route-id="@Model.Id">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="ArtCod" />
             <div class="form-group">
-                <label asp-for="ArtDesc" class="control-label"></label>
+                <label class="control-label">Descripción</label>
                 <input asp-for="ArtDesc" class="form-control" />
                 <span asp-validation-for="ArtDesc" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ArtStock" class="control-label"></label>
-                <input asp-for="ArtStock" class="form-control" />
+                <label class="control-label">Stock</label>
+                <input type="text" name="ArtStockStr" value="@(Model.ArtStock?.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) ?? "")" class="form-control" placeholder="Ej: 10 o 10.5 o 10,5" />
                 <span asp-validation-for="ArtStock" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MarCod" class="control-label"></label>
+                <label class="control-label">Stock crítico</label>
+                <input type="text" name="ArtStockMinStr" value="@(Model.ArtStockMin?.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) ?? "")" class="form-control" placeholder="Ej: 5 o 5.5 o 5,5" />
+                <span asp-validation-for="ArtStockMin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Costo</label>
+                <input type="text" name="ArtCostStr" value="@(Model.ArtCost?.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture) ?? "")" class="form-control" placeholder="Ej: 1500 o 1500.50 o 1500,50" />
+                <span asp-validation-for="ArtCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Marca</label>
                 <select asp-for="MarCod" class="form-control" asp-items="ViewBag.MarCod"></select>
                 <span asp-validation-for="MarCod" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ProCod" class="control-label"></label>
+                <label class="control-label">Proveedor</label>
                 <select asp-for="ProCod" class="form-control" asp-items="ViewBag.ProCod"></select>
                 <span asp-validation-for="ProCod" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MarCod" class="control-label"></label>
-                <select asp-for="MarCod" class="form-control" asp-items="ViewBag.MarCod"></select>
-                <span asp-validation-for="MarCod" class="text-danger"></span>
+                <label class="control-label">IVA (%)</label>
+                <select asp-for="IvaCod" class="form-control" asp-items="ViewBag.IvaCod">
+                    <option value="">-- Seleccione IVA --</option>
+                </select>
+                <span asp-validation-for="IvaCod" class="text-danger"></span>
             </div>
+            <hr />
             <div class="form-group">
-                <label asp-for="ProCod" class="control-label"></label>
-                <select asp-for="ProCod" class="form-control" asp-items="ViewBag.ProCod"></select>
-                <span asp-validation-for="ProCod" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <input type="submit" value="Guardar" class="btn btn-sm btn-primary" />
+                <a asp-action="Index" class="btn btn-sm btn-secondary">Volver a la lista</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Volver a la lista</a>
 </div>
 
 @section Scripts {

@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("comara-dev-secrets-2026")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("comara")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fdd88575631c395daaf51c2c2b23fb5e76821c9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fb5bce64cd04bd630e2fc066f300e3397b8b921")]
 [assembly: System.Reflection.AssemblyProductAttribute("comara")]
 [assembly: System.Reflection.AssemblyTitleAttribute("comara")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
