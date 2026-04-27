@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("comara")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f72b00acd30508b7c7bf7377cb307470c26985a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf951ed660acc0a1a7247a8cb2262ea5efa3a6c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("comara")]
 [assembly: System.Reflection.AssemblyTitleAttribute("comara")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

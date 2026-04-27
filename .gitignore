@@ -1,2 +1,5 @@
 .claude
 .vs
+/.vs
+/bin
+/obj
