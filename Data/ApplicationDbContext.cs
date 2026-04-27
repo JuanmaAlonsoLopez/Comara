@@ -473,8 +473,8 @@ namespace comara.Data
         // --- Tablas a auditar ---
         private static readonly HashSet<string> TablasAuditadas = new()
         {
-            "ARTICULOS", "CLIENTES", "VENTAS", "COTIZACIONES",
-            "PROVEEDORES", "MARCAS", "USUARIOS", "PAGOS", "CHEQUES"
+            "VENTAS", 
+            "MOVIMIENTOS_CAJA"
         };
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
@@ -506,8 +506,6 @@ namespace comara.Data
                     UserName = GetCurrentUserName(),
                     IpAddress = GetClientIpAddress()
                 };
-
-                auditEntries.Add(auditEntry);
 
                 foreach (var property in entry.Properties)
                 {
@@ -546,6 +544,14 @@ namespace comara.Data
                             break;
                     }
                 }
+
+                // --- PREVENCIÓN DE LOGS "BASURA" (Empty Logs) ---
+                if (entry.State == EntityState.Modified && auditEntry.OldValues.Count == 0 && auditEntry.NewValues.Count == 0)
+                {
+                    continue;
+                }
+
+                auditEntries.Add(auditEntry);
             }
 
             return auditEntries;

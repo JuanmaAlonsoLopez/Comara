@@ -1,0 +1,575 @@
+2026-04-27 13:46:51.051 -03:00 [WRN] Login attempt failed: Invalid password for user 'jmalonso' {"SourceContext":"comara.Services.AuthenticationService","ActionId":"628b2853-6425-4531-b146-f87533c15d9d","ActionName":"comara.Controllers.AccountController.Login (comara)","RequestId":"0HNL4FHGJKQ5J:00000011","RequestPath":"/Account/Login","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":19}
+2026-04-27 13:46:51.116 -03:00 [WRN] Failed login attempt for username: jmalonso from IP: ::1 {"SourceContext":"comara.Controllers.AccountController","ActionId":"628b2853-6425-4531-b146-f87533c15d9d","ActionName":"comara.Controllers.AccountController.Login (comara)","RequestId":"0HNL4FHGJKQ5J:00000011","RequestPath":"/Account/Login","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":19}
+2026-04-27 13:46:56.315 -03:00 [INF] User 'jmalonso' validated successfully {"SourceContext":"comara.Services.AuthenticationService","ActionId":"628b2853-6425-4531-b146-f87533c15d9d","ActionName":"comara.Controllers.AccountController.Login (comara)","RequestId":"0HNL4FHGJKQ5J:00000017","RequestPath":"/Account/Login","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":18}
+2026-04-27 13:46:56.528 -03:00 [INF] Updated last login for user ID 2 {"SourceContext":"comara.Services.AuthenticationService","ActionId":"628b2853-6425-4531-b146-f87533c15d9d","ActionName":"comara.Controllers.AccountController.Login (comara)","RequestId":"0HNL4FHGJKQ5J:00000017","RequestPath":"/Account/Login","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":19}
+2026-04-27 13:46:56.537 -03:00 [INF] User jmalonso logged in successfully {"SourceContext":"comara.Controllers.AccountController","ActionId":"628b2853-6425-4531-b146-f87533c15d9d","ActionName":"comara.Controllers.AccountController.Login (comara)","RequestId":"0HNL4FHGJKQ5J:00000017","RequestPath":"/Account/Login","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":19}
+2026-04-27 13:53:08.895 -03:00 [ERR] Failed executing DbCommand (15ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT c1."cotCod", c1."cliCod", c1."cotDiasOferta", c1."cotDiasPago", c1."cotEstado", c1."cotEstadoId", c1."cotFech", c1."cotTotal", c1."listaCod", c1."razonCrea", c0.id, c0."cliCondicionIVA", c0."cliDireccion", c0."cliEmail", c0."cliFormaPago", c0."cliNombre", c0."cliNumDoc", c0."cliTelefono", c0."cliTipoDoc", c2.id, c2.color, c2.descripcion, d."detCotCod", d."artCod", d."cotCod", d."detCant", d."detPrecio", d."detSubtotal"
+FROM (
+    SELECT c."cotCod", c."cliCod", c."cotDiasOferta", c."cotDiasPago", c."cotEstado", c."cotEstadoId", c."cotFech", c."cotTotal", c."listaCod", c."razonCrea"
+    FROM "COTIZACIONES" AS c
+    ORDER BY c."cotCod" DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS c1
+INNER JOIN "CLIENTES" AS c0 ON c1."cliCod" = c0.id
+LEFT JOIN "cotizacionEstados" AS c2 ON c1."cotEstadoId" = c2.id
+LEFT JOIN "DETALLE_COTIZACIONES" AS d ON c1."cotCod" = d."cotCod"
+ORDER BY c1."cotCod" DESC, c0.id, c2.id {"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:0000001F","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":22}
+2026-04-27 13:53:08.956 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'comara.Data.ApplicationDbContext'.
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn {"EventId":{"Id":10100,"Name":"Microsoft.EntityFrameworkCore.Query.QueryIterationFailed"},"SourceContext":"Microsoft.EntityFrameworkCore.Query","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:0000001F","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":22}
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn
+2026-04-27 13:53:09.094 -03:00 [ERR] Error no manejado en Cotizaciones/Index: 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475 {"SourceContext":"comara.Filters.GlobalExceptionFilter","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:0000001F","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":22}
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at comara.Controllers.CotizacionesController.Index(String searchTerm, Nullable`1 estadoFilter, Int32 page, Int32 pageSize) in C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\Controllers\CotizacionesController.cs:line 59
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn
+2026-04-27 13:53:19.702 -03:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT c1."cotCod", c1."cliCod", c1."cotDiasOferta", c1."cotDiasPago", c1."cotEstado", c1."cotEstadoId", c1."cotFech", c1."cotTotal", c1."listaCod", c1."razonCrea", c0.id, c0."cliCondicionIVA", c0."cliDireccion", c0."cliEmail", c0."cliFormaPago", c0."cliNombre", c0."cliNumDoc", c0."cliTelefono", c0."cliTipoDoc", c2.id, c2.color, c2.descripcion, d."detCotCod", d."artCod", d."cotCod", d."detCant", d."detPrecio", d."detSubtotal"
+FROM (
+    SELECT c."cotCod", c."cliCod", c."cotDiasOferta", c."cotDiasPago", c."cotEstado", c."cotEstadoId", c."cotFech", c."cotTotal", c."listaCod", c."razonCrea"
+    FROM "COTIZACIONES" AS c
+    ORDER BY c."cotCod" DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS c1
+INNER JOIN "CLIENTES" AS c0 ON c1."cliCod" = c0.id
+LEFT JOIN "cotizacionEstados" AS c2 ON c1."cotEstadoId" = c2.id
+LEFT JOIN "DETALLE_COTIZACIONES" AS d ON c1."cotCod" = d."cotCod"
+ORDER BY c1."cotCod" DESC, c0.id, c2.id {"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:00000027","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":12}
+2026-04-27 13:53:19.714 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'comara.Data.ApplicationDbContext'.
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn {"EventId":{"Id":10100,"Name":"Microsoft.EntityFrameworkCore.Query.QueryIterationFailed"},"SourceContext":"Microsoft.EntityFrameworkCore.Query","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:00000027","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":12}
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn
+2026-04-27 13:53:19.780 -03:00 [ERR] Error no manejado en Cotizaciones/Index: 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475 {"SourceContext":"comara.Filters.GlobalExceptionFilter","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:00000027","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":12}
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at comara.Controllers.CotizacionesController.Index(String searchTerm, Nullable`1 estadoFilter, Int32 page, Int32 pageSize) in C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\Controllers\CotizacionesController.cs:line 59
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn
+2026-04-27 13:53:22.234 -03:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT c1."cotCod", c1."cliCod", c1."cotDiasOferta", c1."cotDiasPago", c1."cotEstado", c1."cotEstadoId", c1."cotFech", c1."cotTotal", c1."listaCod", c1."razonCrea", c0.id, c0."cliCondicionIVA", c0."cliDireccion", c0."cliEmail", c0."cliFormaPago", c0."cliNombre", c0."cliNumDoc", c0."cliTelefono", c0."cliTipoDoc", c2.id, c2.color, c2.descripcion, d."detCotCod", d."artCod", d."cotCod", d."detCant", d."detPrecio", d."detSubtotal"
+FROM (
+    SELECT c."cotCod", c."cliCod", c."cotDiasOferta", c."cotDiasPago", c."cotEstado", c."cotEstadoId", c."cotFech", c."cotTotal", c."listaCod", c."razonCrea"
+    FROM "COTIZACIONES" AS c
+    ORDER BY c."cotCod" DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS c1
+INNER JOIN "CLIENTES" AS c0 ON c1."cliCod" = c0.id
+LEFT JOIN "cotizacionEstados" AS c2 ON c1."cotEstadoId" = c2.id
+LEFT JOIN "DETALLE_COTIZACIONES" AS d ON c1."cotCod" = d."cotCod"
+ORDER BY c1."cotCod" DESC, c0.id, c2.id {"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:00000035","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":24}
+2026-04-27 13:53:22.247 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'comara.Data.ApplicationDbContext'.
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn {"EventId":{"Id":10100,"Name":"Microsoft.EntityFrameworkCore.Query.QueryIterationFailed"},"SourceContext":"Microsoft.EntityFrameworkCore.Query","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:00000035","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":24}
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn
+2026-04-27 13:53:22.329 -03:00 [ERR] Error no manejado en Cotizaciones/Index: 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475 {"SourceContext":"comara.Filters.GlobalExceptionFilter","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:00000035","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":24}
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at comara.Controllers.CotizacionesController.Index(String searchTerm, Nullable`1 estadoFilter, Int32 page, Int32 pageSize) in C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\Controllers\CotizacionesController.cs:line 59
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn
+2026-04-27 13:53:24.310 -03:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT c1."cotCod", c1."cliCod", c1."cotDiasOferta", c1."cotDiasPago", c1."cotEstado", c1."cotEstadoId", c1."cotFech", c1."cotTotal", c1."listaCod", c1."razonCrea", c0.id, c0."cliCondicionIVA", c0."cliDireccion", c0."cliEmail", c0."cliFormaPago", c0."cliNombre", c0."cliNumDoc", c0."cliTelefono", c0."cliTipoDoc", c2.id, c2.color, c2.descripcion, d."detCotCod", d."artCod", d."cotCod", d."detCant", d."detPrecio", d."detSubtotal"
+FROM (
+    SELECT c."cotCod", c."cliCod", c."cotDiasOferta", c."cotDiasPago", c."cotEstado", c."cotEstadoId", c."cotFech", c."cotTotal", c."listaCod", c."razonCrea"
+    FROM "COTIZACIONES" AS c
+    ORDER BY c."cotCod" DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS c1
+INNER JOIN "CLIENTES" AS c0 ON c1."cliCod" = c0.id
+LEFT JOIN "cotizacionEstados" AS c2 ON c1."cotEstadoId" = c2.id
+LEFT JOIN "DETALLE_COTIZACIONES" AS d ON c1."cotCod" = d."cotCod"
+ORDER BY c1."cotCod" DESC, c0.id, c2.id {"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:00000043","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":23}
+2026-04-27 13:53:24.321 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'comara.Data.ApplicationDbContext'.
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn {"EventId":{"Id":10100,"Name":"Microsoft.EntityFrameworkCore.Query.QueryIterationFailed"},"SourceContext":"Microsoft.EntityFrameworkCore.Query","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:00000043","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":23}
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn
+2026-04-27 13:53:24.394 -03:00 [ERR] Error no manejado en Cotizaciones/Index: 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475 {"SourceContext":"comara.Filters.GlobalExceptionFilter","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:00000043","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":23}
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at comara.Controllers.CotizacionesController.Index(String searchTerm, Nullable`1 estadoFilter, Int32 page, Int32 pageSize) in C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\Controllers\CotizacionesController.cs:line 59
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn
+2026-04-27 13:53:25.128 -03:00 [ERR] Failed executing DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT c1."cotCod", c1."cliCod", c1."cotDiasOferta", c1."cotDiasPago", c1."cotEstado", c1."cotEstadoId", c1."cotFech", c1."cotTotal", c1."listaCod", c1."razonCrea", c0.id, c0."cliCondicionIVA", c0."cliDireccion", c0."cliEmail", c0."cliFormaPago", c0."cliNombre", c0."cliNumDoc", c0."cliTelefono", c0."cliTipoDoc", c2.id, c2.color, c2.descripcion, d."detCotCod", d."artCod", d."cotCod", d."detCant", d."detPrecio", d."detSubtotal"
+FROM (
+    SELECT c."cotCod", c."cliCod", c."cotDiasOferta", c."cotDiasPago", c."cotEstado", c."cotEstadoId", c."cotFech", c."cotTotal", c."listaCod", c."razonCrea"
+    FROM "COTIZACIONES" AS c
+    ORDER BY c."cotCod" DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS c1
+INNER JOIN "CLIENTES" AS c0 ON c1."cliCod" = c0.id
+LEFT JOIN "cotizacionEstados" AS c2 ON c1."cotEstadoId" = c2.id
+LEFT JOIN "DETALLE_COTIZACIONES" AS d ON c1."cotCod" = d."cotCod"
+ORDER BY c1."cotCod" DESC, c0.id, c2.id {"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:0000004B","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":15}
+2026-04-27 13:53:25.138 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'comara.Data.ApplicationDbContext'.
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn {"EventId":{"Id":10100,"Name":"Microsoft.EntityFrameworkCore.Query.QueryIterationFailed"},"SourceContext":"Microsoft.EntityFrameworkCore.Query","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:0000004B","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":15}
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn
+2026-04-27 13:53:25.209 -03:00 [ERR] Error no manejado en Cotizaciones/Index: 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475 {"SourceContext":"comara.Filters.GlobalExceptionFilter","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:0000004B","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":15}
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at comara.Controllers.CotizacionesController.Index(String searchTerm, Nullable`1 estadoFilter, Int32 page, Int32 pageSize) in C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\Controllers\CotizacionesController.cs:line 59
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn
+2026-04-27 13:53:59.778 -03:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT c1."cotCod", c1."cliCod", c1."cotDiasOferta", c1."cotDiasPago", c1."cotEstado", c1."cotEstadoId", c1."cotFech", c1."cotTotal", c1."listaCod", c1."razonCrea", c0.id, c0."cliCondicionIVA", c0."cliDireccion", c0."cliEmail", c0."cliFormaPago", c0."cliNombre", c0."cliNumDoc", c0."cliTelefono", c0."cliTipoDoc", c2.id, c2.color, c2.descripcion, d."detCotCod", d."artCod", d."cotCod", d."detCant", d."detPrecio", d."detSubtotal"
+FROM (
+    SELECT c."cotCod", c."cliCod", c."cotDiasOferta", c."cotDiasPago", c."cotEstado", c."cotEstadoId", c."cotFech", c."cotTotal", c."listaCod", c."razonCrea"
+    FROM "COTIZACIONES" AS c
+    ORDER BY c."cotCod" DESC
+    LIMIT @__p_1 OFFSET @__p_0
+) AS c1
+INNER JOIN "CLIENTES" AS c0 ON c1."cliCod" = c0.id
+LEFT JOIN "cotizacionEstados" AS c2 ON c1."cotEstadoId" = c2.id
+LEFT JOIN "DETALLE_COTIZACIONES" AS d ON c1."cotCod" = d."cotCod"
+ORDER BY c1."cotCod" DESC, c0.id, c2.id {"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:00000053","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":28}
+2026-04-27 13:53:59.791 -03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'comara.Data.ApplicationDbContext'.
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn {"EventId":{"Id":10100,"Name":"Microsoft.EntityFrameworkCore.Query.QueryIterationFailed"},"SourceContext":"Microsoft.EntityFrameworkCore.Query","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:00000053","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":28}
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn
+2026-04-27 13:53:59.869 -03:00 [ERR] Error no manejado en Cotizaciones/Index: 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475 {"SourceContext":"comara.Filters.GlobalExceptionFilter","ActionId":"d907f672-7a25-4cb9-87af-4049103c3e5c","ActionName":"comara.Controllers.CotizacionesController.Index (comara)","RequestId":"0HNL4FHGJKQ5J:00000053","RequestPath":"/Cotizaciones","ConnectionId":"0HNL4FHGJKQ5J","MachineName":"BSM-JUANMA","ThreadId":28}
+Npgsql.PostgresException (0x80004005): 42703: no existe la columna c.cotDiasOferta
+
+POSITION: 475
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at comara.Controllers.CotizacionesController.Index(String searchTerm, Nullable`1 estadoFilter, Int32 page, Int32 pageSize) in C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\Controllers\CotizacionesController.cs:line 59
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: no existe la columna c.cotDiasOferta
+    Position: 475
+    File: parse_relation.c
+    Line: 3827
+    Routine: errorMissingColumn

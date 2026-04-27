@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\",
+  "WorkspaceRootPath": "C:\\Users\\Juanma y pedemont\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma y pedemont\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma y pedemont\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\models\\lista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:models\\lista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +18,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Lista.cs",
+              "DocumentMoniker": "C:\\Users\\Juanma y pedemont\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Models\\Lista.cs",
+              "RelativeDocumentMoniker": "Models\\Lista.cs",
+              "ToolTip": "C:\\Users\\Juanma y pedemont\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Models\\Lista.cs",
+              "RelativeToolTip": "Models\\Lista.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T18:32:51.227Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -34,48 +39,28 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:323948898:0:{81164725-9a96-4ece-a4cb-440d8fd285e5}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:323948898:0:{81164725-9a96-4ece-a4cb-440d8fd285e5}"
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-23T15:19:20.227Z",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Juanma y pedemont\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Juanma y pedemont\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAUCAACAeDV5yiIiwA8CAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T18:03:01.222Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAByAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-23T15:18:39.46Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-23T15:16:58.852Z"
             }
           ]
         }
