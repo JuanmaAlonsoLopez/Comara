@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\models\\viewmodels\\ventareporteitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:models\\viewmodels\\ventareporteitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\views\\ventas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:views\\ventas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\views\\reportes\\ventas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:views\\reportes\\ventas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\views\\ventas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:views\\ventas\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\models\\viewmodels\\reportesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:models\\viewmodels\\reportesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\views\\ventas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:views\\ventas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\models\\viewmodels\\ventaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:models\\viewmodels\\ventaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\views\\ventas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:views\\ventas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|solutionrelative:controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08406F53-21D6-4E30-8684-9435E3D5AA1F}|comara.csproj|c:\\users\\juanma\\onedrive - alumnos.frm.utn.edu.ar\\trabajo\\sistema comara\\comara\\models\\detalleventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,13 +62,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "ReportesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Models\\ViewModels\\ReportesViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\ReportesViewModel.cs",
+              "ToolTip": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Models\\ViewModels\\ReportesViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\ReportesViewModel.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAIA0wCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T23:14:27.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ReportesController.cs",
               "DocumentMoniker": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Controllers\\ReportesController.cs",
               "RelativeDocumentMoniker": "Controllers\\ReportesController.cs",
               "ToolTip": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Controllers\\ReportesController.cs",
               "RelativeToolTip": "Controllers\\ReportesController.cs",
-              "ViewState": "AgIAAFEAAACAmbfqOkwXwGAAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAMwE0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-04T22:03:39.28Z",
               "EditorCaption": ""
@@ -76,51 +89,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "VentaReporteItemViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Models\\ViewModels\\VentaReporteItemViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ViewModels\\VentaReporteItemViewModel.cs",
-              "ToolTip": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Models\\ViewModels\\VentaReporteItemViewModel.cs",
-              "RelativeToolTip": "Models\\ViewModels\\VentaReporteItemViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T22:02:34.568Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Ventas.cshtml",
               "DocumentMoniker": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Views\\Reportes\\Ventas.cshtml",
               "RelativeDocumentMoniker": "Views\\Reportes\\Ventas.cshtml",
               "ToolTip": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Views\\Reportes\\Ventas.cshtml",
               "RelativeToolTip": "Views\\Reportes\\Ventas.cshtml",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAAIAAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAACwmq4nutoowHIAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-05-04T21:57:02.065Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Views\\Ventas\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Ventas\\Details.cshtml",
               "ToolTip": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Views\\Ventas\\Details.cshtml",
               "RelativeToolTip": "Views\\Ventas\\Details.cshtml",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAIwI8AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAqwLoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-05-04T20:44:46.833Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "VentasController.cs",
               "DocumentMoniker": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Controllers\\VentasController.cs",
               "RelativeDocumentMoniker": "Controllers\\VentasController.cs",
               "ToolTip": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Controllers\\VentasController.cs",
               "RelativeToolTip": "Controllers\\VentasController.cs",
-              "ViewState": "AgIAAMIBAAAAAAAAAAAhwMsBAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAHcBAAAAAAAAAAAIwNEBAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-04T20:31:06.558Z",
               "EditorCaption": ""
@@ -133,20 +133,20 @@
               "RelativeDocumentMoniker": "Models\\ViewModels\\VentaViewModel.cs",
               "ToolTip": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Models\\ViewModels\\VentaViewModel.cs",
               "RelativeToolTip": "Models\\ViewModels\\VentaViewModel.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAUwDIAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA3wDIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-04T20:29:41.722Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Views\\Ventas\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Ventas\\Create.cshtml",
               "ToolTip": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\Views\\Ventas\\Create.cshtml",
               "RelativeToolTip": "Views\\Ventas\\Create.cshtml",
-              "ViewState": "AgIAAM8BAAAAAAAAAAAAANkBAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-05-04T20:38:18.948Z",
               "EditorCaption": ""
@@ -161,8 +161,7 @@
               "RelativeToolTip": "Models\\DetalleVenta.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAmwB4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T20:26:47.798Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-04T20:26:47.798Z"
             }
           ]
         }

@@ -59,19 +59,6 @@
         </div>
     </div>
     <div class="col-md-4">
-        <div class="card bg-info text-white">
-            <div class="card-body">
-                <h5 class="card-title">Costo Total</h5>
-                <h3 class="fw-bold">
-                    @Model.GranTotalCostos.ToString("C")
-                    <span class="fs-6 text-dark opacity-75">
-                        (@Model.MargenGeneral.ToString("0.00")%)
-                    </span>
-                </h3>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
         <div class="card bg-success text-white">
             <div class="card-body">
                 <h5 class="card-title">Cantidad de Ventas</h5>
@@ -118,9 +105,16 @@
                             @if (item.CostoTotal > 0)
                             {
                                 @item.CostoTotal.ToString("C")
-                                <span class="text-success fw-bold" style="font-size: 0.85em;">
-                                    (@item.MargenPorcentaje.ToString("0.00")%)
-                                </span>
+                                if (item.MargenPorcentaje >= 0) {
+                                    <span class="text-success fw-bold" style="font-size: 0.85em;">
+                                        (@item.MargenPorcentaje.ToString("0.00")%)
+                                    </span>
+                                } else
+                                {
+                                    <span class="text-danger fw-bold" style="font-size: 0.85em;">
+                                        (@item.MargenPorcentaje.ToString("0.00")%)
+                                    </span>
+                                }
                             }
                             else
                             {

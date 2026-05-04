@@ -31,6 +31,10 @@ namespace comara.Models.ViewModels
         // Totales
         public decimal TotalVentas { get; set; }
         public int CantidadVentas { get; set; }
+
+        // --- NUEVAS PROPIEDADES PARA COSTOS Y MÁRGENES GENERALES ---
+        public decimal GranTotalCostos { get; set; }
+
     }
 
     public class VentaReporteItem
@@ -41,6 +45,13 @@ namespace comara.Models.ViewModels
         public string MetodoPago { get; set; } = string.Empty;
         public string Estado { get; set; } = string.Empty;
         public decimal VenTotal { get; set; }
+
+        // --- NUEVAS PROPIEDADES PARA COSTO Y MARGEN POR VENTA ---
+        public decimal CostoTotal { get; set; }
+
+        public decimal MargenPorcentaje => VenTotal > 0 && CostoTotal > 0
+            ? ((VenTotal - CostoTotal) / VenTotal) * 100
+            : 0;
     }
 
     // ViewModel para Reporte de Cuentas Corrientes

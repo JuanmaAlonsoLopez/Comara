@@ -140,7 +140,13 @@
                                     @if (detalle.DetCostoTotal > 0)
                                     {
                                         @detalle.DetCostoTotal.ToString("C")
-                                        <span class="text-success fw-bold" style="font-size: 0.85em;">(@margenPorcentaje.ToString("0.00")%)</span>
+                                        if (margenPorcentaje >= 0)
+                                        {
+                                            <span class="text-success fw-bold" style="font-size: 0.85em;">(@margenPorcentaje.ToString("0.00")%)</span>
+                                        } else
+                                        {
+                                            <span class="text-danger fw-bold" style="font-size: 0.85em;">(@margenPorcentaje.ToString("0.00")%)</span>
+                                        }
                                     }
                                     else
                                     {
@@ -168,7 +174,12 @@
                                 @if (sumaCostoTotal > 0)
                                 {
                                     @sumaCostoTotal.ToString("C")
-                                    <span class="text-success">(@margenVentaTotal.ToString("0.00")%)</span>
+                                    if (margenVentaTotal >= 0) {
+                                        <span class="text-success">(@margenVentaTotal.ToString("0.00")%)</span>
+                                    } else
+                                    {
+                                        <span class="text-danger">(@margenVentaTotal.ToString("0.00")%)</span>
+                                    }
                                 }
                                 else
                                 {
