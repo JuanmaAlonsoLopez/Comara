@@ -22,3 +22,9 @@ INSERT INTO "tipoRazonCrea" (nombre_razon) VALUES
 ALTER TABLE "COTIZACIONES"
 ADD CONSTRAINT fk_cotizaciones_razoncrea 
 FOREIGN KEY ("razonCrea") REFERENCES "tipoRazonCrea" (id);
+
+-- Agregar columna de Costo Unitario
+ALTER TABLE "DETALLE_VENTAS" ADD COLUMN "detCostoUnitario" DECIMAL(18, 2) NOT NULL DEFAULT 0;
+
+-- Agregar columna de Costo Total
+ALTER TABLE "DETALLE_VENTAS" ADD COLUMN "detCostoTotal" DECIMAL(18, 2) NOT NULL DEFAULT 0;

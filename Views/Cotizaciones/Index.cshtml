@@ -135,8 +135,8 @@
                                 <a asp-action="Edit" asp-route-id="@item.CotCod" class="btn btn-warning" title="Editar">
                                     <i class="bi bi-pencil"></i>
                                 </a>
-                                <a asp-action="ConvertToSale" asp-route-id="@item.CotCod" class="btn btn-success" title="Convertir a Venta">
-                                    <i class="bi bi-cart-check"></i>
+                                <a asp-controller="Ventas" asp-action="Create" asp-route-cotizacionId="@item.CotCod" class="btn btn-success">
+                                    <i class="fas fa-shopping-cart"></i> Convertir a Venta
                                 </a>
                                 <a asp-action="Delete" asp-route-id="@item.CotCod" class="btn btn-outline-danger" title="Eliminar">
                                     <i class="bi bi-trash"></i>

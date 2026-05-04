@@ -229,9 +229,34 @@
         }
 
         $(document).ready(function() {
+
+            // --- INICIO: INYECCIÓN DE DATOS DE COTIZACIÓN ---
+            // Obtenemos los detalles enviados desde el controlador
+            var detallesPrecargados = @Html.Raw(Model.Items != null ? System.Text.Json.JsonSerializer.Serialize(Model.Items) : "[]");
+
+            if (detallesPrecargados && detallesPrecargados.length > 0) {
+                detallesPrecargados.forEach(function(detalle) {
+                    // Llenamos el array 'items' respetando las propiedades de VentaItemViewModel
+                    items.push({
+                        ArtCod: detalle.ArtCod,
+                        ArtCodigoStr: detalle.ArtCodigoStr || '-',
+                        Cantidad: detalle.Cantidad,
+                        Precio: detalle.Precio,           // <-- Corregido
+                        Subtotal: detalle.Subtotal,
+                        ArtDesc: detalle.ArtDesc || 'Artículo pre-cargado', // <-- Corregido
+                        ArtStock: detalle.ArtStock || '-'
+                    });
+                });
+                // Dibujamos la tabla y calculamos el total inicial
+                actualizarTabla();
+            }
+            // --- FIN: INYECCIÓN DE DATOS DE COTIZACIÓN ---
+
+
             // Seleccionar automáticamente la primera lista de precios
             var firstOption = $('#listaPrecios option[value!=""]:first');
-            if (firstOption.length > 0) {
+            // MODIFICACIÓN: Solo autoselecciona si NO hay un valor ya seleccionado por la cotización
+            if (firstOption.length > 0 && !$('#listaPrecios').val()) {
                 $('#listaPrecios').val(firstOption.val());
             }
 
@@ -351,9 +376,9 @@
                     .data('item', item)
                     .html(
                         '<div class="item-main">' +
-                            '<span class="item-code">' + item.codigo + '</span>' +
-                            '<span class="item-desc">' + item.descripcion + '</span>' +
-                            '<span class="item-info">Stock: ' + item.stock + ' | ' + item.marca + '</span>' +
+                        '<span class="item-code">' + item.codigo + '</span>' +
+                        '<span class="item-desc">' + item.descripcion + '</span>' +
+                        '<span class="item-info">Stock: ' + item.stock + ' | ' + item.marca + '</span>' +
                         '</div>'
                     )
                     .on('click', function() {
@@ -423,6 +448,7 @@
                         $('#precioArticulo').val(result.precio.toFixed(2));
                         articuloSeleccionado.precio = result.precio;
                         articuloSeleccionado.stock = result.stock;
+                        articuloSeleccionado.costo = result.costoFinal;
                     }
                 }
             });
@@ -444,6 +470,8 @@
                 Cantidad: cantidad,
                 Precio: precio,
                 Subtotal: cantidad * precio,
+                CostoUnitario: articuloSeleccionado.costo,
+                CostoTotal: cantidad * articuloSeleccionado.costo,
                 ArtDesc: articuloSeleccionado.descripcion,
                 ArtStock: articuloSeleccionado.stock
             });
@@ -472,6 +500,7 @@
         }
 
         function eliminarItem(index) { items.splice(index, 1); actualizarTabla(); }
+    
         function limpiarFormulario() {
             $('#buscarArticulo').val('');
             $('#cantidadArticulo').val(1);

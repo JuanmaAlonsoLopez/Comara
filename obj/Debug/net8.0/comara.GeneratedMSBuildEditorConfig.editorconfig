@@ -19,341 +19,341 @@ build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v8.0
 build_property.RootNamespace = comara
 build_property.RootNamespace = comara
-build_property.ProjectDir = C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\
+build_property.ProjectDir = C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Juanma y pedemont\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara
+build_property.MSBuildProjectDirectory = C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Account/AccessDenied.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Account/ChangePassword.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Account/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Account/Login.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Articulos/Create.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Articulos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Articulos/Delete.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Articulos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Articulos/Details.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Articulos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Articulos/Edit.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Articulos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Articulos/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Articulos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/Create.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FqYVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/Details.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FqYVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FqYVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/RegistrarMovimiento.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/RegistrarMovimiento.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FqYVxSZWdpc3RyYXJNb3ZpbWllbnRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/RegistrarPago.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/RegistrarPago.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FqYVxSZWdpc3RyYXJQYWdvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/VerCheques.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/VerCheques.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FqYVxWZXJDaGVxdWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/VerCuentaCorriente.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/VerCuentaCorriente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FqYVxWZXJDdWVudGFDb3JyaWVudGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/VerMovimientos.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Caja/VerMovimientos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FqYVxWZXJNb3ZpbWllbnRvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Clientes/Create.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Clientes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Clientes/Delete.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Clientes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Clientes/Details.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Clientes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Clientes/Edit.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Clientes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Clientes/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Clientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cobranzas/Create.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cobranzas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29icmFuemFzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cobranzas/Delete.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cobranzas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29icmFuemFzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cobranzas/Details.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cobranzas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29icmFuemFzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cobranzas/Edit.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cobranzas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29icmFuemFzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cobranzas/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cobranzas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29icmFuemFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cotizaciones/ConvertToSale.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cotizaciones/ConvertToSale.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbmVzXENvbnZlcnRUb1NhbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cotizaciones/Create.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cotizaciones/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbmVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cotizaciones/Delete.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cotizaciones/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbmVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cotizaciones/Details.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cotizaciones/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbmVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cotizaciones/Edit.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cotizaciones/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbmVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cotizaciones/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Cotizaciones/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbmVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Facturas/Consultar.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Facturas/Consultar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcQ29uc3VsdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Facturas/Detalle.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Facturas/Detalle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcRGV0YWxsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Facturas/Generar.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Facturas/Generar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcR2VuZXJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Facturas/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Facturas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Facturas/NotaCredito.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Facturas/NotaCredito.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyYXNcTm90YUNyZWRpdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Home/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Home/Privacy.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Listas/Create.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Listas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Listas/Delete.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Listas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Listas/Edit.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Listas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Listas/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Listas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdGFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Marcas/Create.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Marcas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Marcas/Delete.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Marcas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Marcas/Details.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Marcas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Marcas/Edit.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Marcas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Marcas/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Marcas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Precios/AumentarPrecios.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Precios/AumentarPrecios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlY2lvc1xBdW1lbnRhclByZWNpb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Precios/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Precios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlY2lvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Proveedores/Create.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Proveedores/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Proveedores/Delete.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Proveedores/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Proveedores/Details.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Proveedores/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Proveedores/Edit.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Proveedores/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Proveedores/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Proveedores/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Reportes/CuentasCorrientes.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Reportes/CuentasCorrientes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcQ3VlbnRhc0NvcnJpZW50ZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Reportes/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Reportes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Reportes/ReporteStock.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Reportes/ReporteStock.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcUmVwb3J0ZVN0b2NrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Reportes/StockCritico.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Reportes/StockCritico.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcU3RvY2tDcml0aWNvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Reportes/Ventas.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Reportes/Ventas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcVmVudGFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Shared/Components/StockCriticoNotification/Default.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Shared/Components/StockCriticoNotification/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU3RvY2tDcml0aWNvTm90aWZpY2F0aW9uXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Shared/Error.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Stock/Edit.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Stock/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Stock/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Stock/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvY2tcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Usuarios/Create.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Usuarios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Usuarios/Delete.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Usuarios/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Usuarios/Details.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Usuarios/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Usuarios/Edit.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Usuarios/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Usuarios/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Usuarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Usuarios/ResetPassword.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Usuarios/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcUmVzZXRQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/Create.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/Delete.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/Details.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/Edit.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/Index.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/Presupuesto.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/Presupuesto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXFByZXN1cHVlc3RvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/PresupuestoGenerado.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/PresupuestoGenerado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXFByZXN1cHVlc3RvR2VuZXJhZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/RegistrarPagoFactura.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Ventas/RegistrarPagoFactura.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXFJlZ2lzdHJhclBhZ29GYWN0dXJhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/_ViewImports.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/_ViewStart.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Juanma y pedemont/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Shared/_Layout.cshtml]
+[C:/Users/Juanma/OneDrive - alumnos.frm.utn.edu.ar/Trabajo/SISTEMA COMARA/comara/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-wgl8hg6tvf

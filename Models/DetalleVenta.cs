@@ -30,6 +30,14 @@ namespace comara.Models
         [Column("detSubtotal")]
         public decimal DetSubtotal { get; set; }
 
+        [Required]
+        [Column("detCostoUnitario")]
+        public decimal DetCostoUnitario { get; set; }
+
+        [Required]
+        [Column("detCostoTotal")]
+        public decimal DetCostoTotal { get; set; }
+
         // Propiedades de Navegaci�n
         [ForeignKey("VenCod")]
         public virtual Venta? Venta { get; set; }

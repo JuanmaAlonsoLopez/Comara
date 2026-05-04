@@ -49,6 +49,8 @@ namespace comara.Models.ViewModels
 
         public decimal Precio { get; set; }
         public decimal Subtotal { get; set; }
+        public decimal CostoUnitario { get; set; }
+        public decimal CostoTotal { get; set; }
 
         // Para mostrar información del artículo
         public string? ArtCodigoStr { get; set; } // Código del artículo como string (artCod de la tabla)

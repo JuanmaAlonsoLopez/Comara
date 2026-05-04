@@ -1,0 +1,127 @@
+2026-05-04 11:27:28.437 -03:00 [INF] User 'jmalonso' validated successfully {"SourceContext":"comara.Services.AuthenticationService","ActionId":"8ba31ca5-9496-4319-b1e1-3679120ddf5c","ActionName":"comara.Controllers.AccountController.Login (comara)","RequestId":"0HNL9T50KEG5O:00000013","RequestPath":"/Account/Login","ConnectionId":"0HNL9T50KEG5O","MachineName":"LEGION-JUANMA","ThreadId":15}
+2026-05-04 11:27:28.573 -03:00 [INF] Updated last login for user ID 2 {"SourceContext":"comara.Services.AuthenticationService","ActionId":"8ba31ca5-9496-4319-b1e1-3679120ddf5c","ActionName":"comara.Controllers.AccountController.Login (comara)","RequestId":"0HNL9T50KEG5O:00000013","RequestPath":"/Account/Login","ConnectionId":"0HNL9T50KEG5O","MachineName":"LEGION-JUANMA","ThreadId":16}
+2026-05-04 11:27:28.580 -03:00 [INF] User jmalonso logged in successfully {"SourceContext":"comara.Controllers.AccountController","ActionId":"8ba31ca5-9496-4319-b1e1-3679120ddf5c","ActionName":"comara.Controllers.AccountController.Login (comara)","RequestId":"0HNL9T50KEG5O:00000013","RequestPath":"/Account/Login","ConnectionId":"0HNL9T50KEG5O","MachineName":"LEGION-JUANMA","ThreadId":16}
+2026-05-04 14:27:18.052 -03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'. {"EventId":{"Id":20504,"Name":"Microsoft.EntityFrameworkCore.Query.MultipleCollectionIncludeWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query","ActionId":"9810463f-8306-4653-af40-e9cb39a94c6d","ActionName":"comara.Controllers.VentasController.Details (comara)","RequestId":"0HNLA08G0RE44:00000031","RequestPath":"/Ventas/Details/46","ConnectionId":"0HNLA08G0RE44","MachineName":"LEGION-JUANMA","ThreadId":24}
+2026-05-04 18:01:24.179 -03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'. {"EventId":{"Id":20504,"Name":"Microsoft.EntityFrameworkCore.Query.MultipleCollectionIncludeWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query","ActionId":"a958a29f-db95-4a53-a0a7-e050123c5f58","ActionName":"comara.Controllers.VentasController.Details (comara)","RequestId":"0HNLA3V3TMITR:00000013","RequestPath":"/Ventas/Details/46","ConnectionId":"0HNLA3V3TMITR","MachineName":"LEGION-JUANMA","ThreadId":14}
+2026-05-04 18:01:54.625 -03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results. {"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query","ActionId":"07d3c29d-f7e2-4d9b-8d56-1d4beabe7576","ActionName":"comara.Controllers.VentasController.Create (comara)","RequestId":"0HNLA3V3TMITR:00000035","RequestPath":"/Ventas/Create","ConnectionId":"0HNLA3V3TMITR","MachineName":"LEGION-JUANMA","ThreadId":23}
+2026-05-04 18:01:54.828 -03:00 [ERR] Failed executing DbCommand (35ms) [Parameters=[@p20='?' (DbType = Int32), @p0='?' (DbType = Binary), @p1='?', @p2='?', @p3='?', @p4='?' (DbType = Decimal), @p5='?', @p6='?' (DbType = Boolean), @p7='?' (DbType = Decimal), @p8='?' (DbType = Decimal), @p9='?' (DbType = Decimal), @p10='?' (DbType = Decimal), @p11='?' (DbType = Decimal), @p12='?' (DbType = Decimal), @p13='?' (DbType = Decimal), @p14='?' (DbType = Int32), @p15='?' (DbType = Int32), @p16='?' (DbType = Int32), @p17='?' (DbType = Int32), @p18='?' (DbType = Int32), @p19='?' (DbType = Int32), @p41='?' (DbType = Int32), @p21='?' (DbType = Binary), @p22='?', @p23='?', @p24='?', @p25='?' (DbType = Decimal), @p26='?', @p27='?' (DbType = Boolean), @p28='?' (DbType = Decimal), @p29='?' (DbType = Decimal), @p30='?' (DbType = Decimal), @p31='?' (DbType = Decimal), @p32='?' (DbType = Decimal), @p33='?' (DbType = Decimal), @p34='?' (DbType = Decimal), @p35='?' (DbType = Int32), @p36='?' (DbType = Int32), @p37='?' (DbType = Int32), @p38='?' (DbType = Int32), @p39='?' (DbType = Int32), @p40='?' (DbType = Int32), @p42='?' (DbType = Int32), @p43='?', @p44='?' (DbType = DateTime), @p45='?' (DbType = Int32), @p46='?' (DbType = Int32), @p47='?' (DbType = DateTime), @p48='?' (DbType = DateTime), @p49='?' (DbType = DateTime), @p50='?' (DbType = Int32), @p51='?' (DbType = Int32), @p52='?' (DbType = Int64), @p53='?', @p54='?' (DbType = Int32), @p55='?', @p56='?' (DbType = Int32), @p57='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "ARTICULOS" SET activo = @p0, "artAlt1" = @p1, "artAlt2" = @p2, "artCod" = @p3, "artCosto" = @p4, "artDesc" = @p5, "artExist" = @p6, "artL1" = @p7, "artL2" = @p8, "artL3" = @p9, "artL4" = @p10, "artL5" = @p11, "artStock" = @p12, "artStockMin" = @p13, "artUni" = @p14, "ivaCod" = @p15, "marCod" = @p16, "proCod" = @p17, "rubCod" = @p18, "srubCod" = @p19
+WHERE id = @p20;
+UPDATE "ARTICULOS" SET activo = @p21, "artAlt1" = @p22, "artAlt2" = @p23, "artCod" = @p24, "artCosto" = @p25, "artDesc" = @p26, "artExist" = @p27, "artL1" = @p28, "artL2" = @p29, "artL3" = @p30, "artL4" = @p31, "artL5" = @p32, "artStock" = @p33, "artStockMin" = @p34, "artUni" = @p35, "ivaCod" = @p36, "marCod" = @p37, "proCod" = @p38, "rubCod" = @p39, "srubCod" = @p40
+WHERE id = @p41;
+INSERT INTO "VENTAS" ("cliCod", "venCAE", "venCAEVencimiento", "venEstado", "venEstadoPago", "venFech", "venFechVenta", "venFechaAutorizacion", "venLista", "venMetodoPago", "venNumComprobante", "venObservacionesAfip", "venPuntoVenta", "venResultadoAfip", "venTipoCbte", "venTotal")
+VALUES (@p42, @p43, @p44, @p45, @p46, @p47, @p48, @p49, @p50, @p51, @p52, @p53, @p54, @p55, @p56, @p57)
+RETURNING "venCod"; {"EventId":{"Id":20102,"Name":"Microsoft.EntityFrameworkCore.Database.Command.CommandError"},"SourceContext":"Microsoft.EntityFrameworkCore.Database.Command","ActionId":"07d3c29d-f7e2-4d9b-8d56-1d4beabe7576","ActionName":"comara.Controllers.VentasController.Create (comara)","RequestId":"0HNLA3V3TMITR:00000035","RequestPath":"/Ventas/Create","ConnectionId":"0HNLA3V3TMITR","MachineName":"LEGION-JUANMA","ThreadId":22}
+2026-05-04 18:01:54.890 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'comara.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: inserción o actualización en la tabla «VENTAS» viola la llave foránea «FK_VENTAS_tipoComprobante»
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: inserción o actualización en la tabla «VENTAS» viola la llave foránea «FK_VENTAS_tipoComprobante»
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: VENTAS
+    ConstraintName: FK_VENTAS_tipoComprobante
+    File: ri_triggers.c
+    Line: 2610
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) {"EventId":{"Id":10000,"Name":"Microsoft.EntityFrameworkCore.Update.SaveChangesFailed"},"SourceContext":"Microsoft.EntityFrameworkCore.Update","ActionId":"07d3c29d-f7e2-4d9b-8d56-1d4beabe7576","ActionName":"comara.Controllers.VentasController.Create (comara)","RequestId":"0HNLA3V3TMITR:00000035","RequestPath":"/Ventas/Create","ConnectionId":"0HNLA3V3TMITR","MachineName":"LEGION-JUANMA","ThreadId":22}
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: inserción o actualización en la tabla «VENTAS» viola la llave foránea «FK_VENTAS_tipoComprobante»
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: inserción o actualización en la tabla «VENTAS» viola la llave foránea «FK_VENTAS_tipoComprobante»
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: VENTAS
+    ConstraintName: FK_VENTAS_tipoComprobante
+    File: ri_triggers.c
+    Line: 2610
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-05-04 18:01:54.990 -03:00 [ERR] Error al crear venta para cliente 12 {"SourceContext":"comara.Controllers.VentasController","ActionId":"07d3c29d-f7e2-4d9b-8d56-1d4beabe7576","ActionName":"comara.Controllers.VentasController.Create (comara)","RequestId":"0HNLA3V3TMITR:00000035","RequestPath":"/Ventas/Create","ConnectionId":"0HNLA3V3TMITR","MachineName":"LEGION-JUANMA","ThreadId":22}
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: inserción o actualización en la tabla «VENTAS» viola la llave foránea «FK_VENTAS_tipoComprobante»
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: inserción o actualización en la tabla «VENTAS» viola la llave foránea «FK_VENTAS_tipoComprobante»
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: VENTAS
+    ConstraintName: FK_VENTAS_tipoComprobante
+    File: ri_triggers.c
+    Line: 2610
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at comara.Data.ApplicationDbContext.SaveChangesAsync(CancellationToken cancellationToken) in C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\Data\ApplicationDbContext.cs:line 483
+   at comara.Controllers.VentasController.Create(VentaViewModel model, String itemsJson) in C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\Controllers\VentasController.cs:line 477
+2026-05-04 18:02:53.215 -03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results. {"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query","ActionId":"a4fb77ab-f152-4b8c-a93b-c223e928382e","ActionName":"comara.Controllers.VentasController.DeleteConfirmed (comara)","RequestId":"0HNLA3V3TMITR:00000065","RequestPath":"/Ventas/Delete/46","ConnectionId":"0HNLA3V3TMITR","MachineName":"LEGION-JUANMA","ThreadId":23}
+2026-05-04 18:17:13.264 -03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'. {"EventId":{"Id":20504,"Name":"Microsoft.EntityFrameworkCore.Query.MultipleCollectionIncludeWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query","ActionId":"2ac3cb2a-5ae7-46cd-aab2-a87975694657","ActionName":"comara.Controllers.VentasController.Details (comara)","RequestId":"0HNLA49ISQH2P:00000013","RequestPath":"/Ventas/Details/52","ConnectionId":"0HNLA49ISQH2P","MachineName":"LEGION-JUANMA","ThreadId":19}
+2026-05-04 18:20:55.428 -03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results. {"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query","ActionId":"19f71439-3445-4b68-ae9f-c281d3d5f44c","ActionName":"comara.Controllers.VentasController.Create (comara)","RequestId":"0HNLA49ISQH2P:00000045","RequestPath":"/Ventas/Create","ConnectionId":"0HNLA49ISQH2P","MachineName":"LEGION-JUANMA","ThreadId":22}

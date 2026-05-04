@@ -38,6 +38,7 @@ namespace comara.Controllers
                 .Include(v => v.Cliente)
                 .Include(v => v.TipoMetodoPago)
                 .Include(v => v.TipoEstado)
+                .Include(v => v.DetalleVentas)
                 .AsQueryable();
 
             // Aplicar filtros
@@ -74,6 +75,9 @@ namespace comara.Controllers
             // Calcular totales ANTES de paginar
             var totalRegistros = await query.CountAsync();
             var totalVentas = await query.SumAsync(v => (decimal?)v.VenTotal) ?? 0;
+            var granTotalCostos = await query
+                .SelectMany(v => v.DetalleVentas)
+                .SumAsync(d => (decimal?)d.DetCostoTotal) ?? 0;
 
             // Paginacion
             var totalPaginas = (int)Math.Ceiling(totalRegistros / (double)RegistrosPorPaginaDefault);
@@ -89,6 +93,7 @@ namespace comara.Controllers
                     ClienteNombre = v.Cliente != null ? v.Cliente.CliNombre ?? "Sin nombre" : "Sin cliente",
                     MetodoPago = v.TipoMetodoPago != null ? v.TipoMetodoPago.Descripcion ?? "" : "",
                     Estado = v.TipoEstado != null ? v.TipoEstado.Descripcion ?? "" : "",
+                    CostoTotal = v.DetalleVentas.Sum(d => d.DetCostoTotal),
                     VenTotal = v.VenTotal
                 })
                 .ToListAsync();
@@ -106,7 +111,8 @@ namespace comara.Controllers
                 MetodoPagoId = metodoPagoId,
                 EstadoId = estadoId,
                 TotalVentas = totalVentas,
-                CantidadVentas = totalRegistros
+                CantidadVentas = totalRegistros,
+                GranTotalCostos = granTotalCostos
             };
 
             await CargarSelectListsVentas(clienteId, metodoPagoId, estadoId);

@@ -213,25 +213,84 @@ namespace comara.Controllers
             return View(venta);
         }
 
+        //// GET: Ventas/Create
+        //public async Task<IActionResult> Create()
+        //{
+        //    ViewData["CliCod"] = new SelectList(await _context.Clientes.ToListAsync(), "Id", "CliNombre");
+        //    ViewData["Listas"] = new SelectList(await _context.Listas.Where(l => l.ListStatus).ToListAsync(), "ListCode", "ListDesc");
+        //    ViewData["VenEstado"] = new SelectList(await _context.VentaTipoEstados.ToListAsync(), "Id", "Descripcion");
+        //    ViewData["VenMetodoPago"] = new SelectList(await _context.VentaTipoMetodoPagos.ToListAsync(), "Id", "Descripcion");
+
+        //    // Cargar tipos de comprobante (opcional en creación - solo facturas, no notas de crédito)
+        //    // C8: Usar CodigoAfip como valor para consistencia con AFIP
+        //    ViewData["TiposComprobante"] = new SelectList(
+        //        await _context.TipoComprobantes
+        //            .Where(tc => tc.CodigoAfip <= 11) // Solo facturas (1, 6, 11), excluir NC (3, 8, 13)
+        //            .OrderBy(tc => tc.CodigoAfip)
+        //            .ToListAsync(),
+        //        "CodigoAfip",
+        //        "Descripcion");
+
+        //    return View(new VentaViewModel());
+        //}
+
         // GET: Ventas/Create
-        public async Task<IActionResult> Create()
+        public async Task<IActionResult> Create(int? cotizacionId)
         {
-            ViewData["CliCod"] = new SelectList(await _context.Clientes.ToListAsync(), "Id", "CliNombre");
-            ViewData["Listas"] = new SelectList(await _context.Listas.Where(l => l.ListStatus).ToListAsync(), "ListCode", "ListDesc");
+            var model = new VentaViewModel
+            {
+                Items = new List<VentaItemViewModel>() // <-- Corregido: Usamos Items y VentaItemViewModel
+            };
+
+            // 1. Si venimos de una cotización, cargamos los datos
+            if (cotizacionId.HasValue)
+            {
+                var cotizacion = await _context.Cotizaciones
+                    .Include(c => c.DetalleCotizaciones)
+                        .ThenInclude(d => d.Articulo)
+                    .FirstOrDefaultAsync(c => c.CotCod == cotizacionId.Value);
+
+                if (cotizacion != null)
+                {
+                    model.CliCod = cotizacion.CliCod;
+                    model.ListaCod = cotizacion.ListaCod;
+
+                    // Pasamos los artículos al modelo de la vista
+                    foreach (var det in cotizacion.DetalleCotizaciones)
+                    {
+                        model.Items.Add(new VentaItemViewModel
+                        {
+                            ArtCod = det.ArtCod,
+                            ArtDesc = det.Articulo?.ArtDesc,
+                            ArtCodigoStr = det.Articulo?.ArtCod, // (Asegúrate de que coincida con tu modelo Articulo, si pide string y es int, agrégale .ToString() al final)
+                            Cantidad = det.DetCant,              // <-- Corregido
+                            Precio = det.DetPrecio,              // <-- Corregido
+                            Subtotal = det.DetSubtotal           // <-- Corregido (aprovechamos que tu modelo ya lo calcula)
+                        });
+                    }
+
+                    // Mensaje opcional para la vista
+                    TempData["InfoPrecarga"] = $"Cargando datos de Cotización #{cotizacion.CotCod}";
+                }
+            }
+
+            // ... (Aquí dejas tus ViewData de SelectLists tal cual los tenías) ...
+
+            // 2. Cargamos los SelectLists (usamos model.CliCod y model.ListaCod para que aparezcan seleccionados)
+            ViewData["CliCod"] = new SelectList(await _context.Clientes.ToListAsync(), "Id", "CliNombre", model.CliCod);
+            ViewData["Listas"] = new SelectList(await _context.Listas.Where(l => l.ListStatus).ToListAsync(), "ListCode", "ListDesc", model.ListaCod);
             ViewData["VenEstado"] = new SelectList(await _context.VentaTipoEstados.ToListAsync(), "Id", "Descripcion");
             ViewData["VenMetodoPago"] = new SelectList(await _context.VentaTipoMetodoPagos.ToListAsync(), "Id", "Descripcion");
 
-            // Cargar tipos de comprobante (opcional en creación - solo facturas, no notas de crédito)
-            // C8: Usar CodigoAfip como valor para consistencia con AFIP
             ViewData["TiposComprobante"] = new SelectList(
                 await _context.TipoComprobantes
-                    .Where(tc => tc.CodigoAfip <= 11) // Solo facturas (1, 6, 11), excluir NC (3, 8, 13)
+                    .Where(tc => tc.CodigoAfip <= 11)
                     .OrderBy(tc => tc.CodigoAfip)
                     .ToListAsync(),
                 "CodigoAfip",
                 "Descripcion");
 
-            return View(new VentaViewModel());
+            return View(model);
         }
 
         // POST: Ventas/Create
@@ -398,6 +457,8 @@ namespace comara.Controllers
                                 ArtCod = item.ArtCod,
                                 DetCant = item.Cantidad,
                                 DetPrecio = item.Precio,
+                                DetCostoUnitario = item.CostoUnitario,
+                                DetCostoTotal = item.CostoTotal,
                                 DetSubtotal = item.Subtotal
                             };
                             venta.DetalleVentas.Add(detalle);
@@ -708,7 +769,7 @@ namespace comara.Controllers
                                 ArtCod = item.ArtCod,
                                 DetCant = item.Cantidad,
                                 DetPrecio = item.Precio,
-                                DetSubtotal = item.Subtotal
+                                DetSubtotal = item.Subtotal,
                             };
                             _context.DetalleVentas.Add(detalle);
 

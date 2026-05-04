@@ -5429,23 +5429,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Juanma y pedemont\\.nuget\\packages\\": {},
+    "C:\\Users\\Juanma\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Juanma y pedemont\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\comara.csproj",
+      "projectUniqueName": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\comara.csproj",
       "projectName": "comara",
-      "projectPath": "C:\\Users\\Juanma y pedemont\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\comara.csproj",
-      "packagesPath": "C:\\Users\\Juanma y pedemont\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Juanma y pedemont\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\obj\\",
+      "projectPath": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\comara.csproj",
+      "packagesPath": "C:\\Users\\Juanma\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Juanma\\OneDrive - alumnos.frm.utn.edu.ar\\Trabajo\\SISTEMA COMARA\\comara\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Juanma y pedemont\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Juanma\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

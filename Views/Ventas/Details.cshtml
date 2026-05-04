@@ -116,12 +116,18 @@
                             <th>Marca</th>
                             <th>Cantidad</th>
                             <th>Precio Unitario</th>
+                            <th>Costo Total / Mg. Ganancia</th>
                             <th>Subtotal</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var detalle in Model.DetalleVentas)
                         {
+                            decimal margenPorcentaje = 0;
+                            if (detalle.DetSubtotal > 0 && detalle.DetCostoTotal > 0)
+                            {
+                                margenPorcentaje = ((detalle.DetSubtotal - detalle.DetCostoTotal) / detalle.DetSubtotal) * 100;
+                            }
                             <tr>
                                 <td>@detalle.Articulo?.Id</td>
                                 <td>@detalle.Articulo?.ArtDesc</td>
@@ -130,14 +136,46 @@
                                     @(detalle.DetCant == Math.Truncate(detalle.DetCant) ? detalle.DetCant.ToString("N0") : detalle.DetCant.ToString("N2"))
                                 </td>
                                 <td>@string.Format("${0:N2}", detalle.DetPrecio)</td>
+                                <td>
+                                    @if (detalle.DetCostoTotal > 0)
+                                    {
+                                        @detalle.DetCostoTotal.ToString("C")
+                                        <span class="text-success fw-bold" style="font-size: 0.85em;">(@margenPorcentaje.ToString("0.00")%)</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted fst-italic" style="font-size: 0.85em;">N/A (Venta antigua)</span>
+                                    }
+                                </td>
                                 <td>@string.Format("${0:N2}", detalle.DetSubtotal)</td>
                             </tr>
                         }
                     </tbody>
                     <tfoot>
+                        @{
+                            decimal sumaCostoTotal = Model.DetalleVentas.Sum(d => d.DetCostoTotal);
+                            decimal sumaSubtotalVenta = Model.DetalleVentas.Sum(d => d.DetSubtotal);
+                            decimal margenVentaTotal = 0;
+    
+                            if (sumaSubtotalVenta > 0 && sumaCostoTotal > 0)
+                            {
+                                margenVentaTotal = ((sumaSubtotalVenta - sumaCostoTotal) / sumaSubtotalVenta) * 100;
+                            }
+                        }
                         <tr>
-                            <td colspan="5" class="text-right"><strong>Total:</strong></td>
-                            <td><strong>@string.Format("${0:N2}", Model.VenTotal)</strong></td>
+                            <td colspan="4" class="text-end fw-bold">TOTALES GENERALES:</td>
+                            <td class="fw-bold fs-5">
+                                @if (sumaCostoTotal > 0)
+                                {
+                                    @sumaCostoTotal.ToString("C")
+                                    <span class="text-success">(@margenVentaTotal.ToString("0.00")%)</span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted fs-6">N/A</span>
+                                }
+                            </td>
+                            <td class="fw-bold fs-5">@sumaSubtotalVenta.ToString("C")</td>
                         </tr>
                     </tfoot>
                 </table>
