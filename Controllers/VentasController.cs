@@ -302,11 +302,16 @@ namespace comara.Controllers
             {
                 try
                 {
-                    // Punto 18: Validación segura de deserialización JSON
-                    List<VentaItemViewModel>? items;
+                    // Punto 18: Deserialización segura (ahora ignorando formatos estrictos)
+                    List<VentaItemViewModel>? itemsRequest;
                     try
                     {
-                        items = JsonSerializer.Deserialize<List<VentaItemViewModel>>(itemsJson ?? "[]");
+                        var options = new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true,
+                            NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString
+                        };
+                        itemsRequest = JsonSerializer.Deserialize<List<VentaItemViewModel>>(itemsJson ?? "[]", options);
                     }
                     catch (JsonException ex)
                     {
@@ -316,15 +321,15 @@ namespace comara.Controllers
                         return View(model);
                     }
 
-                    if (items == null || items.Count == 0)
+                    if (itemsRequest == null || itemsRequest.Count == 0)
                     {
                         ModelState.AddModelError("", "Debe agregar al menos un artículo a la venta");
                         await CargarViewDataVenta(model);
                         return View(model);
                     }
 
-                    // Punto 18: Validar cada item deserializado
-                    foreach (var item in items)
+                    // Validamos SOLAMENTE el ID y la Cantidad, ya que el precio lo calculará el servidor
+                    foreach (var item in itemsRequest)
                     {
                         if (item.ArtCod <= 0)
                         {
@@ -338,25 +343,7 @@ namespace comara.Controllers
                             await CargarViewDataVenta(model);
                             return View(model);
                         }
-                        if (item.Precio < 0)
-                        {
-                            ModelState.AddModelError("", "El precio no puede ser negativo");
-                            await CargarViewDataVenta(model);
-                            return View(model);
-                        }
-                        if (item.Subtotal < 0)
-                        {
-                            ModelState.AddModelError("", "El subtotal no puede ser negativo");
-                            await CargarViewDataVenta(model);
-                            return View(model);
-                        }
                     }
-
-                    // Restaurar items en el modelo para que estén disponibles si se devuelve la vista por error
-                    model.Items = items;
-
-                    // Punto 16: La verificación de stock se hace DENTRO de la transacción
-                    // con lock FOR UPDATE para prevenir race conditions
 
                     // Validar tipo de comprobante si se especificó
                     if (model.VenTipoCbte.HasValue && model.VenTipoCbte.Value > 0)
@@ -400,18 +387,25 @@ namespace comara.Controllers
                     using var transaction = await _context.Database.BeginTransactionAsync();
                     try
                     {
-                        // Punto 16: TODA la verificación de stock se hace dentro de la transacción
-                        // con lock FOR UPDATE para prevenir race conditions
+                        // Obtenemos el porcentaje de la lista de precios seleccionada
+                        decimal porcentajeLista = 0;
+                        if (model.ListaCod.HasValue)
+                        {
+                            var lista = await _context.Listas.FindAsync(model.ListaCod.Value);
+                            if (lista != null) porcentajeLista = lista.ListPercent;
+                        }
 
-                        // Primero adquirir locks y verificar stock de TODOS los artículos
                         var articulosConLock = new Dictionary<int, Articulo>();
                         bool hayNuevoStockCritico = false;
+                        decimal totalVentaCalculado = 0;
 
-                        foreach (var item in items)
+                        // Primero adquirir locks, verificar stock y CÁLCULAR PRECIOS desde el servidor
+                        foreach (var item in itemsRequest)
                         {
-                            // Adquirir lock con FOR UPDATE
                             var articulo = await _context.Articulos
                                 .FromSqlRaw("SELECT * FROM \"ARTICULOS\" WHERE \"id\" = {0} FOR UPDATE", item.ArtCod)
+                                .Include(a => a.Proveedor)
+                                .Include(a => a.Iva)
                                 .FirstOrDefaultAsync();
 
                             if (articulo == null)
@@ -427,8 +421,28 @@ namespace comara.Controllers
                                     $"Disponible: {articulo.ArtStock ?? 0}, Solicitado: {item.Cantidad}");
                             }
 
+                            // CÁLCULOS 100% SEGUROS EN EL BACKEND
+                            decimal costoUnitario = articulo.CostoFinal;
+                            decimal precioUnitario = articulo.CostoFinal;
+
+                            if (porcentajeLista > 0)
+                            {
+                                precioUnitario = articulo.CalcularPrecioVenta(porcentajeLista);
+                            }
+
+                            // Completamos el objeto del ViewModel con los datos reales de la BD
+                            item.Precio = precioUnitario;
+                            item.Subtotal = precioUnitario * item.Cantidad;
+                            item.CostoUnitario = costoUnitario;
+                            item.CostoTotal = costoUnitario * item.Cantidad;
+                            item.ArtDesc = articulo.ArtDesc;
+
+                            totalVentaCalculado += item.Subtotal;
                             articulosConLock[item.ArtCod] = articulo;
                         }
+
+                        // Restaurar items en el modelo con los valores reales calculados
+                        model.Items = itemsRequest;
 
                         // Crear venta (pedido)
                         // Punto 24: Usar método utilitario para conversión a UTC mediodía
@@ -443,23 +457,23 @@ namespace comara.Controllers
                             VenTipoCbte = model.VenTipoCbte,
                             VenMetodoPago = model.VenMetodoPago,
                             VenLista = model.ListaCod,
-                            VenTotal = items.Sum(i => i.Subtotal)
+                            VenTotal = totalVentaCalculado // Guardamos el total blindado
                         };
 
                         _context.Ventas.Add(venta);
 
                         // Agregar detalles y actualizar stock (ya tenemos los locks)
-                        foreach (var item in items)
+                        foreach (var item in itemsRequest)
                         {
                             var detalle = new DetalleVenta
                             {
                                 Venta = venta,
                                 ArtCod = item.ArtCod,
                                 DetCant = item.Cantidad,
-                                DetPrecio = item.Precio,
-                                DetCostoUnitario = item.CostoUnitario,
-                                DetCostoTotal = item.CostoTotal,
-                                DetSubtotal = item.Subtotal
+                                DetPrecio = item.Precio, // Ya calculado arriba
+                                DetCostoUnitario = item.CostoUnitario, // Ya calculado arriba
+                                DetCostoTotal = item.CostoTotal, // Ya calculado arriba
+                                DetSubtotal = item.Subtotal // Ya calculado arriba
                             };
                             venta.DetalleVentas.Add(detalle);
 
@@ -605,7 +619,12 @@ namespace comara.Controllers
                     List<VentaItemViewModel>? items;
                     try
                     {
-                        items = JsonSerializer.Deserialize<List<VentaItemViewModel>>(itemsJson ?? "[]");
+                        var options = new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true,
+                            NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowReadingFromString
+                        };
+                        items = JsonSerializer.Deserialize<List<VentaItemViewModel>>(itemsJson ?? "[]", options);
                     }
                     catch (JsonException ex)
                     {

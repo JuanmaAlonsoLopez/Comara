@@ -121,7 +121,17 @@
 
         $(document).ready(function() {
             actualizarTabla();
-            $('#formVenta').submit(function() { $('#itemsJson').val(JSON.stringify(items)); });
+            
+            $('#formVenta').submit(function() {
+                // Enfoque a prueba de balas: Solo mandamos ID y Cantidad.
+                // El servidor calculará los precios y costos reales.
+                const itemsLimpios = items.map(item => ({
+                    ArtCod: parseInt(item.ArtCod || item.artCod) || 0,
+                    Cantidad: parseDecimal(item.Cantidad || item.cantidad) || 0
+                }));
+                
+                $('#itemsJson').val(JSON.stringify(itemsLimpios));
+            });
         });
 
         function actualizarTabla() {
