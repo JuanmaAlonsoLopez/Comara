@@ -438,3 +438,70 @@ System.Text.Json.JsonException: The JSON value could not be converted to System.
    at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
    at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
    at comara.Controllers.VentasController.Create(VentaViewModel model, String itemsJson) in C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\Controllers\VentasController.cs:line 314
+2026-05-04 23:28:26.683 -03:00 [WRN] Error al deserializar JSON de items de venta {"SourceContext":"comara.Controllers.VentasController","ActionId":"8ad474a6-9498-4a30-8347-7d679b8021da","ActionName":"comara.Controllers.VentasController.Create (comara)","RequestId":"0HNLA9NPIOAHO:00000013","RequestPath":"/Ventas/Create","ConnectionId":"0HNLA9NPIOAHO","MachineName":"LEGION-JUANMA","ThreadId":15}
+System.Text.Json.JsonException: The JSON value could not be converted to System.Nullable`1[System.Decimal]. Path: $[0].ArtStock | LineNumber: 0 | BytePositionInLine: 136.
+ ---> System.FormatException: The JSON value is either too large or too small for a Decimal.
+   at System.Text.Json.ThrowHelper.ThrowFormatException(NumericType numericType)
+   at System.Text.Json.Utf8JsonReader.GetDecimalWithQuotes()
+   at System.Text.Json.Serialization.Converters.DecimalConverter.ReadNumberWithCustomHandling(Utf8JsonReader& reader, JsonNumberHandling handling, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Converters.NullableConverter`1.ReadNumberWithCustomHandling(Utf8JsonReader& reader, JsonNumberHandling numberHandling, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at comara.Controllers.VentasController.Create(VentaViewModel model, String itemsJson) in C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\Controllers\VentasController.cs:line 314
+2026-05-04 23:29:09.226 -03:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results. {"EventId":{"Id":10103,"Name":"Microsoft.EntityFrameworkCore.Query.FirstWithoutOrderByAndFilterWarning"},"SourceContext":"Microsoft.EntityFrameworkCore.Query","ActionId":"8ad474a6-9498-4a30-8347-7d679b8021da","ActionName":"comara.Controllers.VentasController.Create (comara)","RequestId":"0HNLA9NPIOAHO:0000002F","RequestPath":"/Ventas/Create","ConnectionId":"0HNLA9NPIOAHO","MachineName":"LEGION-JUANMA","ThreadId":11}
+2026-05-04 23:29:53.906 -03:00 [WRN] Error al deserializar JSON de items de venta {"SourceContext":"comara.Controllers.VentasController","ActionId":"8ad474a6-9498-4a30-8347-7d679b8021da","ActionName":"comara.Controllers.VentasController.Create (comara)","RequestId":"0HNLA9NPIOAHO:00000063","RequestPath":"/Ventas/Create","ConnectionId":"0HNLA9NPIOAHO","MachineName":"LEGION-JUANMA","ThreadId":15}
+System.Text.Json.JsonException: The JSON value could not be converted to System.Nullable`1[System.Decimal]. Path: $[0].ArtStock | LineNumber: 0 | BytePositionInLine: 141.
+ ---> System.FormatException: The JSON value is either too large or too small for a Decimal.
+   at System.Text.Json.ThrowHelper.ThrowFormatException(NumericType numericType)
+   at System.Text.Json.Utf8JsonReader.GetDecimalWithQuotes()
+   at System.Text.Json.Serialization.Converters.DecimalConverter.ReadNumberWithCustomHandling(Utf8JsonReader& reader, JsonNumberHandling handling, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Converters.NullableConverter`1.ReadNumberWithCustomHandling(Utf8JsonReader& reader, JsonNumberHandling numberHandling, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at comara.Controllers.VentasController.Create(VentaViewModel model, String itemsJson) in C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\Controllers\VentasController.cs:line 314
+2026-05-04 23:30:02.296 -03:00 [WRN] Error al deserializar JSON de items de venta {"SourceContext":"comara.Controllers.VentasController","ActionId":"8ad474a6-9498-4a30-8347-7d679b8021da","ActionName":"comara.Controllers.VentasController.Create (comara)","RequestId":"0HNLA9NPIOAHO:00000073","RequestPath":"/Ventas/Create","ConnectionId":"0HNLA9NPIOAHO","MachineName":"LEGION-JUANMA","ThreadId":15}
+System.Text.Json.JsonException: The JSON value could not be converted to System.Nullable`1[System.Decimal]. Path: $[0].ArtStock | LineNumber: 0 | BytePositionInLine: 141.
+ ---> System.FormatException: The JSON value is either too large or too small for a Decimal.
+   at System.Text.Json.ThrowHelper.ThrowFormatException(NumericType numericType)
+   at System.Text.Json.Utf8JsonReader.GetDecimalWithQuotes()
+   at System.Text.Json.Serialization.Converters.DecimalConverter.ReadNumberWithCustomHandling(Utf8JsonReader& reader, JsonNumberHandling handling, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Converters.NullableConverter`1.ReadNumberWithCustomHandling(Utf8JsonReader& reader, JsonNumberHandling numberHandling, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, T& value, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Deserialize(Utf8JsonReader& reader, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at comara.Controllers.VentasController.Create(VentaViewModel model, String itemsJson) in C:\Users\Juanma\OneDrive - alumnos.frm.utn.edu.ar\Trabajo\SISTEMA COMARA\comara\Controllers\VentasController.cs:line 314
