@@ -1,6 +1,53 @@
-.claude
-.vs
-/.vs
-/bin
-/obj
+# .NET build output
+bin/
+obj/
+out/
+TestResults/
+coverage/
+*.trx
+
+# IDE and user-specific files
+.vs/
+.vscode/
+*.user
+*.suo
+*.csproj.user
+
+# Local tooling
+.claude/
 .aider*
+
+# Logs
+logs/
+*.log
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+appsettings.*.local.json
+secrets.json
+secretos.txt
+
+# Certificates and private keys
+App_Data/Certificados/
+certificados/
+*.pfx
+*.p12
+*.pem
+*.key
+*.crt
+*.csr
+
+# Database backups and exports
+Backup/
+backups/
+backup*.sql
+Cloud_SQL_Export_*.sql
+*.bak
+*.dump
+
+# OS files
+.DS_Store
+Thumbs.db
